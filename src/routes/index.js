@@ -1,7 +1,4 @@
-const publicRoutes = [
-  { path: '/', component: '', layout: '' },
-  { path: '/', component: '', layout: '' },
-];
+const publicRoutes = [{ path: '/', component: '', layout: '' }];
 
 const privateRoutes = [];
 
