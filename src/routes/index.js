@@ -1,6 +1,6 @@
 import ProductionCard from '../components/ProductionCard/ProductionCard';
 
-const publicRoutes = [{ path: '/', component: ProductionCard }];
+const publicRoutes = [{ path: '/', component: '' }];
 
 const privateRoutes = [];
 
