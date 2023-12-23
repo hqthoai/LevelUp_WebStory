@@ -1,6 +1,7 @@
 import ProductionCard from '../components/ProductionCard/ProductionCard';
+import DefaultLayout from '../layouts/DefaultLayout/DefaultLayout.js';
 
-const publicRoutes = [{ path: '/', component: ProductionCard }];
+const publicRoutes = [{ path: '/', component: ProductionCard, layout: DefaultLayout }];
 
 const privateRoutes = [];
 
