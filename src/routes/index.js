@@ -1,6 +1,6 @@
-import ProductionCard from '../components/ProductionCard/ProductionCard';
+import HomePage from '../pages/HomePage';
 
-const publicRoutes = [{ path: '/', component: '' }];
+const publicRoutes = [{ path: '/', component: HomePage }];
 
 const privateRoutes = [];
 
