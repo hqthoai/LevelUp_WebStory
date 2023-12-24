@@ -33,7 +33,7 @@ const Header = () => {
             </li>
 
             <div
-              className={`absolute top-full left-[-20px] bg-[#1a1b29] w-[200px] transition-all transform origin-top duration-500 z-50  ${
+              className={`absolute top-full left-[-20px] bg-[#1a1b29] w-[200px] transition-all transform origin-top duration-300 z-50  ${
                 open ? 'scale-y-100' : 'scale-y-0'
               }
                 }`}

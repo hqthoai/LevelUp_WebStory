@@ -1,6 +1,8 @@
-import DefaultLayout from '../layouts/DefaultLayout/DefaultLayout';
-import HomePage from '../pages/HomePage';
-const publicRoutes = [{ path: '/', component: HomePage, layout: DefaultLayout }];
+import ProductionCard from '../components/ProductionCard/ProductionCard';
+import MainBanner from '../components/MainBanner/index.js';
+import DefaultLayout from '../layouts/DefaultLayout/DefaultLayout.js';
+
+const publicRoutes = [{ path: '/', component: MainBanner, layout: DefaultLayout }];
 
 const privateRoutes = [];
 
