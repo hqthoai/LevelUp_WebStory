@@ -1,6 +1,6 @@
 import React from 'react';
-import AboutUsMainBanner from '~/components/MainBanner/AboutUsMainBanner.js';
-import OurMission from '~/components/OurMission';
+import AboutUsMainBanner from '../components/MainBanner/AboutUsMainBanner.js';
+import OurMission from '../components/OurMission';
 
 const AboutUs = ({ title = 'About Us' }) => {
   return (
