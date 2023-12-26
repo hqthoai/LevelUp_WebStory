@@ -62,7 +62,9 @@ const Header = () => {
             <div className="transform skew-x-[30deg] tracking-tighter">Our squad</div>
           </li>
           <li className="h-[100%] px-6 hover:bg-[#1a1b21] border-b-4 border-solid border-transparent hover:border-orange-700 hover:text-orange-700 transform -skew-x-[30deg] flex items-center">
-            <div className="transform skew-x-[30deg] tracking-tight">Production</div>
+            <a href="/production" className="transform skew-x-[30deg] tracking-tight">
+              Production
+            </a>
           </li>
           <li className="h-[100%] px-6 hover:bg-[#1a1b21] border-b-4 border-solid border-transparent hover:border-orange-700 hover:text-orange-700 transform -skew-x-[30deg] flex items-center">
             <div className="transform skew-x-[30deg] tracking-tight">Games</div>
