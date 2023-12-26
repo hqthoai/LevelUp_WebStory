@@ -9,7 +9,7 @@ const Header = () => {
   const [hoverFlag, setHoverFlag] = useState(true);
 
   return (
-    <div className="w-full h-[100px] flex justify-around  bg-[#1f2029] fixed items-center ">
+    <div className="w-full h-[100px] flex justify-around  bg-[#1f2029] fixed items-center z-9999 ">
       {/* Logo */}
       <div className="flex  flex-col justify-between items-center">
         <img
