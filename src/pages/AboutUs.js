@@ -1,5 +1,5 @@
 import React from 'react';
-import AboutUsMainBanner from '~/components/MainBanner/AboutUsMainBanner.js';
+import AboutUsMainBanner from '../components/MainBanner/AboutUsMainBanner.js';
 
 const AboutUs = () => {
   return (
