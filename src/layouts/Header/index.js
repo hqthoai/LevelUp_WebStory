@@ -14,11 +14,12 @@ const Header = () => {
       style={{ zIndex: 999 }}
     >
       {/* Logo */}
-      <div className="flex  flex-col justify-between items-center ">
+      <a className="flex  flex-col justify-between items-center " href='/'>
         <img
           // src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/480px-Instagram_logo_2016.svg.png"
           src={imgLink}
           alt="Logo"
+          
           className={`w-[62px] h-[49px] cursor-pointer block m-auto rounded-[5px]`}
         />
         <label
@@ -26,7 +27,7 @@ const Header = () => {
         >
           Luan Luan
         </label>
-      </div>
+      </a>
 
       {/* Navigation */}
       <div className="w-[55%] h-[100%]">
@@ -57,7 +58,9 @@ const Header = () => {
                   </a>
                 </li>
                 <li className="px-4 w-full hover:bg-[#1a1b21] hover:text-orange-700 ">
-                  Our mission
+                  <a href="/our-mission" className="transform skew-x-[30deg] tracking-tight">
+                    Our mission
+                  </a>
                 </li>
               </ul>
             </div>

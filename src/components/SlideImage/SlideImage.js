@@ -4,17 +4,16 @@ import { FaCircleArrowRight, FaCircleArrowLeft } from 'react-icons/fa6';
 import ArrowCircleRightIcon from '@mui/icons-material/ArrowCircleRight';
 import ArrowCircleLeftIcon from '@mui/icons-material/ArrowCircleLeft';
 // import images
-import ActivisionBlizzard from '~/assets/images/activision_blizzard-logo.png';
-import RobloxGlobal from '~/assets/images/Roblox.png';
-import GiantyVN from '~/assets/images/GiantyVN.png';
-import RollingAnt from '~/assets/images/RollingAnt.png';
-import S8XTPN from '~/assets/images/s8x-tpn-logo.png';
-import ChanhPhuongFilm from '~/assets/images/channels4_profile.jpg';
-import JungVonMattAg from '~/assets/images/JungVonMattAg.jpg';
-import CasperDash from '~/assets/images/CasperDash.png'
-import Capcom from '~/assets/images/Capcom-logo.png'
+import ActivisionBlizzard from '../../assets/images/activision_blizzard-logo.png';
+import RobloxGlobal from '../../assets/images/Roblox.png';
+import GiantyVN from '../../assets/images/GiantyVN.png';
+import RollingAnt from '../../assets/images/RollingAnt.png';
+import S8XTPN from '../../assets/images/s8x-tpn-logo.png';
+import ChanhPhuongFilm from '../../assets/images/channels4_profile.jpg';
+import JungVonMattAg from '../../assets/images/JungVonMattAg.jpg';
+import CasperDash from '../../assets/images/CasperDash.png';
+import Capcom from '../../assets/images/Capcom-logo.png';
 import './SlideImage.module.scss';
-
 
 const slides = [
   {
@@ -79,14 +78,9 @@ const slides = [
   //   gameUrl: 'https://www.capcom.com/',
   //   gameName: 'Capcom',
   // },
-  
-  
-  
-  
 ];
 
 function SlideImage() {
-  
   const [currentImages, setCurrentImages] = useState([0, 1, 2]);
 
   // back to the previous image
@@ -102,7 +96,6 @@ function SlideImage() {
     const nextImageIndex = (lastImageIndex + 1) % slides.length;
     setCurrentImages((prevImages) => [...prevImages.slice(1), nextImageIndex]);
   };
-
 
   useEffect(() => {
     const slideInterval = setInterval(() => {
@@ -143,11 +136,15 @@ function SlideImage() {
       </div>
 
       <Box className="flex justify-center mt-[-28px]">
-      <IconButton sx={{ '&:hover': {
-            color:'transparent',
-            backgroundColor:'transparent',
-          } }}>
-          <ArrowCircleLeftIcon sx={{ color: 'white', mr: 78}} onClick={handleGoToPrevImage} />
+        <IconButton
+          sx={{
+            '&:hover': {
+              color: 'transparent',
+              backgroundColor: 'transparent',
+            },
+          }}
+        >
+          <ArrowCircleLeftIcon sx={{ color: 'white', mr: 78 }} onClick={handleGoToPrevImage} />
         </IconButton>
         <IconButton>
           <ArrowCircleRightIcon sx={{ color: 'white' }} onClick={handleGoToNextImage} />
@@ -158,6 +155,3 @@ function SlideImage() {
 }
 
 export default SlideImage;
-
-
-

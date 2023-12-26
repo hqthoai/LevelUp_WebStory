@@ -3,8 +3,8 @@ import GameComing from '../components/GameComming/GameComing';
 import TeamMembers from '../components/TeamMembers/TeamMembers';
 import ScrollToTopButton from '../components/ScrollToTop/ScrollToTopButton';
 import SlideImage from '../components/SlideImage/SlideImage';
-import MainBanner from '~/components/MainBanner';
-import MailBox from '~/components/MailBox';
+import MainBanner from '../components/MainBanner';
+import MailBox from '../components/MailBox';
 
 function HomePage() {
   return (
