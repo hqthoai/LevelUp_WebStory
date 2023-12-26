@@ -32,12 +32,15 @@ export default function GamingComing() {
                 players.
               </p>
               <a
-                className="btn bg-[#ff8503] px-[33px] py-[18px] text-white font-bold uppercase inline-block text-[16px] transition-all duration-300"
+                className="btn bg-[#ff8503] px-[33px] py-[18px] text-white font-bold uppercase inline-block 
+                text-[16px] text-center transition-all duration-300"
                 href="#"
                 onMouseOver={handleMouseOver}
                 onMouseOut={handleMouseOut}
                 style={{
                   clipPath: 'polygon(90% 0, 100% 34%, 100% 100%, 10% 100%, 0 66%, 0 0)',
+                  backgroundColor: isHovered ? '#1f2029' : '#ff8503',
+                  width: 'auto',
                 }}
               >
                 {btnContent}
@@ -47,9 +50,9 @@ export default function GamingComing() {
 
           <div className="flex px-[15px]" style={{ flex: '8' }}>
             <img
-              className="bg-auto"
-              src="https://e0.pxfuel.com/wallpapers/512/651/desktop-wallpaper-2048x1152-gaming-banner-engine-games-png-gaming.jpg"
-              alt="img"
+              className="bg-auto w-full h-[270px] object-fit "
+              src="https://www.charlieintel.com/cdn-cgi/image/width=3840,quality=75,format=auto/https://editors.charlieintel.com/wp-content/uploads/2023/07/26/Roblox-Balloon-Simulator-codes.jpg"
+              alt="pet-balloon"
             />
           </div>
         </div>
