@@ -40,7 +40,7 @@ export default function GamingComing() {
                 style={{
                   clipPath: 'polygon(90% 0, 100% 34%, 100% 100%, 10% 100%, 0 66%, 0 0)',
                   backgroundColor: isHovered ? '#1f2029' : '#ff8503',
-                  width: 'auto',
+                  minWidth: '205px',
                 }}
               >
                 {btnContent}

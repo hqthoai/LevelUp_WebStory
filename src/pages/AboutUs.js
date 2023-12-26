@@ -1,13 +1,13 @@
 import React from 'react';
-import AboutUsMainBanner from '~/components/MainBanner/AboutUsMainBanner.js';
-import OurMission from '~/components/OurMission';
+import AboutUsMainBanner from '../components/MainBanner/AboutUsMainBanner.js';
+import AboutUsText from '../components/AboutArea/AboutUsText.js';
 
 const AboutUs = ({ title = 'About Us' }) => {
   return (
     <div>
       <div className="bg-slate-800 min-h-[100vh] w-full">
         <AboutUsMainBanner title={title} />
-        <OurMission />
+        <AboutUsText />
       </div>
     </div>
   );

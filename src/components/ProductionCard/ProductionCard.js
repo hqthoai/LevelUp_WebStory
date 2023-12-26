@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-
+import './ProductionCard.scss';
 export default function ProductionCard() {
   const [activeTab, setActiveTab] = useState(1);
 
@@ -40,9 +40,9 @@ export default function ProductionCard() {
 
                 <div className="mt-4">
                   {activeTab === 1 && (
-                    <div className="animate-pulse">
-                      <h2 className="text-white text-[50px] uppercase font-bold mb-2 font-san ">
-                        <a>
+                    <div className="fade-in">
+                      <h2 className="text-white text-[50px] uppercase font-bold mb-2 font-san">
+                        <a href="/production">
                           SEIZE THE LIFE ON <span className="text-[#ff8503]">METAVERSE</span>
                         </a>
                       </h2>
@@ -55,12 +55,7 @@ export default function ProductionCard() {
                     </div>
                   )}
                   {activeTab === 2 && (
-                    <div
-                      style={{
-                        animation: 'pulse 1s cubic-bezier(0.4, 0, 0.6, 1) 1',
-                        // opacity: 0.5,
-                      }}
-                    >
+                    <div className="fade-in">
                       <h2 className="text-white text-[50px] uppercase font-bold mb-2">
                         <a href="/production">
                           EXPERIENCE JUST FOR FEARLESS BUSINESS{' '}
