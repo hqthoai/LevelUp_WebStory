@@ -40,9 +40,11 @@ export default function ProductionCard() {
 
                 <div className="mt-4">
                   {activeTab === 1 && (
-                    <div>
+                    <div className="animate-pulse">
                       <h2 className="text-white text-[50px] uppercase font-bold mb-2 font-san ">
-                        SEIZE THE LIFE ON <span className="text-[#ff8503]">METAVERSE</span>
+                        <a>
+                          SEIZE THE LIFE ON <span className="text-[#ff8503]">METAVERSE</span>
+                        </a>
                       </h2>
                       <p className="text-white text-justify text-[14px]  w-[90%]">
                         Gaming should be more than just entertainment; it should be an enriching
@@ -53,10 +55,17 @@ export default function ProductionCard() {
                     </div>
                   )}
                   {activeTab === 2 && (
-                    <div className="relative">
+                    <div
+                      style={{
+                        animation: 'pulse 1s cubic-bezier(0.4, 0, 0.6, 1) 1',
+                        // opacity: 0.5,
+                      }}
+                    >
                       <h2 className="text-white text-[50px] uppercase font-bold mb-2">
-                        EXPERIENCE JUST FOR FEARLESS BUSINESS{' '}
-                        <span className="text-[#ff8503]">OFFER</span>
+                        <a href="/production">
+                          EXPERIENCE JUST FOR FEARLESS BUSINESS{' '}
+                          <span className="text-[#ff8503]">OFFER</span>
+                        </a>
                       </h2>
                       <p className="text-white text-justify  text-[14px] w-[90%]">
                         From storytelling to gameplay mechanics, we tailor every aspect of your game
@@ -77,7 +86,7 @@ export default function ProductionCard() {
             <img
               src="https://themebeyond.com/demo/haldalive/wp-content/uploads/2022/04/game_img01.png"
               alt="Your Image"
-              className="w-full h-auto"
+              className="w-full h-full"
             />
           </div>
         </div>
