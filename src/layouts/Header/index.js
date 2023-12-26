@@ -51,7 +51,11 @@ const Header = () => {
               }}
             >
               <ul className="flex flex-col py-4 ">
-                <li className="px-4 w-full hover:bg-[#1a1b21] hover:text-orange-700 ">About US</li>
+                <li className="px-4 w-full hover:bg-[#1a1b21] hover:text-orange-700 ">
+                  <a href="/about-us" className="transform skew-x-[30deg] tracking-tight">
+                    About US
+                  </a>
+                </li>
                 <li className="px-4 w-full hover:bg-[#1a1b21] hover:text-orange-700 ">
                   Our mission
                 </li>
