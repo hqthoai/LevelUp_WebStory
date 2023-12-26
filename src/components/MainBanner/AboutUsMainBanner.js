@@ -8,7 +8,7 @@ const AboutUsMainBanner = () => {
       {' '}
       <div className="w-full h-screen bg-[#151212]">
         <div
-          className="w-full h-[65%] flex justify-center items-center "
+          className="w-full h-[80%] flex justify-center items-center relative"
           style={{
             backgroundImage:
               'url("https://themebeyond.com/demo/haldalive/wp-content/themes/halda/assets/img/bg/breadcrumb_bg.jpg")',
@@ -17,7 +17,7 @@ const AboutUsMainBanner = () => {
             backgroundPosition: 'center',
           }}
         >
-          <div className="flex justify-around items-center w-full">
+          <div className="flex justify-around items-center w-full ">
             <div className="text-white ">
               <h2 className="text-[60px] leading-tighter  leading-none font-bold mb-6 font-oswald font-refault font-sans">
                 ABOUT US
@@ -34,33 +34,13 @@ const AboutUsMainBanner = () => {
                 alt="img"
               />
             </div>
-            <div
-              class="breadcrumb-shape shape-1 wow slideInLeft"
-              data-wow-delay=".2s"
-              data-wow-duration="2.5s"
-              style={{
-                visibility: 'visible',
-                animationDuration: '2.5s',
-                animationDelay: '0.2s',
-                animationName: 'slideInLeft',
-              }}
-            >
+            <div className="absolute bottom-0 left-0">
               <img
                 src="https://themebeyond.com/demo/haldalive/wp-content/themes/halda/assets/img/bg/breadcrumb_shape01.png"
                 alt="img"
               ></img>
             </div>
-            <div
-              class="breadcrumb-shape shape-2 wow slideInRight"
-              data-wow-delay=".2s"
-              data-wow-duration="2.5s"
-              style={{
-                visibility: 'visible',
-                animationDuration: '2.5s',
-                animationDelay: '0.2s',
-                animationName: 'slideInRight',
-              }}
-            >
+            <div className="absolute bottom-0 right-0">
               <img
                 src="https://themebeyond.com/demo/haldalive/wp-content/themes/halda/assets/img/bg/breadcrumb_shape02.png"
                 alt="img"
