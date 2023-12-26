@@ -1,8 +1,12 @@
 import React from 'react'
+import {Box} from '@mui/material';
+import AboutUs from './AboutUs';
 
 function Production() {
   return (
-    <div>Production</div>
+    <Box>
+      <AboutUs title={"Production"}/>
+    </Box>
   )
 }
 
