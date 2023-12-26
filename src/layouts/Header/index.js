@@ -57,7 +57,9 @@ const Header = () => {
                   </a>
                 </li>
                 <li className="px-4 w-full hover:bg-[#1a1b21] hover:text-orange-700 ">
-                  Our mission
+                  <a href="/our-mission" className="transform skew-x-[30deg] tracking-tight">
+                    Our mission
+                  </a>
                 </li>
               </ul>
             </div>
