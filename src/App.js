@@ -47,7 +47,7 @@ function App() {
             );
           })}
         </Routes>
-        <ScrollToTopButton/>
+        <ScrollToTopButton />
       </div>
     </Router>
   );

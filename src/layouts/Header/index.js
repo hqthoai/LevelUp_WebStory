@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { FaMagnifyingGlass, FaRegPenToSquare } from 'react-icons/fa6';
 import { TextField } from '@mui/material';
-import imgLink from './luanmeme.jpg'
+import imgLink from './luanmeme.jpg';
 const Header = () => {
   const [searchHover, setSearchHover] = useState(false);
   const [searchKey, setSearchKey] = useState('');
@@ -9,7 +9,10 @@ const Header = () => {
   const [hoverFlag, setHoverFlag] = useState(true);
 
   return (
-    <div className="w-full h-[100px] flex justify-around  bg-[#1f2029] fixed items-center z-9999 ">
+    <div
+      className="w-full h-[100px] flex justify-around  bg-[#1f2029] fixed items-center  "
+      style={{ zIndex: 999 }}
+    >
       {/* Logo */}
       <div className="flex  flex-col justify-between items-center ">
         <img
@@ -28,14 +31,19 @@ const Header = () => {
       {/* Navigation */}
       <div className="w-[55%] h-[100%]">
         <ul className="flex w-full h-[100%]  items-center text-lg text-white font-mono leading-10 font-semibold">
-          <div className="relative " onMouseOver={() => setOpen(true)}>
+          <div
+            className="relative "
+            onMouseEnter={() => setOpen(true)}
+            onMouseLeave={() => {
+              setOpen(false);
+            }}
+          >
             <li className=" relative h-[100px] px-6 hover:bg-[#1a1b21] border-b-4 border-solid border-transparent hover:border-orange-700 hover:text-orange-700 transform -skew-x-[20deg] flex items-center">
               <div className="transform skew-x-[20deg] tracking-tighter">About Us</div>
             </li>
-
             <div
               className={`absolute top-full left-[-20px] bg-[#1a1b29] w-[200px] transition-all transform origin-top duration-300 z-50  ${
-                open ? 'scale-y-100' : 'scale-y-0'
+                open ? 'scale-y-100 ' : 'scale-y-0 '
               }
                 }`}
               onMouseLeave={() => {

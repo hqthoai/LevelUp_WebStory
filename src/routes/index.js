@@ -1,9 +1,10 @@
-import ProductionCard from '../components/ProductionCard/ProductionCard';
-import MainBanner from '../components/MainBanner/index.js';
-import DefaultLayout from '../layouts/DefaultLayout/DefaultLayout.js';
-import HomePage from '../pages/HomePage.js';
-
-const publicRoutes = [{ path: '/', component: HomePage, layout: DefaultLayout }];
+import DefaultLayout from '../layouts/DefaultLayout/DefaultLayout';
+import HomePage from '../pages/HomePage';
+import AboutUs from '../pages/AboutUs';
+const publicRoutes = [
+  { path: '/', component: HomePage, layout: DefaultLayout },
+  { path: '/about-us', component: AboutUs, layout: DefaultLayout },
+];
 
 const privateRoutes = [];
 
