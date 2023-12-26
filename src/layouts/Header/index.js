@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { FaMagnifyingGlass, FaRegPenToSquare } from 'react-icons/fa6';
 import { TextField } from '@mui/material';
-
+import imgLink from './luanmeme.jpg';
 const Header = () => {
   const [searchHover, setSearchHover] = useState(false);
   const [searchKey, setSearchKey] = useState('');
@@ -9,18 +9,22 @@ const Header = () => {
   const [hoverFlag, setHoverFlag] = useState(true);
 
   return (
-    <div className="w-full h-[100px] flex justify-around  bg-[#1f2029] fixed items-center ">
+    <div
+      className="w-full h-[100px] flex justify-around  bg-[#1f2029] fixed items-center  "
+      style={{ zIndex: 999 }}
+    >
       {/* Logo */}
-      <div className="flex  flex-col justify-between items-center">
+      <div className="flex  flex-col justify-between items-center ">
         <img
-          src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/480px-Instagram_logo_2016.svg.png"
+          // src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/480px-Instagram_logo_2016.svg.png"
+          src={imgLink}
           alt="Logo"
-          className={`w-[62px] h-[49px] cursor-pointer block m-auto  `}
+          className={`w-[62px] h-[49px] cursor-pointer block m-auto rounded-[5px]`}
         />
         <label
           className={`text-[#980B0B] duration-200 lg:text-[20px] sm:text-[30px] min-[320px]:text-[30px] font-semibold`}
         >
-          Universe Fitness
+          Luan Luan
         </label>
       </div>
 

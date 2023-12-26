@@ -34,3 +34,32 @@
         }
     }
 }
+.breadcrumb-img-two::before,
+.breadcrumb-img-two::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-image: url('https: //themebeyond.com/demo/haldalive/wp-content/…alda/assets/img/images/breadcrumb_img_shape01.png');
+    width: 210px;
+    height: 319px;
+    pointer-events: none;
+    transition: .5s linear;
+    z-index: -1;
+}
+
+*,
+::after,
+::before {
+    box-sizing: border-box;
+}
+.breadcrumb-img-two::after {
+    background-image: url("https: //themebeyond.com/demo/haldalive/wp-content/…alda/assets/img/images/breadcrumb_img_shape02.png");
+    left: auto;
+    right: 0;
+}
+.breadcrumb-img-two {
+    max-width: 534px;
+    
+    z-index: 1;
+}
