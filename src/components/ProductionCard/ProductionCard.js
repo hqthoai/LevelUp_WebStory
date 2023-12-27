@@ -21,8 +21,8 @@ export default function ProductionCard({ originalText, businessText }) {
           <div className="w-full md:w-1/2 px-[16px]">
             <div className="bg-[#1f2029] px-4 md:px-[43px] py-4 md:py-[48px]">
               <div>
-                <div className="nav-link relative">
-                  <div className="flex mb-4 md:mb-[30px] pb-4 md:pb-[36px]">
+                <div className="nav-link ">
+                  <div className="flex mb-4 md:mb-[30px] pb-4 md:pb-[36px] relative">
                     <div
                       className={`font-bold mr-2 cursor-pointer uppercase ${
                         activeTab === 1 ? 'text-[#ff8503]' : 'text-white'
@@ -32,9 +32,8 @@ export default function ProductionCard({ originalText, businessText }) {
                       Originals
                     </div>
                     <div
-                      className={`ml-1 font-bold cursor-pointer uppercase before:content-['-'] before:mr-3 before:text-gray-500  ${
-                        activeTab === 2 ? 'text-[#ff8503]' : 'text-white'
-                      }`}
+                      className={`ml-12 font-bold cursor-pointer uppercase business-tab
+                      ${activeTab === 2 ? 'text-[#ff8503]' : 'text-white'}`}
                       onClick={() => handleTabChange(2)}
                     >
                       Business
@@ -44,7 +43,7 @@ export default function ProductionCard({ originalText, businessText }) {
                   </div>
                 </div>
 
-                <div className="mt-4">
+                <div className="mt-4 min-h-[300px]">
                   {activeTab === 1 && (
                     <div className="fade-in">
                       <h2 className="text-white text-[50px] uppercase font-bold mb-2 font-san">
@@ -106,7 +105,7 @@ export default function ProductionCard({ originalText, businessText }) {
             <img
               src="https://themebeyond.com/demo/haldalive/wp-content/uploads/2022/04/game_img01.png"
               alt="Your Image"
-              className="w-full h-full"
+              className="w-full h-[560px]"
             />
           </div>
         </div>

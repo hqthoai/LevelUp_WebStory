@@ -1,16 +1,23 @@
+.business-tab::before {
+  content: '';
+  position: absolute;
+  margin-left: -35px;
+  top: 20%;
+  width: 15px;
+  height: 4px;
+  background-color: #373843;
+}
+
 .fade-in {
+  opacity: 1;
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
     opacity: 1;
-    animation: fadeIn 1s ease-in-out;
   }
-  
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
-  }
-  
-  
-  
+}

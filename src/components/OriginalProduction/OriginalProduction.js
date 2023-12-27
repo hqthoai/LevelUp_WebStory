@@ -2,7 +2,7 @@ import React from 'react';
 import './OriginalProduction.scss';
 function OriginalProduction() {
   return (
-    <div className="relative">
+    <div className="relative font-display">
       <section className="original-area pb-[70px] before-bg">
         <div className="original-container mx-[64px] px-[15px]">
           <div className="leading-[1.1] pl-[30px] relative">
@@ -30,7 +30,7 @@ function OriginalProduction() {
                   Culture-Enriched
                 </div>
                 {/* content */}
-                <div className="text-white text-[16px] font-normal w-[80%] text-justify">
+                <div className="text-white text-[16px] font-light font-pop w-[80%] text-justify ">
                   Each of our creations tells a unique story, and through our games, players can
                   explore the depth of culture and social like never before.
                 </div>
@@ -61,7 +61,7 @@ function OriginalProduction() {
                   Engaging narratives
                 </div>
                 {/* content */}
-                <div className="text-white text-[16px] font-normal w-[80%] text-justify">
+                <div className="text-white text-[16px]  font-light font-pop w-[80%] text-justify">
                   We don't stop at Roblox and Steam. We can seamlessly integrate your game into
                   websites and mobile apps, expanding your reach and player base. We work closely
                   with you every step of the way, ensuring your vision is realized and your game
@@ -94,7 +94,7 @@ function OriginalProduction() {
                   Unique experiences
                 </div>
                 {/* content */}
-                <div className="text-white text-[16px] font-normal w-[80%] text-justify">
+                <div className="text-white text-[16px]  font-light font-pop w-[80%] text-justify">
                   We thrive on innovation, constantly pushing the boundaries of what's possible in
                   game development and create gameplay mechanics that challenge the status quo.
                 </div>

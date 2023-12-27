@@ -1,6 +1,6 @@
 function AboutUsText() {
   return (
-    <section className="pt-[110px] pb-[120px]">
+    <section className="pt-[110px] pb-[120px] font-display">
       <div className="about-container px-[15px] mx-[64px]">
         <div className="flex">
           <div className="flex flex-col justify-center items-center px-[15px]">
@@ -11,9 +11,9 @@ function AboutUsText() {
               </h2>
             </div>
 
-            <div className="flex flex-col">
+            <div className="flex flex-col font-pop font-light">
               <div className="about-content justify-center text-center flex flex-row">
-                <p className="text-white font-medium text-[18px]">
+                <p className="text-white text-[18px]">
                   Starting as a freelance team in 2019 with a group of four specialists, we worked
                   on game projects for the Activision. Level Up Studio is ready to embrace every
                   challenge and strives to build brand value in the technology industry with our

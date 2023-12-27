@@ -7,7 +7,7 @@ const AboutUsMainBanner = ({ title }) => {
   return (
     // <div className="w-full h-screen bg-[#151212]">
     // {' '}
-    <div className="w-full h-[550px] bg-[#151212]">
+    <div className="w-full h-[550px] bg-[#151212] font-display">
       <div
         className="w-full h-[550px] flex justify-center items-center relative"
         style={{
@@ -20,11 +20,11 @@ const AboutUsMainBanner = ({ title }) => {
       >
         <div className="flex justify-around items-center w-full ">
           <div className="text-white mb-[100px] ">
-            <h2 className="text-[60px] leading-tighter  leading-none font-bold mb-6 font-oswald font-refault font-sans">
+            <h2 className="text-[60px] leading-tighter uppercase leading-none font-bold mb-6">
               {/* ABOUT US */}
               {title}
             </h2>
-            <button className=" text-[12px]  select-none bg-[#ff8503] border-0 mt-1 hover:bg-black text-white leading-tighter  cursor-pointer inline-flex  font-bold tracking-wide leading-none mb-0 py-5 px-3 text-center uppercase  relative font-oswald">
+            <button className=" text-[16px]  select-none bg-[#ff8503] border-0 mt-1 hover:bg-black text-white leading-tighter  cursor-pointer inline-flex  font-bold tracking-wide leading-none mb-0 py-5 px-3 text-center uppercase  relative">
               HOME {'   '}
               <FaAnglesRight className="ml-3 text-lg mr-3 mt-[-3px]" />
               {'   '} {title}
