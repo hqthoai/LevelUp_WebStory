@@ -113,7 +113,7 @@ function MemOurTeam({ title }) {
                   <p className="text-[16px] uppercase font-bold bg-clip-text text-transparent bg-gradient-to-r from-[#ec4899] from-10% via-purple-500 via-30% to-[#18ffff] to-90%">
                     {mem.memName}
                   </p>
-                  <p className=" font-semibold text-[12px]">{mem.memPosition}</p>
+                  <p className=" font-semibold text-[12px] mt-2">{mem.memPosition}</p>
                 </div>
                 {isHovered === index && (
                   <div className="absolute inset-0 flex items-center justify-center opacity-100 transition-opacity cursor-pointer text-[#ff8502]">

@@ -59,7 +59,7 @@ const MainBanner = () => {
           </h4>
           <button className="clip-custom select-none bg-orange-500 border-0 mt-5 hover:bg-black text-white cursor-pointer inline-flex text-lg font-semibold tracking-wide leading-none mb-0 py-6 px-10 text-center uppercase relative font-oswald">
             ABOUT US {'   '}
-            <FaCirclePlay className="ml-3" />
+            <FaCirclePlay className="ml-3 text-[18px]" />
           </button>
         </div>
       </div>
