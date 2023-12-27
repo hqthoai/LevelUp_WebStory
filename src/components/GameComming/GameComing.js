@@ -15,7 +15,7 @@ export default function GamingComing() {
   };
 
   return (
-    <section className="pb-[120px]">
+    <section className="pb-[120px] font-display">
       <div className="card-container p-[15px] mx-4 md:mx-16">
         <div className="flex">
           <div className="flex flex-col px-[15px]" style={{ flex: '4' }}>
@@ -26,7 +26,7 @@ export default function GamingComing() {
               <h6 className="title text-white text-[30px] font-bold uppercase mb-[20px]">
                 Pet Balloon
               </h6>
-              <p className="text-justify mb-[36px] text-white">
+              <p className="text-start mb-[36px] font-pop font-light text-white">
                 We specialize in crafting immersive gaming experiences that not only celebrate the
                 rich culture of Vietnam but are also tailored to suit the preferences of global
                 players.

@@ -14,7 +14,7 @@ export default function ProductionCard({ originalText, businessText }) {
   };
 
   return (
-    <section className="pt-[120px] pb-[100px]">
+    <section className="pt-[120px] pb-[100px] font-display">
       <div className="card-container p-[15px] mx-4 md:mx-16">
         <div className="flex flex-col md:flex-row items-center justify-between">
           {/* Tabs */}
@@ -52,7 +52,7 @@ export default function ProductionCard({ originalText, businessText }) {
                           SEIZE THE LIFE ON <span className="text-[#ff8503]">METAVERSE</span>
                         </a>
                       </h2>
-                      <p className="text-white text-justify text-[14px]  w-[90%]">
+                      <p className="text-white text-justify font-pop font-light text-[14px]  w-[90%]">
                         {/* Gaming should be more than just entertainment; it should be an enriching
                         experience and community-centric approach! Our team is passionate about
                         incorporating elements of Vietnamese culture into your game, offering global
@@ -77,7 +77,7 @@ export default function ProductionCard({ originalText, businessText }) {
                           <span className="text-[#ff8503]">OFFER</span>
                         </a>
                       </h2>
-                      <p className="text-white text-justify  text-[14px] w-[90%]">
+                      <p className="text-white text-justify font-pop font-light text-[14px] w-[90%]">
                         {/* From storytelling to gameplay mechanics, we tailor every aspect of your game
                         to resonate with the target audience, ensuring an unforgettable experience.
                         We work closely with you to bring your game concept to life. Whether it's a
