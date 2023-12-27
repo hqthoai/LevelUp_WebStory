@@ -14,12 +14,11 @@ const Header = () => {
       style={{ zIndex: 999 }}
     >
       {/* Logo */}
-      <a className="flex  flex-col justify-between items-center " href='/'>
+      <a className="flex  flex-col justify-between items-center " href="/">
         <img
           // src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/480px-Instagram_logo_2016.svg.png"
           src={imgLink}
           alt="Logo"
-          
           className={`w-[62px] h-[49px] cursor-pointer block m-auto rounded-[5px]`}
         />
         <label
@@ -30,7 +29,7 @@ const Header = () => {
       </a>
 
       {/* Navigation */}
-      <div className="w-[55%] h-[100%]">
+      <div className="w-[55%] h-[100%] uppercase">
         <ul className="flex w-full h-[100%]  items-center text-lg text-white font-mono leading-10 font-semibold">
           <div
             className="relative "
@@ -43,7 +42,7 @@ const Header = () => {
               <div className="transform skew-x-[20deg] tracking-tighter">About Us</div>
             </li>
             <div
-              className={`absolute top-full left-[-20px] bg-[#1a1b29] w-[200px] transition-all transform origin-top duration-300 z-50  ${
+              className={`absolute top-full uppercase left-[-20px] bg-[#1a1b29] w-[200px] transition-all transform origin-top duration-300 z-50  ${
                 open ? 'scale-y-100 ' : 'scale-y-0 '
               }
                 }`}
@@ -66,7 +65,9 @@ const Header = () => {
             </div>
           </div>
           <li className="h-[100%] px-6 hover:bg-[#1a1b21] border-b-4 border-solid border-transparent hover:border-orange-700 hover:text-orange-700 transform -skew-x-[30deg] flex items-center">
-            <div className="transform skew-x-[30deg] tracking-tighter">Our squad</div>
+            <a href="/our-team" className="transform skew-x-[30deg] tracking-tighter">
+              Our team
+            </a>
           </li>
           <li className="h-[100%] px-6 hover:bg-[#1a1b21] border-b-4 border-solid border-transparent hover:border-orange-700 hover:text-orange-700 transform -skew-x-[30deg] flex items-center">
             <a href="/production" className="transform skew-x-[30deg] tracking-tight">
@@ -114,7 +115,7 @@ const Header = () => {
           <div className="w-[30px] h-[30px] bg-[#15151a] flex items-center justify-center ">
             <FaRegPenToSquare />
           </div>
-          <div className=" border-solid border-transparent text-normal leading-6 font-mono  font-semibold">
+          <div className=" border-solid border-transparent text-normal leading-6 font-mono  font-semibold uppercase">
             Log-in
           </div>
         </div>

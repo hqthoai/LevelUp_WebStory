@@ -10,8 +10,9 @@ function Production() {
     <Box>
       <AboutUs title={"Production"}/>
       <ProductionCard/>
+      <ProductionBusiness originalText="" businessText=""/>
       <SlideImage/>
-      <ProductionBusiness/>
+
     </Box>
   )
 }
