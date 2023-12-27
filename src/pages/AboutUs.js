@@ -7,7 +7,9 @@ const AboutUs = ({ title = 'About Us' }) => {
     <div>
       <div className="bg-slate-800 min-h-[100vh] w-full">
         <AboutUsMainBanner title={title} />
-        <AboutUsText />
+        { title === "About Us" ?
+          (<AboutUsText />) : (<></>)
+        }
       </div>
     </div>
   );

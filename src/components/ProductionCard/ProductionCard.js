@@ -1,10 +1,16 @@
 import React, { useState } from 'react';
 import './ProductionCard.scss';
-export default function ProductionCard() {
+
+export default function ProductionCard({ originalText, businessText }) {
   const [activeTab, setActiveTab] = useState(1);
+  const [animate, setAnimate] = useState(true); // State for controlling animation
 
   const handleTabChange = (tabIndex) => {
-    setActiveTab(tabIndex);
+    setAnimate(false); // Disable animation
+    setTimeout(() => {
+      setActiveTab(tabIndex);
+      setAnimate(true); // Enable animation after a short delay
+    }, 100);
   };
 
   return (
@@ -47,10 +53,19 @@ export default function ProductionCard() {
                         </a>
                       </h2>
                       <p className="text-white text-justify text-[14px]  w-[90%]">
-                        Gaming should be more than just entertainment; it should be an enriching
+                        {/* Gaming should be more than just entertainment; it should be an enriching
                         experience and community-centric approach! Our team is passionate about
                         incorporating elements of Vietnamese culture into your game, offering global
-                        next-generation players a unique and immersive adventure in the metaverse.
+                        next-generation players a unique and immersive adventure in the metaverse. */}
+                        {originalText || (
+                          <div>
+                            Gaming should be more than just entertainment; it should be an enriching
+                            experience and community-centric approach! Our team is passionate about
+                            incorporating elements of Vietnamese culture into your game, offering
+                            global next-generation players a unique and immersive adventure in the
+                            metaverse.{' '}
+                          </div>
+                        )}
                       </p>
                     </div>
                   )}
@@ -63,11 +78,21 @@ export default function ProductionCard() {
                         </a>
                       </h2>
                       <p className="text-white text-justify  text-[14px] w-[90%]">
-                        From storytelling to gameplay mechanics, we tailor every aspect of your game
+                        {/* From storytelling to gameplay mechanics, we tailor every aspect of your game
                         to resonate with the target audience, ensuring an unforgettable experience.
                         We work closely with you to bring your game concept to life. Whether it's a
                         historical epic, a fantastical journey, or a modern adventure, LEVEL UP
-                        STUDIO are here to turn your vision into a captivating reality.
+                        STUDIO are here to turn your vision into a captivating reality. */}
+                        {businessText || (
+                          <div>
+                            From storytelling to gameplay mechanics, we tailor every aspect of your
+                            game to resonate with the target audience, ensuring an unforgettable
+                            experience. We work closely with you to bring your game concept to life.
+                            Whether it's a historical epic, a fantastical journey, or a modern
+                            adventure, LEVEL UP STUDIO are here to turn your vision into a
+                            captivating reality.
+                          </div>
+                        )}
                       </p>
                     </div>
                   )}
