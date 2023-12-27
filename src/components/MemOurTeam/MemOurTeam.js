@@ -53,7 +53,6 @@ const listDistribute = [
     memImg: 'https://i.ytimg.com/vi/hZ5KbowMIN0/maxresdefault.jpg',
     memName: 'Nguyễn Thị Minh Phúc',
     memPosition: '2D ARTIST',
-
   },
   {
     id: 9,
@@ -79,8 +78,8 @@ function MemOurTeam({ title }) {
   const [isHovered, setIsHovered] = useState(null);
 
   return (
-    <div className="bg-[#1c121f] h-[210vh] flex items-center flex-col">
-      <div className="flex justify-center items-center">
+    <div className="bg-[#1c121f] h-full flex items-center flex-col mb-[110px]">
+      <div className="flex justify-center items-center mt-16">
         <div className="content-around text-center">
           <h3 className="uppercase text-white font-bold text-[24px] pb-4">
             {title || <div>MEET OUR TEAM</div>}
@@ -97,7 +96,7 @@ function MemOurTeam({ title }) {
       <div className="grid grid-cols-4 gap-8  mt-10">
         {listDistribute.map((mem, index) => (
           <div className="bg-black w-[250px] h-[300px] p-3">
-            <div key={index} className="relative w-[120px] h-[120px] mx-auto my-4 ">
+            <div key={index} className="relative w-[70%] h-[120px] mx-auto my-4 ">
               <div
                 className="w-full h-full border-2 border-transparent group  relative "
                 onMouseEnter={() => setIsHovered(index)}
@@ -109,12 +108,13 @@ function MemOurTeam({ title }) {
                     className="w-full h-full object-cover cursor-pointer group-hover:border-[#ff8502]"
                     alt={mem.memName}
                   />
-                  
                 </div>
                 <div className="text-white text-center items-center justify-between mt-4">
-                    <p className="text-[12px]">{mem.memName}</p>
-                    <p className=" font-bold text-[12px]">{mem.memPosition}</p>
-                  </div>
+                  <p className="text-[16px] uppercase font-bold bg-clip-text text-transparent bg-gradient-to-r from-[#ec4899] from-10% via-purple-500 via-30% to-[#18ffff] to-90%">
+                    {mem.memName}
+                  </p>
+                  <p className=" font-semibold text-[12px]">{mem.memPosition}</p>
+                </div>
                 {isHovered === index && (
                   <div className="absolute inset-0 flex items-center justify-center opacity-100 transition-opacity cursor-pointer text-[#ff8502]">
                     <a target="_blank" href={`https://www.facebook.com/${mem.name}`}>
