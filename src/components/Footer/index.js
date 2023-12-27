@@ -21,7 +21,7 @@ const Footer = () => {
   }, []);
 
   return (
-    <div className="w-full bg-[#151212] h-[500px]  flex self-end p-3">
+    <div className="w-full bg-[#151212] h-[500px]  flex self-end">
       <footer
         className="w-full flex flex-col text-white h-fit "
         style={{
