@@ -21,7 +21,7 @@ const Footer = () => {
   }, []);
 
   return (
-    <div className="w-full bg-[#151212] h-[500px] mt-[20%] flex self-end p-3">
+    <div className="w-full bg-[#151212] h-[500px]  flex self-end">
       <footer
         className="w-full flex flex-col text-white h-fit "
         style={{
@@ -41,7 +41,10 @@ const Footer = () => {
               <Text as="span" className="text-white">
                 LEVELUP
               </Text>
-              <Text as="span" className="bg-orange-700 bg-clip-text text-transparent">
+              {/* <Text as="span" className="text-orange-700 bg-clip-text">
+                STUDIO
+              </Text> */}
+              <Text as="span" className="text-transparent bg-clip-text bg-orange-700">
                 STUDIO
               </Text>
             </Link>
