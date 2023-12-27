@@ -43,7 +43,7 @@ function TeamMembers({title}) {
   const [isHovered, setIsHovered] = useState(null);
 
   return (
-    <div className="bg-[#1c121f] h-[900px] flex items-center flex-col">
+    <div className="bg-[#1c121f] h-[900px] flex items-center flex-col ">
       <div className="flex justify-center items-center">
         <div className="content-around text-center">
           <h3 className="uppercase text-white font-bold text-[24px] pb-4">{title|| <div>active team members</div>}</h3>
@@ -56,9 +56,10 @@ function TeamMembers({title}) {
         </div>
       </div>
 
-      <div className="grid grid-cols-4 gap-8 justify-center items-center mt-10">
+      
+      <div className="grid grid-cols-4 gap-8 justify-center items-center mt-10 ">
         {listDistribute.map((mem, index) => (
-          <div className="bg-black w-[250px] h-[300px] p-3">
+          <div className="bg-black w-[250px] h-[300px] p-3 border-b-2 border-[#242424]">
             <div key={index} className="relative w-[120px] h-[120px] mx-auto my-4 ">
               <div
                 className="w-full h-full rounded-full border-2 border-transparent group hover:border-[#ff8502] relative "

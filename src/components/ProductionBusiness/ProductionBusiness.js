@@ -10,7 +10,7 @@ function ProductionBusiness() {
         EXPERIENCE JUST FOR FEARLESS BUSINESS OFFER
       </p>
       <div className="flex items-center justify-center mt-[50px]">
-        <div className="bg-[#1a1b21] w-[420px] h-[250px] flex items-center justify-around mr-8 rounded-[5px] px-[16px]">
+        <div className="bg-[#1a1b21] w-[420px] h-[250px] flex items-center justify-around mr-8 rounded-[5px] px-[16px]  hover:translate-y-[-6px]">
           <div>
             <FaHotjar className="text-[#ff8503] text-[60px] mr-4 mt-[-110px]" />
           </div>
@@ -28,12 +28,12 @@ function ProductionBusiness() {
             </div>
           </div>
         </div>
-        <div className="bg-[#1a1b21] w-[420px] h-[250px] flex items-center justify-around mr-8 rounded-[5px] px-[16px]">
+        <div className="bg-[#1a1b21] w-[420px] h-[250px] flex items-center justify-around mr-8 rounded-[5px] px-[16px]  hover:translate-y-[-6px]">
           <div>
             <HiSearchCircle className="text-[#ff8503] text-[60px] mr-4 mt-[-106px]" />
           </div>
 
-          <div className='mt-[24px]'>
+          <div className="mt-[24px]">
             {/* title */}
             <div className="text-[white] font-bold text-[24px] uppercase hover:text-[#ff8503] hover:cursor-pointer ">
               Discover
@@ -47,12 +47,12 @@ function ProductionBusiness() {
             </div>
           </div>
         </div>
-        <div className="bg-[#1a1b21] w-[420px] h-[250px] flex items-center justify-around mr-8 rounded-[5px] px-[16px]">
+        <div className="bg-[#1a1b21] w-[420px] h-[250px] flex items-center justify-around mr-8 rounded-[5px] px-[16px]  hover:translate-y-[-6px]">
           <div>
             <SiOnlyoffice className="text-[#ff8503] text-[60px] mr-4 mt-[-110px]" />
           </div>
 
-          <div className='mt-[-40px]'>
+          <div className="mt-[-40px]">
             {/* title */}
             <div className="text-[white] font-bold text-[24px] uppercase hover:text-[#ff8503] hover:cursor-pointer ">
               Unique experiences
