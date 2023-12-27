@@ -33,7 +33,7 @@ const Header = () => {
   }, []);
 
   return (
-    <div className="header-container relative">
+    <div className="header-container relative font-display">
       <div
         className={` w-full h-[110px] duration-2000 animate__animated flex justify-around bg-[#1f2029] ${
           subNavBarToggle ? 'fixed animate__fadeInDown ' : ' header-before logo-after'
@@ -57,7 +57,7 @@ const Header = () => {
 
         {/* Navigation */}
         <div className="w-[55%] h-[100%] uppercase">
-          <ul className="flex w-full h-[100%]  items-center text-lg text-white font-mono leading-10 font-semibold">
+          <ul className="flex w-full h-[100%] items-center text-[15px] text-white leading-10 font-semibold">
             <div
               className="relative "
               onMouseEnter={() => setOpen(true)}
@@ -77,7 +77,7 @@ const Header = () => {
                   setOpen(false);
                 }}
               >
-                <ul className="flex flex-col py-4 ">
+                <ul className="flex flex-col py-4 text-[15px]">
                   <li className="px-4 w-full hover:bg-[#1a1b21] hover:text-orange-700 ">
                     <a href="/about-us" className="transform skew-x-[30deg] tracking-tight">
                       About US

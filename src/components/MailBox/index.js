@@ -16,7 +16,7 @@ const MailBox = () => {
     console.log(data);
   };
   return (
-    <div>
+    <div className="font-display">
       {' '}
       <div className="container mx-auto px-4 py-12 h-fit">
         <div className="grid grid-cols-2 ">
@@ -29,7 +29,7 @@ const MailBox = () => {
           ></iframe>
           <div className="basis-[50%] space-y-3 text-pink-500">
             <label className="text-2xl leading-8 font-semibold uppercase">Mail box</label>
-            <p className="text-white italic ">
+            <p className="text-white italic font-pop font-light">
               Join us in making gaming history! Contact us today to turn your dream game into a
               reality.
             </p>
@@ -43,7 +43,7 @@ const MailBox = () => {
                     <label className="text-[#18ffff]">First Name</label>
                     <input
                       type="text"
-                      className="w-full p-2  text-black"
+                      className="w-full p-2 text-black font-light font-pop"
                       placeholder="First Name"
                       {...register('firstName', {
                         required: 'Name is required',
@@ -57,7 +57,7 @@ const MailBox = () => {
                     <label className="text-[#18ffff]">Last Name</label>
                     <input
                       type="text"
-                      className="w-full p-2  text-black"
+                      className="w-full p-2 text-black font-light font-pop"
                       placeholder="Last Name"
                       {...register('lastName', {
                         required: 'Name is required',
@@ -73,7 +73,7 @@ const MailBox = () => {
                 </label>
                 <input
                   type="text"
-                  className="w-full p-2  text-black"
+                  className="w-full p-2 text-black font-light font-pop"
                   placeholder="Company Name"
                   {...register('companyName', {
                     required: 'Company Name is required',
@@ -87,7 +87,7 @@ const MailBox = () => {
                 </label>
                 <input
                   type="text"
-                  className="w-full p-2   text-black"
+                  className="w-full p-2 text-black font-light font-pop"
                   placeholder="Email"
                   {...register('email', {
                     required: 'Email is required',
@@ -103,7 +103,7 @@ const MailBox = () => {
                   Message <span className="text-[#00838f]">(Required)</span>
                 </label>
                 <textarea
-                  className="w-full p-2  text-black"
+                  className="w-full p-2 text-black font-light font-pop"
                   placeholder="Message"
                   {...register('message', {
                     required: 'Message is required',

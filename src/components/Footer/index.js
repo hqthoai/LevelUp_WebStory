@@ -21,7 +21,7 @@ const Footer = () => {
   }, []);
 
   return (
-    <div className="w-full bg-[#151212] h-[500px]  flex self-end">
+    <div className="w-full bg-[#151212] h-[500px]  flex self-end font-pop">
       <footer
         className="w-full flex flex-col text-white h-fit "
         style={{
@@ -33,17 +33,14 @@ const Footer = () => {
           <div className="flex flex-col gap-6 ">
             <Link
               to={`/`}
-              className="font-extrabold flex items-center relative md:text-3xl text-2xl"
+              className="font-extrabold flex items-center relative md:text-3xl text-2xl font-display"
             >
-              <Text as="span" className="text-orange-700 absolute -top-5 md:left-5 left-3">
+              {/* <Text as="span" className="text-orange-700 absolute -top-5 md:left-5 left-3">
                 <Barbell size={35} color="currentColor" weight="fill" />
-              </Text>
+              </Text> */}
               <Text as="span" className="text-white">
                 LEVELUP
               </Text>
-              {/* <Text as="span" className="text-orange-700 bg-clip-text">
-                STUDIO
-              </Text> */}
               <Text as="span" className="text-transparent bg-clip-text bg-orange-700">
                 STUDIO
               </Text>
@@ -72,7 +69,7 @@ const Footer = () => {
           <div className="flex flex-col  gap-6">
             <Text
               as="h1"
-              className="text-zinc-300 text-2xl font-bold border-solid border-orange-700 border-r-8"
+              className="text-zinc-300 text-2xl font-display font-bold border-solid border-orange-700 border-r-8"
             >
               {FooterTexts.quickLinks.caption}
             </Text>
@@ -94,7 +91,7 @@ const Footer = () => {
           <div className="flex flex-col  gap-6">
             <Text
               as="h1"
-              className="text-zinc-300 text-2xl font-bold  border-solid border-orange-700 border-r-8"
+              className="text-zinc-300 text-2xl font-display font-bold  border-solid border-orange-700 border-r-8"
             >
               {FooterTexts.recentPosts.caption}
             </Text>
@@ -103,7 +100,7 @@ const Footer = () => {
                 <div className="flex space-x-3">
                   <img className="w-[35%]" src={name.img} />
                   <div>
-                    <label className="font-semibold leading-4 text-base hover:text-orange-700">
+                    <label className="font-semibold font-display leading-4 text-base hover:text-orange-700">
                       {name.name}
                     </label>
                     <div className="flex items-center space-x-2">
@@ -119,7 +116,7 @@ const Footer = () => {
           <div className="flex flex-col  gap-4">
             <Text
               as="h1"
-              className="text-zinc-300 text-2xl font-bold  border-solid border-orange-700 border-r-8"
+              className="text-zinc-300 text-2xl font-display font-bold  border-solid border-orange-700 border-r-8"
             >
               {FooterTexts.followUs.caption}
             </Text>

@@ -5,7 +5,7 @@ import { HiSearchCircle } from 'react-icons/hi';
 import { SiOnlyoffice } from 'react-icons/si';
 function ProductionBusiness() {
   return (
-    <Box sx={{ minHeight: '100vh' }}>
+    <Box sx={{ minHeight: '100vh' }} className="font-display">
       <p className="text-white font-bold text-[40px] text-center">
         EXPERIENCE JUST FOR FEARLESS BUSINESS OFFER
       </p>
@@ -21,7 +21,7 @@ function ProductionBusiness() {
               Hot deal
             </div>
             {/* content */}
-            <div className="text-[#cfcfcf] text-[14px]">
+            <div className="text-[#cfcfcf] text-[14px] font-light font-pop">
               Our commitment to innovation and efficiency allows us to break barriers by lowering
               the cost of making games without compromising on quality. We believe that great games
               should be accessible to all, and we're making that vision a reality.
@@ -39,7 +39,7 @@ function ProductionBusiness() {
               Discover
             </div>
             {/* content */}
-            <div className="text-[#cfcfcf] text-[14px]">
+            <div className="text-[#cfcfcf] text-[14px] font-light font-pop">
               We don't stop at Roblox and Steam. We can seamlessly integrate your game into websites
               and mobile apps, expanding your reach and player base. We work closely with you every
               step of the way, ensuring your vision is realized and your game succeeds in the
@@ -58,7 +58,7 @@ function ProductionBusiness() {
               Unique experiences
             </div>
             {/* content */}
-            <div className="text-[#cfcfcf] text-[14px]">
+            <div className="text-[#cfcfcf] text-[14px] font-light font-pop">
               We thrive on innovation, constantly pushing the boundaries of what's possible in game
               development and create gameplay mechanics that challenge the status quo.
             </div>

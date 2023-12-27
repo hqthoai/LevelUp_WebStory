@@ -46,15 +46,15 @@ const MainBanner = () => {
         onMouseMove={handleMouseMove}
         onMouseLeave={handleMouseLeave}
       >
-        <div className="text-white text-center">
+        <div className="text-white text-center font-display">
           <h2
-            className="text-[120px] leading-loose font-bold font-refault"
+            className="text-[120px] leading-tight font-bold font-refault"
             style={{ ...hoverStyles }}
           >
             LEVEL UP STUDIO
           </h2>
 
-          <h4 className="text-white uppercase text-2xl font-semibold tracking-wide ml-5 font-oswald">
+          <h4 className="text-white uppercase text-2xl font-semibold tracking-wide ml-5 ">
             We will win when we want.
           </h4>
           <button className="clip-custom select-none bg-orange-500 border-0 mt-5 hover:bg-black text-white cursor-pointer inline-flex text-lg font-semibold tracking-wide leading-none mb-0 py-6 px-10 text-center uppercase relative font-oswald">
