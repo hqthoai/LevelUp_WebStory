@@ -8,7 +8,15 @@ import MailBox from '../components/MailBox';
 
 function HomePage() {
   return (
-    <div className="bg-slate-800 min-h-[100vh] w-full">
+    <div
+      className="min-h-[100vh] w-full"
+      style={{
+        backgroundImage:
+          'url("https://themebeyond.com/demo/haldalive/wp-content/uploads/2022/04/area_bg-scaled.jpg")',
+        backgroundPosition: 'center center',
+        backgroundSize: 'cover',
+      }}
+    >
       <MainBanner />
       <ProductionCard />
       <GameComing />

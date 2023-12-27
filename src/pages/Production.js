@@ -8,7 +8,14 @@ import OriginalProduction from '../components/OriginalProduction/OriginalProduct
 
 function Production() {
   return (
-    <Box>
+    <Box
+      sx={{
+        backgroundImage:
+          'url("https://themebeyond.com/demo/haldalive/wp-content/uploads/2022/04/area_bg-scaled.jpg")',
+        backgroundPosition: 'center center',
+        backgroundSize: 'cover',
+      }}
+    >
       <AboutUs title={'Production'} />
       <ProductionCard />
       <OriginalProduction />
