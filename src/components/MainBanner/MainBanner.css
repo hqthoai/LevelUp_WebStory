@@ -70,3 +70,11 @@
     bottom: 0;
     z-index: -1;
 }
+
+
+
+.hover-3d:hover {
+    transform: perspective(1000px) rotateY(10deg); /* Adjust the rotation value as needed */
+    transition: transform 0.5s ease; /* Add a smooth transition effect */
+  }
+  
