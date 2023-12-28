@@ -18,7 +18,7 @@ const AboutUsMainBanner = ({ title }) => {
           backgroundPosition: 'center',
         }}
       >
-        <div className="flex justify-around items-center w-full ">
+        <div className="flex justify-around items-center w-full">
           <div className="text-white mb-[100px] ">
             <h2 className="text-[60px] leading-tighter uppercase leading-none font-bold mb-6">
               {/* ABOUT US */}
@@ -30,11 +30,13 @@ const AboutUsMainBanner = ({ title }) => {
               {'   '} {title}
             </button>
           </div>
-          <div className="breadcrumb-img-two text-center mt-[-100px]">
-            <img
-              src="https://themebeyond.com/demo/haldalive/wp-content/themes/halda/assets/img/images/breadcrumb_img04.png"
-              alt="img"
-            />
+          <div className="text-center mt-[-100px] relative">
+            <div className="breadcrumb-img-two">
+              <img
+                src="https://themebeyond.com/demo/haldalive/wp-content/themes/halda/assets/img/images/breadcrumb_img04.png"
+                alt="img"
+              />
+            </div>
           </div>
 
           <div
