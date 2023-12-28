@@ -1,6 +1,6 @@
 function Loading() {
   return (
-    <div class="absolute bg-white bg-opacity-60 z-10 h-full w-full flex items-center justify-center">
+    <div class="absolute bg-slate-700 bg-opacity-60 z-10 h-full w-full flex items-center justify-center">
       <div class="flex items-center">
         <div class="flex items-center justify-center h-screen  fixed left-[50%] top-[10%]">
           <div class="relative">
