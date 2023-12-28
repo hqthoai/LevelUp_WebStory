@@ -46,9 +46,9 @@ const MainBanner = () => {
         onMouseMove={handleMouseMove}
         onMouseLeave={handleMouseLeave}
       >
-        <div className="text-white text-center font-display">
+        <div className="text-white text-center font-display w-[90%]">
           <h2
-            className="text-[120px] leading-tight font-bold font-refault"
+            className="text-[120px] leading-tight font-bold font-refault "
             style={{ ...hoverStyles }}
           >
             LEVEL UP STUDIO
