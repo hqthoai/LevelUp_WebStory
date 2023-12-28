@@ -81,7 +81,7 @@ function OriginalProduction() {
               </div>
             </div>
             <div
-              className="w-[420px] h-[250px] flex items-center justify-around mr-8  px-[16px] relative
+              className="w-[420px] h-[250px] flex items-center justify-around px-[16px] relative
             bg-gradient-to-t from-[#f95249e3] from-40% via-[#ff6a00c7] via-80% to-[#ff8503c0] to-1%
             hover:translate-y-[-8px] transition duration-500 ease-in-out"
               style={{
