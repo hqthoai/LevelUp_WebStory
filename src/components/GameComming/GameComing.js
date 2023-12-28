@@ -23,9 +23,7 @@ export default function GamingComing() {
               <div className="sub-title text-[16px] font-bold uppercase text-[#ff8503] mb-[13px]">
                 CHECK OUT OUR NEXT GAME!
               </div>
-              <h6 className="title text-white text-[30px] font-bold uppercase mb-[20px]">
-                Pet Balloon
-              </h6>
+              <h6 className="title text-white text-[30px] font-bold mb-[20px]">PetBalloon</h6>
               <p className="text-start mb-[36px] font-pop font-light text-white">
                 We specialize in crafting immersive gaming experiences that not only celebrate the
                 rich culture of Vietnam but are also tailored to suit the preferences of global
