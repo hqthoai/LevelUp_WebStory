@@ -34,30 +34,45 @@
         }
     }
 }
-.breadcrumb-img-two::before,
-.breadcrumb-img-two::after {
+.breadcrumb-img-two::before
+{
     content: "";
     position: absolute;
-    left: 0;
+    left: -88px;
     top: 0;
-    background-image: url('https: //themebeyond.com/demo/haldalive/wp-content/…alda/assets/img/images/breadcrumb_img_shape01.png');
+    background-image: url('https://themebeyond.com/demo/haldalive/wp-content/themes/halda/assets/img/images/breadcrumb_img_shape01.png');
     width: 210px;
     height: 319px;
     pointer-events: none;
     transition: .5s linear;
-    z-index: -1;
+    z-index: 1;
 }
-
+.breadcrumb-img-two::after {
+    content: "";
+    position: absolute;
+    left: auto;
+    top: 0;
+    right: -88px;
+    background-image: url('https://themebeyond.com/demo/haldalive/wp-content/themes/halda/assets/img/images/breadcrumb_img_shape02.png');
+    width: 210px;
+    height: 319px;
+    pointer-events: none;
+    transition: .5s linear;
+    z-index: 1;
+}
+.breadcrumb-img-two:hover::before {
+    transform: translateX(50px);
+}
+  
+.breadcrumb-img-two:hover::after {
+    transform: translateX(-50px);
+}
 *,
 ::after,
 ::before {
     box-sizing: border-box;
 }
-.breadcrumb-img-two::after {
-    background-image: url("https: //themebeyond.com/demo/haldalive/wp-content/…alda/assets/img/images/breadcrumb_img_shape02.png");
-    left: auto;
-    right: 0;
-}
+
 .breadcrumb-img-two {
     max-width: 534px;
     
