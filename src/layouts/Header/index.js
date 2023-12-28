@@ -1,22 +1,47 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { FaMagnifyingGlass, FaRegPenToSquare } from 'react-icons/fa6';
 import './index.scss';
 import { TextField } from '@mui/material';
+import 'animate.css';
+
 import imgLink from './luanmeme.jpg';
 const Header = () => {
   const [searchHover, setSearchHover] = useState(false);
   const [searchKey, setSearchKey] = useState('');
   const [open, setOpen] = useState(false);
   const [hoverFlag, setHoverFlag] = useState(true);
+  const [subNavBarToggle, setSubNavBarToggle] = useState(false);
+  // animation scrolling for sub-navbar
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY;
+
+      // Kiểm tra scrollPosition và cập nhật trạng thái của isFixed
+      if (window.scrollY > 150) {
+        setSubNavBarToggle(true);
+      } else {
+        setSubNavBarToggle(false);
+      }
+    };
+
+    // Thêm sự kiện cuộn trang
+    window.addEventListener('scroll', handleScroll);
+    // Xóa sự kiện khi component bị hủy
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
 
   return (
-    <div className="header-container relative">
+    <div className="header-container relative font-display">
       <div
-        className="header-before w-full h-[100px] flex justify-around  bg-[#1f2029] fixed items-center"
+        className={` w-full h-[110px] duration-2000 animate__animated flex justify-around bg-[#1f2029] ${
+          subNavBarToggle ? 'fixed animate__fadeInDown ' : ' header-before logo-after'
+        } items-center`}
         style={{ zIndex: 999 }}
       >
         {/* Logo */}
-        <a className="flex flex-col justify-between items-center logo-after" href="/">
+        <a className="flex flex-col justify-between items-center " href="/">
           <img
             // src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/480px-Instagram_logo_2016.svg.png"
             src={imgLink}
@@ -32,7 +57,7 @@ const Header = () => {
 
         {/* Navigation */}
         <div className="w-[55%] h-[100%] uppercase">
-          <ul className="flex w-full h-[100%]  items-center text-lg text-white font-mono leading-10 font-semibold">
+          <ul className="flex w-full h-[100%] items-center text-[15px] text-white leading-10 font-semibold">
             <div
               className="relative "
               onMouseEnter={() => setOpen(true)}
@@ -40,11 +65,11 @@ const Header = () => {
                 setOpen(false);
               }}
             >
-              <li className=" relative h-[100px] px-6 hover:bg-[#1a1b21] border-b-4 border-solid border-transparent hover:border-orange-700 hover:text-orange-700 transform -skew-x-[20deg] flex items-center">
+              <li className=" relative h-[110px] px-6 hover:bg-[#1a1b21] border-b-4 border-solid border-transparent hover:border-orange-700 hover:text-orange-700 transform -skew-x-[20deg] flex items-center">
                 <div className="transform skew-x-[20deg] tracking-tighter">About Us</div>
               </li>
               <div
-                className={`absolute top-full uppercase left-[-20px] bg-[#1a1b29] w-[200px] transition-all transform origin-top duration-300 z-50  ${
+                className={`absolute top-full uppercase left-[-21px] bg-[#1a1b29] w-[200px] transition-all transform origin-top duration-300 z-50  ${
                   open ? 'scale-y-100 ' : 'scale-y-0 '
                 }
                 }`}
@@ -52,7 +77,7 @@ const Header = () => {
                   setOpen(false);
                 }}
               >
-                <ul className="flex flex-col py-4 ">
+                <ul className="flex flex-col py-4 text-[15px]">
                   <li className="px-4 w-full hover:bg-[#1a1b21] hover:text-orange-700 ">
                     <a href="/about-us" className="transform skew-x-[30deg] tracking-tight">
                       About US

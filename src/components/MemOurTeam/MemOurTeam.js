@@ -78,7 +78,7 @@ function MemOurTeam({ title }) {
   const [isHovered, setIsHovered] = useState(null);
 
   return (
-    <div className="bg-[#1c121f] h-full flex items-center flex-col mb-[110px]">
+    <div className="bg-[#1c121f] h-full flex items-center flex-col mb-[110px] font-display">
       <div className="flex justify-center items-center mt-16">
         <div className="content-around text-center">
           <h3 className="uppercase text-white font-bold text-[24px] pb-4">
@@ -113,7 +113,7 @@ function MemOurTeam({ title }) {
                   <p className="text-[16px] uppercase font-bold bg-clip-text text-transparent bg-gradient-to-r from-[#ec4899] from-10% via-purple-500 via-30% to-[#18ffff] to-90%">
                     {mem.memName}
                   </p>
-                  <p className=" font-semibold text-[12px]">{mem.memPosition}</p>
+                  <p className="text-[12px] mt-2  font-medium font-pop">{mem.memPosition}</p>
                 </div>
                 {isHovered === index && (
                   <div className="absolute inset-0 flex items-center justify-center opacity-100 transition-opacity cursor-pointer text-[#ff8502]">

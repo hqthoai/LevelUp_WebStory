@@ -5,11 +5,17 @@ import AboutUsText from '../components/AboutArea/AboutUsText.js';
 const AboutUs = ({ title = 'About Us' }) => {
   return (
     <div>
-      <div className="bg-slate-800 min-h-[100vh] w-full">
+      <div
+        className="min-h-fit w-full"
+        style={{
+          backgroundImage:
+            'url("https://themebeyond.com/demo/haldalive/wp-content/uploads/2022/04/area_bg-scaled.jpg")',
+          backgroundPosition: 'center center',
+          backgroundSize: 'cover',
+        }}
+      >
         <AboutUsMainBanner title={title} />
-        { title === "About Us" ?
-          (<AboutUsText />) : (<></>)
-        }
+        {title === 'About Us' ? <AboutUsText /> : <></>}
       </div>
     </div>
   );

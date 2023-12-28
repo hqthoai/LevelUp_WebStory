@@ -39,14 +39,16 @@ const listDistribute = [
   },
 ];
 
-function TeamMembers({title}) {
+function TeamMembers({ title }) {
   const [isHovered, setIsHovered] = useState(null);
 
   return (
-    <div className="bg-[#1c121f] h-[900px] flex items-center flex-col ">
+    <div className="bg-[#1c121f] h-[900px] flex items-center flex-col font-display">
       <div className="flex justify-center items-center">
         <div className="content-around text-center">
-          <h3 className="uppercase text-white font-bold text-[24px] pb-4">{title|| <div>active team members</div>}</h3>
+          <h3 className="uppercase text-white font-bold text-[24px] pb-4">
+            {title || <div>active team members</div>}
+          </h3>
           <div className="flex justify-center items-center">
             <img
               src="https://themebeyond.com/demo/haldalive/wp-content/themes/halda/assets/img/images/section_line.png"
@@ -56,7 +58,6 @@ function TeamMembers({title}) {
         </div>
       </div>
 
-      
       <div className="grid grid-cols-4 gap-8 justify-center items-center mt-10 ">
         {listDistribute.map((mem, index) => (
           <div className="bg-black w-[250px] h-[300px] p-3 border-b-2 border-[#242424]">
@@ -101,7 +102,7 @@ function TeamMembers({title}) {
               </div>
             </div>
             <div className="flex items-center justify-between uppercase mt-3">
-              <p className="text-zinc-300">Sub name</p>
+              <p className="text-zinc-300 font-pop font-light">Sub name</p>
               <p className="text-[#ff8502] text-[12px]">follow us</p>
             </div>
           </div>
