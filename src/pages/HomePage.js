@@ -19,7 +19,7 @@ function HomePage() {
     >
       <MainBanner />
       <ProductionCard />
-      <GameComing />
+      {/* <GameComing /> */}
       <TeamMembers />
       <SlideImage />
       <MailBox />

@@ -1,11 +1,13 @@
+import AboutUsText from '../components/AboutArea/AboutUsText';
 import GamingDefined from '../components/GamingDefined';
-import AboutUsMainBanner from '../components/MainBanner/AboutUsMainBanner';
-
+import OurMissionText from '../components/OurMissionText/OurMissionText';
+import AboutUsMainBanner from '../components/MainBanner/AboutUsMainBanner'
 function OurMission({ title = 'Our Mission' }) {
   return (
     <div>
       <AboutUsMainBanner title={title} />
-      <GamingDefined />
+      {/* <GamingDefined /> */}
+      <OurMissionText/>
     </div>
   );
 }

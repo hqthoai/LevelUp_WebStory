@@ -7,7 +7,7 @@ const AboutUsMainBanner = ({ title }) => {
   return (
     // <div className="w-full h-screen bg-[#151212]">
     // {' '}
-    <div className="w-full h-[550px] bg-[#151212] font-display">
+    <div className="w-full h-[550px] bg-[#151212] font-display overflow-x-hidden">
       <div
         className="w-full h-[550px] flex justify-center items-center relative"
         style={{
