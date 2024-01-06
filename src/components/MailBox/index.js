@@ -21,9 +21,9 @@ const MailBox = () => {
       <div className="container mx-auto px-4 py-12 h-fit">
         {/* <div className="grid grid-cols-2 col-span-2 "> */}
         <div className="flex items-center justify-center ">
-          <div className="basis-[50%] space-y-3 text-pink-500 ">
-            <label className="text-2xl text-[#ff8530] leading-8 font-semibold uppercase flex items-center justify-center ">Mail box</label>
-            <p className="text-yellow italic font-pop font-light">
+          <div className="basis-[50%] space-y-3  text-[#ff8530]">
+            <label className="text-2xl  leading-8 font-semibold uppercase text-[#ff8530] flex items-center justify-center ">Mail box</label>
+            <p className="text-white italic font-pop font-light">
               Join us in making gaming history! Contact us today to turn your dream game into a
               reality.
             </p>
