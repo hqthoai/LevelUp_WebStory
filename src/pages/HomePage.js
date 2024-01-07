@@ -5,6 +5,7 @@ import ScrollToTopButton from '../components/ScrollToTop/ScrollToTopButton';
 import SlideImage from '../components/SlideImage/SlideImage';
 import MainBanner from '../components/MainBanner';
 import MailBox from '../components/MailBox';
+import HomeOurServices from '../components/HomeOurServices/HomeOurServices';
 
 function HomePage() {
   return (
@@ -19,9 +20,10 @@ function HomePage() {
     >
       <MainBanner />
       <ProductionCard />
-      <GameComing />
+      {/* <GameComing /> */}
       <TeamMembers />
-      <SlideImage />
+      <HomeOurServices/>
+      {/* <SlideImage /> */}
       <MailBox />
     </div>
   );

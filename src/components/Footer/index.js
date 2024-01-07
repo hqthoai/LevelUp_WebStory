@@ -31,7 +31,7 @@ const Footer = () => {
       >
         <div className="mx-[64px] px-[15px]">
           <main className="w-full lg:pt-28 lg:pb-12 pt-20 pb-12 grid md:grid-cols-4 lg:gap-8 md:gap-5 gap-8 ">
-            <div className="flex flex-col gap-6 ">
+            <div className="flex flex-col gap-6 col-span-2">
               <Link
                 to={`/`}
                 className="font-extrabold flex items-center relative md:text-3xl text-2xl font-display"
@@ -67,7 +67,7 @@ const Footer = () => {
             </div>
 
             {/* CATEGORIES  */}
-            <div className="flex flex-col  gap-6">
+            <div className="flex flex-col  gap-6 ml-[-100px] ">
               <Text
                 as="h1"
                 className="text-zinc-300 text-2xl font-display font-bold border-solid border-[#ff8503] border-r-8"
@@ -89,7 +89,7 @@ const Footer = () => {
             </div>
 
             {/* RECENT POSTS */}
-            <div className="flex flex-col  gap-6">
+            {/* <div className="flex flex-col  gap-6">
               <Text
                 as="h1"
                 className="text-zinc-300 text-2xl font-display font-bold  border-solid border-[#ff8503] border-r-8"
@@ -112,9 +112,9 @@ const Footer = () => {
                   </div>
                 ))}
               </ul>
-            </div>
+            </div> */}
             {/* FOLLOW US  */}
-            <div className="flex flex-col  gap-4">
+            <div className="flex flex-col  gap-6 ">
               <Text
                 as="h1"
                 className="text-zinc-300 text-2xl font-display font-bold  border-solid border-[#ff8503] border-r-8"

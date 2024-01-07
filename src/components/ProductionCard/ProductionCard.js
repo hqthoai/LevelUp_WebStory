@@ -72,8 +72,8 @@ export default function ProductionCard({ originalText, businessText }) {
                     <div className="fade-in">
                       <h2 className="text-white text-[50px] uppercase font-bold mb-2">
                         <a href="/production">
-                          EXPERIENCE JUST FOR FEARLESS BUSINESS{' '}
-                          <span className="text-[#ff8503]">OFFER</span>
+                          EXPERIENCE JUST FOR {' '}
+                          <span className="text-[#ff8503]">FEARLESS BUSINESS</span>
                         </a>
                       </h2>
                       <p className="text-white text-justify font-pop font-light text-[14px] w-[90%]">

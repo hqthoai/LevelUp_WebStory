@@ -3,13 +3,19 @@ import { Box, IconButton } from '@mui/material';
 import { FaCircleArrowRight, FaCircleArrowLeft } from 'react-icons/fa6';
 import ArrowCircleRightIcon from '@mui/icons-material/ArrowCircleRight';
 import ArrowCircleLeftIcon from '@mui/icons-material/ArrowCircleLeft';
+import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
+import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
+import KeyboardDoubleArrowRightIcon from '@mui/icons-material/KeyboardDoubleArrowRight';
+import KeyboardDoubleArrowLeftIcon from '@mui/icons-material/KeyboardDoubleArrowLeft';
 // import images
 import ActivisionBlizzard from '../../assets/images/activision_blizzard-logo.png';
 import RobloxGlobal from '../../assets/images/Roblox.png';
 import GiantyVN from '../../assets/images/GiantyVN.png';
 import RollingAnt from '../../assets/images/RollingAnt.png';
 import S8XTPN from '../../assets/images/s8x-tpn-logo.png';
-import ChanhPhuongFilm from '../../assets/images/channels4_profile.jpg';
+// import ChanhPhuongFilm from '../../assets/images/channels4_profile.jpg';
+import ChanhPhuongFilm from '../../assets/images/channels4_profile_400.jpg';
+
 import JungVonMattAg from '../../assets/images/JungVonMattAg.jpg';
 import CasperDash from '../../assets/images/CasperDash.png';
 import Capcom from '../../assets/images/Capcom-logo.png';
@@ -100,7 +106,7 @@ function SlideImage() {
   useEffect(() => {
     const slideInterval = setInterval(() => {
       handleGoToNextImage();
-    }, 4000);
+    }, 2500);
 
     return () => {
       clearInterval(slideInterval);
@@ -135,7 +141,7 @@ function SlideImage() {
         </div>
       </div>
 
-      <Box className="flex justify-center mt-[-28px]">
+      <Box className="flex justify-center mt-[-58px]">
         <IconButton
           sx={{
             '&:hover': {
@@ -144,10 +150,10 @@ function SlideImage() {
             },
           }}
         >
-          <ArrowCircleLeftIcon sx={{ color: 'white', mr: 78 }} onClick={handleGoToPrevImage} />
+          <KeyboardDoubleArrowLeftIcon sx={{ color: 'white', mr: 70, fontSize:'48px' }} onClick={handleGoToPrevImage} />
         </IconButton>
         <IconButton>
-          <ArrowCircleRightIcon sx={{ color: 'white' }} onClick={handleGoToNextImage} />
+          <KeyboardDoubleArrowRightIcon sx={{ color: 'white', fontSize:'48px' }} onClick={handleGoToNextImage} />
         </IconButton>
       </Box>
     </div>

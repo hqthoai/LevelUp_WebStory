@@ -27,7 +27,7 @@ const listDistribute = [
     id: 4,
     memImg: 'https://mfiles.alphacoders.com/100/1005060.png',
     memName: 'Trương Thụy Khánh An',
-    memPosition: '  HEAD OF MARKETING RESEARCH & DEVELOPMENT',
+    memPosition: 'HEAD OF MARKETING RESEARCH & DEVELOPMENT',
   },
   {
     id: 5,
@@ -70,6 +70,12 @@ const listDistribute = [
     id: 11,
     memImg: 'https://i.ytimg.com/vi/hZ5KbowMIN0/maxresdefault.jpg',
     memName: 'Nguyễn Quốc Trung',
+    memPosition: 'DEVELOPER',
+  },
+  {
+    id: 12,
+    memImg: 'https://e1.pxfuel.com/desktop-wallpaper/502/361/desktop-wallpaper-rengoku-smile-rengoku-death.jpg',
+    memName: 'Luân\'s Team',
     memPosition: 'DEVELOPER',
   },
 ];
@@ -134,7 +140,7 @@ function MemOurTeam({ title }) {
           </div>
         ))}
       </div>
-      <div className="mt-10">
+      {/* <div className="mt-10">
         <a
           className="btn bg-[#ff8503] px-[33px] py-[18px] text-white font-bold uppercase inline-block text-[16px] transition-all duration-300"
           href="#"
@@ -144,7 +150,7 @@ function MemOurTeam({ title }) {
         >
           Show our full team
         </a>
-      </div>
+      </div> */}
     </div>
   );
 }

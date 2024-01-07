@@ -5,6 +5,7 @@ import ProductionCard from '../components/ProductionCard/ProductionCard';
 import SlideImage from '../components/SlideImage/SlideImage';
 import ProductionBusiness from '../components/ProductionBusiness/ProductionBusiness';
 import OriginalProduction from '../components/OriginalProduction/OriginalProduction';
+import OriginalProductionBusiness from '../components/OriginalProductionBusiness/OriginalProductionBusiness';
 
 function Production() {
   return (
@@ -20,7 +21,8 @@ function Production() {
       <ProductionCard />
       <OriginalProduction />
       <SlideImage />
-      <ProductionBusiness originalText="" businessText="" />
+      {/* <ProductionBusiness originalText="" businessText="" /> */}
+      <OriginalProductionBusiness/>
     </Box>
   );
 }
