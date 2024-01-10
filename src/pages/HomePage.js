@@ -6,6 +6,7 @@ import SlideImage from '../components/SlideImage/SlideImage';
 import MainBanner from '../components/MainBanner';
 import MailBox from '../components/MailBox';
 import HomeOurServices from '../components/HomeOurServices/HomeOurServices';
+import HomeBlog from '../components/HomeBlog/HomeBlog';
 
 function HomePage() {
   return (
@@ -21,9 +22,11 @@ function HomePage() {
       <MainBanner />
       <ProductionCard />
       {/* <GameComing /> */}
+      <SlideImage />
+      <HomeOurServices />
       <TeamMembers />
-      <HomeOurServices/>
-      {/* <SlideImage /> */}
+      <HomeBlog />
+
       <MailBox />
     </div>
   );
