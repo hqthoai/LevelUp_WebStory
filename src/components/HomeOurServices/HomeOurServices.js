@@ -1,5 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Crown from '../../assets/images/crown.jpg';
+import { Box, IconButton } from '@mui/material';
+import KeyboardDoubleArrowRightIcon from '@mui/icons-material/KeyboardDoubleArrowRight';
+import KeyboardDoubleArrowLeftIcon from '@mui/icons-material/KeyboardDoubleArrowLeft';
 
 const listServices = [
   {
@@ -31,15 +34,40 @@ const listServices = [
 ];
 
 function HomeOurServices({ title }) {
-    const [hoveredService, setHoveredService] = useState(null);
+  const [hoveredService, setHoveredService] = useState(null);
+  const [currentImages, setCurrentImages] = useState([0, 1, 2]);
 
-    const handleMouseEnter = (index) => {
-      setHoveredService(index);
+  // back to the previous image
+  const handleGoToPrevImage = () => {
+    const firstImageIndex = currentImages[0];
+    const prevImageIndex = (firstImageIndex - 1 + listServices.length) % listServices.length;
+    setCurrentImages((prevImages) => [prevImageIndex, ...prevImages.slice(0, -1)]);
+  };
+
+  // next image
+  const handleGoToNextImage = () => {
+    const lastImageIndex = currentImages[currentImages.length - 1];
+    const nextImageIndex = (lastImageIndex + 1) % listServices.length;
+    setCurrentImages((prevImages) => [...prevImages.slice(1), nextImageIndex]);
+  };
+
+  useEffect(() => {
+    const slideInterval = setInterval(() => {
+      handleGoToNextImage();
+    }, 2500);
+
+    return () => {
+      clearInterval(slideInterval);
     };
-  
-    const handleMouseLeave = () => {
-      setHoveredService(null);
-    };
+  }, [currentImages]);
+
+  const handleMouseEnter = (index) => {
+    setHoveredService(index);
+  };
+
+  const handleMouseLeave = () => {
+    setHoveredService(null);
+  };
 
   return (
     <div className="bg-[#1c121f] h-[600px] flex items-center flex-col font-display">
@@ -57,38 +85,60 @@ function HomeOurServices({ title }) {
         </div>
       </div>
 
-      <div className="grid grid-cols-6 justify-center items-center mt-10 ">
-        {listServices.map((service, index) => (
-          <div className="  h-[300px] mr-4" key={index}>
-            {/* <div
-              key={index}
-              className="border-2 border-[#232323] mx-auto my-4 "
-            > */}
-             <div
-              className={`border-2 border-[#232323] mx-auto my-4 ${
-                hoveredService === index ? 'group-hover:border-[#ff8502]' : ''
-              }`}
-              onMouseEnter={() => handleMouseEnter(index)}
+      {/* <Box className="flex justify-between mt-[-58px]"> */}
+      <Box className="flex justify-between items-center">
+        <IconButton
+          sx={{
+            '&:hover': {
+              color: 'transparent',
+              backgroundColor: 'transparent',
+            },
+          }}
+        >
+          <KeyboardDoubleArrowLeftIcon
+            sx={{ color: 'white', fontSize: '48px' }}
+            onClick={handleGoToPrevImage}
+          />
+        </IconButton>
+        <div className="grid grid-cols-3 justify-center gap-8 items-center mt-10 ">
+          {currentImages.map((i, currentIndex) => (
+            <div
+              onMouseEnter={() => handleMouseEnter(currentIndex)}
               onMouseLeave={handleMouseLeave}
+              className="hover:cursor-pointer border-2 border-[#ff8503] relative p-4"
             >
-              <img
-                src={service.imgService}
-                className="w-[360px] h-full object-contain cursor-pointer group-hover:border-[#ff8502]"
-                alt={service.name}
-              />
+              <a
+                key={currentIndex}
+                // href user to game link
+                href={listServices[i].gameUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-[350px] h-[450px]"
+              >
+                <img
+                  src={listServices[i].imgService}
+                  alt={listServices[i].name}
+                  className="h-auto max-w-full opacity-100  transition-transform duration-1000"
+                  // className="contain h-auto max-w-full"
+                />
+                {hoveredService === currentIndex && (
+                  <div className="absolute bottom-[-40px] left-0 right-0  text-white p-2 text-center">
+                    {/* <div className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-70 text-white p-8 text-center"> */}
+                    <p>Contact Us!</p>
+                  </div>
+                )}
+              </a>
+              <p className="text-white text-center">{listServices[i].name}</p>
             </div>
-            <div className="flex items-center justify-center text-white mt-6">
-              <p className=" font-bold text-[18px]">{service.name}</p>
-            </div>
-            {hoveredService === index && (
-              <div className="flex items-center justify-center text-white mt-2">
-                <p>Contact Us!</p>
-              </div>
-            )}
-          </div>
-        ))}
-      </div>
-      
+          ))}
+        </div>
+        <IconButton>
+          <KeyboardDoubleArrowRightIcon
+            sx={{ color: 'white', fontSize: '48px' }}
+            onClick={handleGoToNextImage}
+          />
+        </IconButton>
+      </Box>
     </div>
   );
 }
