@@ -111,7 +111,7 @@ function TeamMembers({ title }) {
       <div className="mt-10">
         <a
           className="btn bg-[#ff8503] px-[33px] py-[18px] text-white font-bold uppercase inline-block text-[16px] transition-all duration-300"
-          href="#"
+          href="/our-team"
           style={{
             clipPath: 'polygon(90% 0, 100% 34%, 100% 100%, 10% 100%, 0 66%, 0 0)',
           }}
