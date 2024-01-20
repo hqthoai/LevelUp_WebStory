@@ -10,7 +10,8 @@ const Footer = () => {
   const renderIcon = useCallback((element) => {
     switch (element) {
       case 0:
-        return <MapPin size={20} color="currentColor" />;
+        // return <MapPin size={20} color="currentColor" />;
+        return <EnvelopeSimple size={20} color="currentColor" />;
       case 1:
         return <EnvelopeSimple size={20} color="currentColor" />;
       case 2:

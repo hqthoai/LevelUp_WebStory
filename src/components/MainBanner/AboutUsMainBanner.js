@@ -4,7 +4,7 @@ import BreadCrumb from '../../assets/images/breadcrumb_line.png';
 import './MainBanner.css';
 import 'animate.css';
 
-const AboutUsMainBanner = ({ title }) => {
+const AboutUsMainBanner = ({ title, textSize }) => {
   return (
     // <div className="w-full h-screen bg-[#151212]">
     // {' '}
@@ -22,7 +22,11 @@ const AboutUsMainBanner = ({ title }) => {
         >
           <div className="flex justify-around items-center w-full">
             <div className="text-white mb-[100px] ">
-              <h2 className="text-[60px] leading-tighter uppercase leading-none font-bold mb-6">
+              <h2
+                className={`${
+                  textSize || `text-[60px]`
+                } leading-tighter uppercase leading-none font-bold mb-6`}
+              >
                 {/* ABOUT US */}
                 {title}
               </h2>
@@ -75,7 +79,7 @@ const AboutUsMainBanner = ({ title }) => {
             </div>
           </div>
         </div>
-      
+
         {/* <img
           src={BreadCrumb}
           alt="img"
@@ -83,7 +87,7 @@ const AboutUsMainBanner = ({ title }) => {
         ></img> */}
       </div>
       <div className="relative">
-      <div className="border-t-2 border-[#ff8503] text-white breadcrumb"></div>
+        <div className="border-t-2 border-[#ff8503] text-white breadcrumb"></div>
       </div>
     </div>
     // </div>

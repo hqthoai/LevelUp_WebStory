@@ -11,11 +11,11 @@ export const FooterTexts = {
       },
       {
         name: 'About Us',
-        url: '/about',
+        url: '/about-us',
       },
       {
         name: 'Our squad',
-        url: '/schedule',
+        url: '/our-team',
       },
       {
         name: 'Production',
@@ -42,15 +42,15 @@ export const FooterTexts = {
   contacts: {
     caption: 'RECENT POSTS',
     names: [
+      // {
+      //   name: 'Address: No.1, Vo Van Ngan, Thu duc, HCMC',
+      // },
       {
-        name: 'Address: No.1, Vo Van Ngan, Thu duc, HCMC',
+        name: 'Email: contactme@levelupstudio.asia',
       },
-      {
-        name: 'Email: levelup@example.com',
-      },
-      {
-        name: 'Phone: +1 424-248-8496',
-      },
+      // {
+      //   name: 'Phone: +1 424-248-8496',
+      // },
     ],
   },
   recentPosts: {

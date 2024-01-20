@@ -2,7 +2,7 @@ import React from 'react';
 import AboutUsMainBanner from '../components/MainBanner/AboutUsMainBanner.js';
 import AboutUsText from '../components/AboutArea/AboutUsText.js';
 
-const AboutUs = ({ title = 'About Us' }) => {
+const AboutUs = ({ title = 'About Us', textSize }) => {
   return (
     <div>
       <div
@@ -14,7 +14,7 @@ const AboutUs = ({ title = 'About Us' }) => {
           backgroundSize: 'cover',
         }}
       >
-        <AboutUsMainBanner title={title} />
+        <AboutUsMainBanner title={title} textSize={textSize} />
         {title === 'About Us' ? <AboutUsText /> : <></>}
       </div>
     </div>

@@ -1,88 +1,95 @@
 import React, { useState } from 'react';
-// import ImgLink from './url.png';
-import { FaSquareTwitter, FaTwitch, FaPinterest, FaVimeo } from 'react-icons/fa6';
+import NguyenThanhDuy from '../../assets/images/NguyenThanhDuy.jpg';
+import DaoChiHao from '../../assets/images/DaoChiHao.jpg';
+import NguyenPhungYenNhi from '../../assets/images/NguyenPhungYenNhi.jpg';
+import TruongThuyKhanhAn from '../../assets/images/TruongThuyKhanhAn.jpg';
+import VoThiMYLinh from '../../assets/images/VoThiMYLinh.jpg';
+import NguyenPhamTienHung from '../../assets/images/NguyenPhamTienHung.jpg';
+import NguyenHuuTrong from '../../assets/images/NguyenHuuTrong.jpg';
+import NguyenThiMinhPhuc from '../../assets/images/NguyenThiMinhPhuc.jpg';
+import VoHoangVuong from '../../assets/images/VoHoangVuong.jpg';
+import TongVuongPhat from '../../assets/images/TongVuongPhat.jpg';
+import NguyenQuocTrung from '../../assets/images/NguyenQuocTrung.jpg';
 
 const listDistribute = [
   {
     id: 1,
-    memImg: 'https://mfiles.alphacoders.com/100/1005060.png',
+    memImg: NguyenThanhDuy,
     memName: 'Nguyễn Thanh Duy',
     memPosition: 'FOUNDER & CEO',
   },
   {
     id: 2,
-    memImg: 'https://i.ytimg.com/vi/hZ5KbowMIN0/maxresdefault.jpg',
+    memImg: DaoChiHao,
     memName: 'Đào Chí Hào',
     memPosition: 'TECHLEAD',
   },
   {
     id: 3,
-    memImg:
-      'https://e1.pxfuel.com/desktop-wallpaper/502/361/desktop-wallpaper-rengoku-smile-rengoku-death.jpg',
+    memImg: NguyenPhungYenNhi,
+
     memName: 'Nguyễn Phùng Yến Nhi',
     memPosition: 'ART DIRECTOR',
   },
 
   {
     id: 4,
-    memImg: 'https://mfiles.alphacoders.com/100/1005060.png',
+    memImg: TruongThuyKhanhAn,
     memName: 'Trương Thụy Khánh An',
-    memPosition: 'HEAD OF MARKETING RESEARCH & DEVELOPMENT',
+    memPosition: 'GAME DIRECTOR',
   },
   {
     id: 5,
-    memImg: 'https://i.ytimg.com/vi/hZ5KbowMIN0/maxresdefault.jpg',
+
+    memImg: VoThiMYLinh,
     memName: 'Võ Thị Mỹ Linh',
     memPosition: 'GAME DESIGNER',
   },
   {
     id: 6,
-    memImg:
-      'https://e1.pxfuel.com/desktop-wallpaper/502/361/desktop-wallpaper-rengoku-smile-rengoku-death.jpg',
+    memImg: NguyenPhamTienHung,
     memName: 'Nguyễn Phạm Tiến Hưng',
     memPosition: '3D DESIGNER & PROGRAMMER',
   },
   {
     id: 7,
-    memImg: 'https://mfiles.alphacoders.com/100/1005060.png',
+    memImg: NguyenHuuTrong,
     memName: 'Nguyễn Trọng Hữu',
     memPosition: '3D ARTIST',
   },
   {
     id: 8,
-    memImg: 'https://i.ytimg.com/vi/hZ5KbowMIN0/maxresdefault.jpg',
+    memImg: NguyenThiMinhPhuc,
     memName: 'Nguyễn Thị Minh Phúc',
     memPosition: '2D ARTIST',
   },
   {
     id: 9,
-    memImg: 'https://i.ytimg.com/vi/hZ5KbowMIN0/maxresdefault.jpg',
+    memImg: VoHoangVuong,
     memName: 'Võ Hoàng Vương',
     memPosition: 'DEVELOPER',
   },
   {
     id: 10,
-    memImg: 'https://i.ytimg.com/vi/hZ5KbowMIN0/maxresdefault.jpg',
+    memImg: TongVuongPhat,
     memName: 'Tống Phát Vương',
     memPosition: 'DEVELOPER',
   },
   {
     id: 11,
-    memImg: 'https://i.ytimg.com/vi/hZ5KbowMIN0/maxresdefault.jpg',
+    memImg: NguyenQuocTrung,
     memName: 'Nguyễn Quốc Trung',
     memPosition: 'DEVELOPER',
   },
   {
     id: 12,
-    memImg: 'https://e1.pxfuel.com/desktop-wallpaper/502/361/desktop-wallpaper-rengoku-smile-rengoku-death.jpg',
-    memName: 'Luân\'s Team',
-    memPosition: 'DEVELOPER',
+    memImg: TruongThuyKhanhAn,
+    memName: 'Trương Thụy Khánh An',
+    memPosition: 'HEAD OF MARKETING RESEARCH & DEVELOPMENT',
   },
 ];
 
 function MemOurTeam({ title }) {
-  const [isHovered, setIsHovered] = useState(null);
-
   return (
     <div className="bg-[#1c121f] h-full flex items-center flex-col mb-[110px] font-display">
       <div className="flex justify-center items-center mt-16">
@@ -103,31 +110,24 @@ function MemOurTeam({ title }) {
         {listDistribute.map((mem, index) => (
           <div className="bg-black w-[250px] h-[300px] p-3">
             <div key={index} className="relative w-[70%] h-[120px] mx-auto my-4 ">
-              <div
-                className="w-full h-full border-2 border-transparent group  relative "
-                onMouseEnter={() => setIsHovered(index)}
-                onMouseLeave={() => setIsHovered(null)}
-              >
+              <div className="w-full h-full border-2 border-transparent group  relative ">
                 <div className="overflow-hidden w-full h-full rounded-[5px] ">
                   <img
                     src={mem.memImg}
-                    className="w-full h-full object-cover cursor-pointer group-hover:border-[#ff8502]"
+                    className="w-full h-full object-contain cursor-pointer group-hover:border-[#ff8502]"
                     alt={mem.memName}
                   />
                 </div>
                 <div className="text-white text-center items-center justify-between mt-4">
-                  <p className="text-[16px] uppercase font-bold bg-clip-text text-transparent bg-gradient-to-r from-[#ec4899] from-10% via-purple-500 via-30% to-[#18ffff] to-90%">
+                  {/* <p className="text-[16px] uppercase font-bold bg-clip-text text-transparent bg-gradient-to-r from-[#ec4899] from-10% via-purple-500 via-30% to-[#18ffff] to-90%">
                     {mem.memName}
                   </p>
-                  <p className="text-[12px] mt-2  font-medium font-pop">{mem.memPosition}</p>
+                  <p className="text-[12px] mt-2  font-medium font-pop">{mem.memPosition}</p> */}
+                  <p className="text-[16px] uppercase font-bold bg-clip-text text-transparent bg-gradient-to-r from-[#ec4899] from-10% via-purple-500 via-30% to-[#18ffff] to-90%">
+                    {mem.memPosition}
+                  </p>
+                  <p className="text-[12px] mt-2  font-medium font-pop">{mem.memName}</p>
                 </div>
-                {isHovered === index && (
-                  <div className="absolute inset-0 flex items-center justify-center opacity-100 transition-opacity cursor-pointer text-[#ff8502]">
-                    <a target="_blank" href={`https://www.facebook.com/${mem.name}`}>
-                      {/* <img src={ImgLink} className="h-[30px] w-[30px]" alt="Link-Profile" /> */}
-                    </a>
-                  </div>
-                )}
               </div>
             </div>
             {/* {listDistribute.map((text, index) => {

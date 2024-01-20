@@ -30,21 +30,20 @@ function OriginalProduction() {
                   Culture-Enriched
                 </div>
                 {/* content */}
-                <div className="text-white text-[16px] font-light font-pop w-[80%] text-justify ">
-                  We take pride in infusing our games with the richness of Vietnamese culture,
-                  celebrating our heritage while embracing global diversity via cutting-edge
-                  graphics.
+                <div className="text-white text-[16px] font-light font-pop w-[80%] text-justify tracking-normal ">
+                  We take pride in infusing our games with the richness of cultures, celebrating our
+                  heritage while embracing global diversity via cutting-edge graphics.
                 </div>
                 {/* offer overlay */}
                 <div
-                  className="absolute right-0 top-[100px] -rotate-90 text-[#d98d7b] text-[40px] font-bold"
+                  className="absolute right-[-40px] top-[100px] -rotate-90 text-[#d98d7b] text-[40px] font-bold"
                   style={{
                     WebkitTextFillColor: 'transparent',
                     WebkitTextStrokeWidth: '1px',
                     WebkitTextStrokeColor: '#d98d7b',
                   }}
                 >
-                  OFFER
+                  METAVERSE
                 </div>
               </div>
             </div>
@@ -68,14 +67,14 @@ function OriginalProduction() {
                 </div>
                 {/* offer overlay */}
                 <div
-                  className="absolute right-0 top-[100px] -rotate-90 text-[#d98d7b] text-[40px] font-bold"
+                  className="absolute right-[-40px] top-[100px] -rotate-90 text-[#d98d7b] text-[40px] font-bold"
                   style={{
                     WebkitTextFillColor: 'transparent',
                     WebkitTextStrokeWidth: '1px',
                     WebkitTextStrokeColor: '#d98d7b',
                   }}
                 >
-                  OFFER
+                  METAVERSE
                 </div>
               </div>
             </div>
@@ -99,14 +98,14 @@ function OriginalProduction() {
                 </div>
                 {/* offer overlay */}
                 <div
-                  className="absolute right-0 top-[100px] -rotate-90 text-[#d98d7b] text-[40px] font-bold"
+                  className="absolute right-[-40px] top-[100px] -rotate-90 text-[#d98d7b] text-[40px] font-bold"
                   style={{
                     WebkitTextFillColor: 'transparent',
                     WebkitTextStrokeWidth: '1px',
                     WebkitTextStrokeColor: '#d98d7b',
                   }}
                 >
-                  OFFER
+                  METAVERSE
                 </div>
               </div>
             </div>
