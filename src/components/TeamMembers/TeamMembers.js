@@ -1,42 +1,30 @@
 import React, { useState } from 'react';
 import ImgLink from './url.png';
-import { FaSquareTwitter, FaTwitch, FaPinterest, FaVimeo } from 'react-icons/fa6';
+import NguyenThanhDuy from '../../assets/images/NguyenThanhDuy.jpg';
+import NguyenPhungYenNhi from '../../assets/images/NguyenPhungYenNhi.jpg';
+import DaoChiHao from '../../assets/images/DaoChiHao.jpg';
 
 const listDistribute = [
   {
-    imgLink: 'https://mfiles.alphacoders.com/100/1005060.png',
-    name: 'Thoại',
+    imgLink: NguyenThanhDuy,
+    position: 'FOUNDER & CEO',
+    name: 'Nguyễn Thanh Duy',
   },
   {
-    imgLink: 'https://i.ytimg.com/vi/hZ5KbowMIN0/maxresdefault.jpg',
-    name: 'Luân',
+    imgLink: DaoChiHao,
+    position: 'TECHLEAD',
+    name: 'Đào Chí Hào',
   },
   {
-    imgLink:
-      'https://e1.pxfuel.com/desktop-wallpaper/502/361/desktop-wallpaper-rengoku-smile-rengoku-death.jpg',
-    name: 'Khoa',
+    imgLink: NguyenPhungYenNhi,
+    position: 'ART DIRECTOR',
+    name: 'Nguyễn Phùng Yến Nhi',
   },
   {
-    imgLink: 'https://mfiles.alphacoders.com/100/1005060.png',
-    name: 'Thoại',
+    imgLink: DaoChiHao,
+    position: 'GAME DIRECTOR',
+    name: 'Sue Hoàng',
   },
-  // {
-  //   imgLink: 'https://i.ytimg.com/vi/hZ5KbowMIN0/maxresdefault.jpg',
-  //   name: 'Luân',
-  // },
-  // {
-  //   imgLink:
-  //     'https://e1.pxfuel.com/desktop-wallpaper/502/361/desktop-wallpaper-rengoku-smile-rengoku-death.jpg',
-  //   name: 'Khoa',
-  // },
-  // {
-  //   imgLink: 'https://mfiles.alphacoders.com/100/1005060.png',
-  //   name: 'Thoại',
-  // },
-  // {
-  //   imgLink: 'https://i.ytimg.com/vi/hZ5KbowMIN0/maxresdefault.jpg',
-  //   name: 'Luân',
-  // },
 ];
 
 function TeamMembers({ title }) {
@@ -47,7 +35,7 @@ function TeamMembers({ title }) {
       <div className="flex justify-center items-center">
         <div className="content-around text-center">
           <h3 className="uppercase text-white font-bold text-[24px] pb-4">
-            {title || <div>active team members</div>}
+            {title || <div>MEET OUR SQUAD!</div>}
           </h3>
           <div className="flex justify-center items-center">
             <img
@@ -61,7 +49,7 @@ function TeamMembers({ title }) {
       <div className="grid grid-cols-4 gap-8 justify-center items-center mt-10 ">
         {listDistribute.map((mem, index) => (
           <div className="bg-black w-[250px] h-[300px] p-3 border-b-2 border-[#242424]" key={index}>
-            <div  className="relative w-[120px] h-[120px] mx-auto my-4 ">
+            <div className="relative w-[120px] h-[120px] mx-auto my-4 ">
               <div
                 className="w-full h-full rounded-full border-2 border-transparent group hover:border-[#ff8502] relative "
                 onMouseEnter={() => setIsHovered(index)}
@@ -83,27 +71,12 @@ function TeamMembers({ title }) {
                 )}
               </div>
             </div>
-            <div className="flex items-center justify-center text-white mt-12">
-              <p className="uppercase font-bold text-[18px]">Games Name</p>
-              {/* <div className="flex text-zinc-300">
-                <div className="mx-[3px]">
-                  <FaSquareTwitter />
-                </div>
 
-                <div className="mx-[3px]">
-                  <FaTwitch />
-                </div>
-                <div className="mx-[3px]">
-                  <FaPinterest />
-                </div>
-                <div className="mx-[3px]">
-                  <FaVimeo />
-                </div>
-              </div> */}
+            <div className="flex items-center justify-center text-white mt-12">
+              <p className="uppercase font-bold text-[18px]">{mem.position}</p>
             </div>
             <div className="flex items-center justify-center uppercase mt-3">
-              <p className="text-zinc-300 font-pop font-light">Sub name</p>
-              {/* <p className="text-[#ff8502] text-[12px]">follow us</p> */}
+              <p className="text-zinc-300 font-pop font-light">{mem.name}</p>
             </div>
           </div>
         ))}

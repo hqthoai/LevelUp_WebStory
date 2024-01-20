@@ -7,6 +7,8 @@ import MainBanner from '../components/MainBanner';
 import MailBox from '../components/MailBox';
 import HomeOurServices from '../components/HomeOurServices/HomeOurServices';
 import HomeBlog from '../components/HomeBlog/HomeBlog';
+import BlogTest from '../components/BlogTest/BlogDetail';
+import MyComponent from '../components/BlogTest/Editor22';
 
 function HomePage() {
   return (
@@ -15,6 +17,7 @@ function HomePage() {
       style={{
         backgroundImage:
           'url("https://themebeyond.com/demo/haldalive/wp-content/uploads/2022/04/area_bg-scaled.jpg")',
+
         backgroundPosition: 'center center',
         backgroundSize: 'cover',
       }}

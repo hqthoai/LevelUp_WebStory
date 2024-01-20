@@ -11,11 +11,11 @@ export const FooterTexts = {
       },
       {
         name: 'About Us',
-        url: '/about',
+        url: '/about-us',
       },
       {
         name: 'Our squad',
-        url: '/schedule',
+        url: '/our-team',
       },
       {
         name: 'Production',

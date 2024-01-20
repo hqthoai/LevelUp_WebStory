@@ -3,32 +3,38 @@ import Crown from '../../assets/images/crown.jpg';
 import { Box, IconButton } from '@mui/material';
 import KeyboardDoubleArrowRightIcon from '@mui/icons-material/KeyboardDoubleArrowRight';
 import KeyboardDoubleArrowLeftIcon from '@mui/icons-material/KeyboardDoubleArrowLeft';
+import GameDevelopment from '../../assets/images/GAMEDevelopment.jpg';
+import AppDevelopment from '../../assets/images/APPDevelopment.jpg';
+import MARKETING from '../../assets/images/MARKETING.jpg';
+import SystemSetting from '../../assets/images/SYSTEMTesting.jpg';
+import ArtDesgin from '../../assets/images/ARTDesign.jpg';
+import Blockchain from '../../assets/images/BLOCKCHAIN.jpg';
 
 const listServices = [
   {
-    imgService: Crown,
+    imgService: GameDevelopment,
     name: 'GAME Development',
   },
   {
-    imgService: Crown,
+    imgService: AppDevelopment,
     name: 'APP Development',
   },
   {
-    imgService: Crown,
+    imgService: MARKETING,
 
     name: 'MARKETING Research',
   },
   {
-    imgService: Crown,
+    imgService: SystemSetting,
     name: 'SYSTEM Testing',
   },
   {
-    imgService: Crown,
+    imgService: ArtDesgin,
 
     name: 'ART Design',
   },
   {
-    imgService: Crown,
+    imgService: Blockchain,
     name: 'BLOCKCHAIN',
   },
 ];
@@ -118,7 +124,7 @@ function HomeOurServices({ title }) {
                 <img
                   src={listServices[i].imgService}
                   alt={listServices[i].name}
-                  className="h-auto max-w-full opacity-100  transition-transform duration-1000"
+                  className="h-[auto] max-w-full opacity-100  transition-transform duration-1000 object-cover"
                   // className="contain h-auto max-w-full"
                 />
                 {hoveredService === currentIndex && (
@@ -128,7 +134,7 @@ function HomeOurServices({ title }) {
                   </div>
                 )}
               </a>
-              <p className="text-white text-center">{listServices[i].name}</p>
+              <p className="text-white text-center mt-4">{listServices[i].name}</p>
             </div>
           ))}
         </div>

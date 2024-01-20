@@ -1,28 +1,31 @@
 import React, { useState, useEffect } from 'react';
-import Crown from '../../assets/images/crown.jpg';
+
 import { Box, IconButton, Avatar } from '@mui/material';
+import { Link } from 'react-router-dom';
 
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
+import imgArticle1 from '../../assets/images/article-11.png';
+import imgArticle2 from '../../assets/images/article2-thumbnail.png';
+import imgArticle3 from '../../assets/images/article3-6.png';
+
 const listArticles = [
   {
-    imgArticle:
-      'https://images.unsplash.com/photo-1500964757637-c85e8a162699?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8YmVhdXRpZnVsJTIwbGFuZHNjYXBlfGVufDB8fDB8fHww',
+    imgArticle: imgArticle1,
     title: 'Article 1',
-    timeToRead: '6 MIN READ',
+    timeToRead:
+      'Roblox achieves remarkable growth in 2023: A game-changer in the digital landscape',
   },
   {
-    imgArticle:
-      'https://images.unsplash.com/photo-1536257104079-aa99c6460a5a?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8bGFuZHNjYXBlc3xlbnwwfHwwfHx8MA%3D%3D',
+    imgArticle: imgArticle2,
     title: 'Article 2',
-    timeToRead: '6 MIN READ',
+    timeToRead: "Roblox's phenomenal rise in vietnam: LEVEL UP STUDIO unveils key insights",
   },
   {
-    imgArticle:
-      'https://posterjack.ca/cdn/shop/articles/landscape_photography_tips_featured_image_1024x1024.jpg?v=1563408049',
+    imgArticle: imgArticle3,
 
     title: 'Article 3',
-    timeToRead: '6 MIN READ',
+    timeToRead: 'From Nikeland to Gucci Town: The top 5 branded Roblox activations',
   },
   {
     imgArticle: 'https://i.pinimg.com/1200x/5e/6e/79/5e6e79603e87312e8ee6c500ce93a9cf.jpg',
@@ -47,19 +50,6 @@ function HomeBlog2({ title }) {
   const [currentImages, setCurrentImages] = useState([0, 1, 2]);
   const [translateX, setTranslateX] = useState(0);
 
-  //   // back to the previous image
-  //   const handleGoToPrevImage = () => {
-  //     const firstImageIndex = currentImages[0];
-  //     const prevImageIndex = (firstImageIndex - 1 + listArticles.length) % listArticles.length;
-  //     setCurrentImages((prevImages) => [prevImageIndex, ...prevImages.slice(0, -1)]);
-  //   };
-
-  //   // next image
-  //   const handleGoToNextImage = () => {
-  //     const lastImageIndex = currentImages[currentImages.length - 1];
-  //     const nextImageIndex = (lastImageIndex + 1) % listArticles.length;
-  //     setCurrentImages((prevImages) => [...prevImages.slice(1), nextImageIndex]);
-  //   };
   const handleGoToPrevImage = () => {
     const firstImageIndex = currentImages[0];
     const prevImageIndex = (firstImageIndex - 1 + listArticles.length) % listArticles.length;
@@ -123,24 +113,37 @@ function HomeBlog2({ title }) {
           <div className="grid grid-cols-3 justify-center gap-8 items-center mt-10 font-pop">
             {currentImages.map((i, currentIndex) => (
               <div className={` animate__animated animate__fadeIn `}>
-                <div className={`hover:cursor-pointer border-2 border-[#ff8503] relative `}>
-                  <a
-                    key={currentIndex}
-                    // href user to game link
-                    href={listArticles[i].gameUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    // className="w-[250px] h-[400px]"
+                <Link to={`/blog/${currentIndex + 1}`}>
+                  <div
+                    className={`hover:cursor-pointer border-2 border-[#ff8503] relative  w-[150px]`}
                   >
-                    <img
-                      src={listArticles[i].imgArticle}
-                      alt={listArticles[i].title}
-                      className="h-[100px] w-[150px] opacity-100  transition-transform duration-1000"
-                    />
-                  </a>
-                  <p className="text-white text-center mt-2 mb-2">{listArticles[i].title}</p>
-                </div>
-                <p className=" text-center mt-2 text-[#bdbdbd]">{listArticles[i].timeToRead}</p>
+                    <a
+                      key={currentIndex}
+                      // href user to game link
+                      href={listArticles[i].gameUrl}
+                      target="_blank"
+                    >
+                      <div className="h-[100px] w-[147px]">
+                        <img
+                          src={listArticles[i].imgArticle}
+                          alt={listArticles[i].title}
+                          className="h-full w-full object-fill transition-transform duration-1000"
+                        />
+                      </div>
+                    </a>
+                    <div className="text-center mt-2 mb-2">
+                      <p className="text-white">{listArticles[i].title}</p>
+                      <p className="text-[#bdbdbd] text-[12px] mt-1">
+                        {listArticles[i].timeToRead}
+                      </p>
+                    </div>
+                    {/* <p className="text-white text-center mt-2 mb-2">{listArticles[i].title}</p> */}
+                  </div>
+                </Link>
+
+                {/* <p className=" text-center mt-6 text-[#bdbdbd] text-[12px]">
+                  {listArticles[i].timeToRead}
+                </p> */}
               </div>
             ))}
           </div>

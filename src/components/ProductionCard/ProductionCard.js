@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './ProductionCard.scss';
+import HomeBanner from '../../assets/images/logoWeb.jfif';
 
 export default function ProductionCard({ originalText, businessText }) {
   const [activeTab, setActiveTab] = useState(1);
@@ -72,7 +73,7 @@ export default function ProductionCard({ originalText, businessText }) {
                     <div className="fade-in">
                       <h2 className="text-white text-[50px] uppercase font-bold mb-2">
                         <a href="/production">
-                          EXPERIENCE JUST FOR {' '}
+                          EXPERIENCE JUST FOR{' '}
                           <span className="text-[#ff8503]">FEARLESS BUSINESS</span>
                         </a>
                       </h2>
@@ -102,11 +103,7 @@ export default function ProductionCard({ originalText, businessText }) {
 
           {/* Image */}
           <div className="flex w-full md:w-1/2 px-[16px] mt-4 md:mt-0">
-            <img
-              src="https://themebeyond.com/demo/haldalive/wp-content/uploads/2022/04/game_img01.png"
-              alt="Your Image"
-              className="w-full h-[560px]"
-            />
+            <img src={HomeBanner} alt="Your Image" className="w-full h-[560px] object-cover" />
           </div>
         </div>
       </div>

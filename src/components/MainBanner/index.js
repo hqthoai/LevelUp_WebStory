@@ -1,7 +1,7 @@
 import React, { useRef, useState } from 'react';
 import './MainBanner.css';
 import { FaCirclePlay } from 'react-icons/fa6';
-
+import HomeBanner from '../../assets/images/logoWeb.jfif';
 const MainBanner = () => {
   const bannerRef = useRef(null);
 
@@ -37,10 +37,11 @@ const MainBanner = () => {
         ref={bannerRef}
         className="w-full h-screen flex justify-center items-center"
         style={{
-          backgroundImage:
-            'url("https://themebeyond.com/demo/haldalive/wp-content/uploads/2022/04/banner_bg.jpg")',
+          // backgroundImage:
+          //   'url("https://themebeyond.com/demo/haldalive/wp-content/uploads/2022/04/banner_bg.jpg")',
+          backgroundImage: `url(${HomeBanner})`,
           backgroundRepeat: 'no-repeat',
-          backgroundSize: 'cover',
+          backgroundSize: 'fill',
           backgroundPosition: 'center',
         }}
         onMouseMove={handleMouseMove}

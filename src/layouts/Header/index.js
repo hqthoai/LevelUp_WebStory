@@ -1,10 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { FaMagnifyingGlass, FaRegPenToSquare } from 'react-icons/fa6';
 import './index.scss';
-import { TextField } from '@mui/material';
 import 'animate.css';
 
-import imgLink from './luanmeme.jpg';
+import LevelUpLogo from '../../assets/images/LevelUpLogo.png';
 const Header = () => {
   const [searchHover, setSearchHover] = useState(false);
   const [searchKey, setSearchKey] = useState('');
@@ -43,16 +42,10 @@ const Header = () => {
         {/* Logo */}
         <a className="flex flex-col justify-between items-center " href="/">
           <img
-            // src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/480px-Instagram_logo_2016.svg.png"
-            src={imgLink}
+            src={LevelUpLogo}
             alt="Logo"
-            className={`w-[62px] h-[49px] cursor-pointer block m-auto rounded-[5px]`}
+            className={`w-[80px] h-[80px] cursor-pointer block m-auto rounded-[5px] object-cover`}
           />
-          <label
-            className={`text-[#980B0B] duration-200 lg:text-[20px] sm:text-[30px] min-[320px]:text-[30px] font-semibold`}
-          >
-            Luan Luan
-          </label>
         </a>
 
         {/* Navigation */}
@@ -108,14 +101,20 @@ const Header = () => {
               <div className="transform skew-x-[30deg] tracking-tight">Shop</div>
             </li>
             <li className="h-[100%] px-6 hover:bg-[#1a1b21] border-b-4 border-solid border-transparent hover:border-orange-700 hover:text-orange-700 transform -skew-x-[30deg] flex items-center">
-              <div className="transform skew-x-[30deg] tracking-tight">Blog</div>
+              <a href="/blog" className="transform skew-x-[30deg] tracking-tight">
+                Blog
+              </a>
             </li>
             <li
               className="h-[100%] px-6 hover:bg-[#1a1b21] border-b-4
                         \border-solid border-transparent hover:border-orange-700
             hover:text-orange-700 transform -skew-x-[30deg] flex items-center"
             >
-              <div className={`transform skew-x-[30deg] tracking-tight`}>Contacts</div>
+              <div className={`transform skew-x-[30deg] tracking-tight`}>
+                <a href="/contact" className="transform skew-x-[30deg] tracking-tight">
+                  Contacts
+                </a>
+              </div>
             </li>
           </ul>
         </div>
