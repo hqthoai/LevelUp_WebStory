@@ -1,20 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import { Box, IconButton } from '@mui/material';
-import { FaCircleArrowRight, FaCircleArrowLeft } from 'react-icons/fa6';
-import ArrowCircleRightIcon from '@mui/icons-material/ArrowCircleRight';
-import ArrowCircleLeftIcon from '@mui/icons-material/ArrowCircleLeft';
-import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
-import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
+
 import KeyboardDoubleArrowRightIcon from '@mui/icons-material/KeyboardDoubleArrowRight';
 import KeyboardDoubleArrowLeftIcon from '@mui/icons-material/KeyboardDoubleArrowLeft';
 // import images
-import ActivisionBlizzard from '../../assets/images/activision_blizzard-logo.png';
+import ActivisionBlizzard from '../../assets/images/Activision-logo.png';
 import RobloxGlobal from '../../assets/images/Roblox.png';
 import GiantyVN from '../../assets/images/GiantyVN.png';
 import RollingAnt from '../../assets/images/RollingAnt.png';
 import S8XTPN from '../../assets/images/s8x-tpn-logo.png';
-// import ChanhPhuongFilm from '../../assets/images/channels4_profile.jpg';
-import ChanhPhuongFilm from '../../assets/images/channels4_profile_400.jpg';
 
 import JungVonMattAg from '../../assets/images/JungVonMattAg.jpg';
 import CasperDash from '../../assets/images/CasperDash.png';
@@ -54,36 +48,25 @@ const slides = [
     gameUrl: 'https://studio8fx.com/',
     gameName: '8fx studio',
   },
+
   {
     id: 6,
-    gameImageUrl: ChanhPhuongFilm,
-    gameUrl: 'https://www.linkedin.com/company/chanh-phuong-films/about/',
-    gameName: 'Chánh Phương Film',
-  },
-  {
-    id: 7,
     gameImageUrl: JungVonMattAg,
     gameUrl: 'https://www.jvm.com/',
     gameName: 'JVM Agency',
   },
   {
-    id: 8,
+    id: 7,
     gameImageUrl: CasperDash,
     gameUrl: 'https://casperdash.io/',
     gameName: 'Casper Dash',
   },
   {
-    id: 9,
+    id: 8,
     gameImageUrl: Capcom,
     gameUrl: 'https://www.capcom.com/',
     gameName: 'Capcom',
   },
-  // {
-  //   id: 10,
-  //   gameImageUrl: 'https://images.unsplash.com/photo-1500964757637-c85e8a162699?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8YmVhdXRpZnVsJTIwbGFuZHNjYXBlfGVufDB8fDB8fHww',
-  //   gameUrl: 'https://www.capcom.com/',
-  //   gameName: 'Capcom',
-  // },
 ];
 
 function SlideImage() {
@@ -126,15 +109,14 @@ function SlideImage() {
               rel="noopener noreferrer"
               className={`${
                 currentIndex === 1
-                  ? 'w-[680px] h-[430px] cursor-pointer -translate-y-8 transition-transform duration-1000 '
-                  : 'w-[340px] h-[430px] translate-y-8 transition-transform duration-1000'
+                  ? 'w-[590px] h-[430px] cursor-pointer -translate-y-8 transition-transform duration-1000'
+                  : 'w-[340px] h-[430px] translate-y-8 transition-transform duration-1000 '
               } overflow-hidden flex justify-center items-center shadow-[0 15px 50px rgba(0, 0, 0, 0.2)] mr-10  transition-transform duration-1000`}
             >
               <img
                 src={slides[i].gameImageUrl}
                 alt={slides[i].gameName}
                 className="h-auto max-w-full opacity-100  transition-transform duration-1000"
-                // className="contain h-auto max-w-full"
               />
             </a>
           ))}
@@ -150,10 +132,16 @@ function SlideImage() {
             },
           }}
         >
-          <KeyboardDoubleArrowLeftIcon sx={{ color: 'white', mr: 70, fontSize:'48px' }} onClick={handleGoToPrevImage} />
+          <KeyboardDoubleArrowLeftIcon
+            sx={{ color: 'white', mr: 70, fontSize: '48px' }}
+            onClick={handleGoToPrevImage}
+          />
         </IconButton>
         <IconButton>
-          <KeyboardDoubleArrowRightIcon sx={{ color: 'white', fontSize:'48px' }} onClick={handleGoToNextImage} />
+          <KeyboardDoubleArrowRightIcon
+            sx={{ color: 'white', fontSize: '48px' }}
+            onClick={handleGoToNextImage}
+          />
         </IconButton>
       </Box>
     </div>
