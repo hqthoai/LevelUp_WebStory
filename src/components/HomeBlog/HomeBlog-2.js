@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from 'react';
-
-import { Box, IconButton, Avatar } from '@mui/material';
+import { Avatar } from '@mui/material';
 import { Link } from 'react-router-dom';
-
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 import imgArticle1 from '../../assets/images/article-11.png';
@@ -12,17 +10,14 @@ import imgArticle3 from '../../assets/images/article3-6.png';
 const listArticles = [
   {
     imgArticle: imgArticle1,
-
     title: 'Roblox achieves remarkable growth in 2023: A game-changer in the digital landscape',
   },
   {
     imgArticle: imgArticle2,
-
-    title: "Roblox's phenomenal rise in vietnam: LEVEL UP STUDIO unveils key insights",
+    title: "Roblox's phenomenal rise in Vietnam: LEVEL UP STUDIO unveils key insights",
   },
   {
     imgArticle: imgArticle3,
-
     title: 'From Nikeland to Gucci Town: The top 5 branded Roblox activations',
   },
 ];
@@ -47,13 +42,12 @@ function HomeBlog2({ title }) {
   };
 
   useEffect(() => {
-    const slideInterval = setInterval(() => {
-      handleGoToNextImage();
-    }, 2500);
-
-    return () => {
-      clearInterval(slideInterval);
-    };
+    // const slideInterval = setInterval(() => {
+    //   handleGoToNextImage();
+    // }, 2500);
+    // return () => {
+    //   clearInterval(slideInterval);
+    // };
   }, [currentImages]);
 
   const handleMouseEnter = (index) => {
@@ -64,9 +58,88 @@ function HomeBlog2({ title }) {
     setHoveredService(null);
   };
 
+  //   return (
+  //     <div className="bg-[#1f2029] w-[580px] h-[350px]">
+  //       <div className="text-white text-[24px] font-bold font-pop text-center p-4 mt-[-16px]">
+  //         <p>LAST ARTICLES</p>
+  //       </div>
+  //       <div className="flex items-center justify-between font-pop mt-8">
+  //         <Avatar
+  //           className="animate__animated animate__fadeIn"
+  //           sx={{
+  //             width: 36,
+  //             height: 36,
+  //             backgroundColor: '#ff8503',
+  //             fontWeight: '900',
+  //             ml: '-20px',
+  //             cursor: 'pointer',
+  //           }}
+  //         >
+  //           <ArrowBackIosIcon
+  //             sx={{
+  //               color: 'white',
+  //               fontSize: '20px',
+  //               mr: '-6px',
+  //             }}
+  //             onClick={handleGoToPrevImage}
+  //           />
+  //         </Avatar>
+  //         <div className="flex jus items-center mt-[-32px] min-h-[280px]">
+  //           <div className="flex justify-start gap-8 items-center  font-pop">
+  //             {currentImages.map((i, currentIndex) => (
+  //               <div key={currentIndex} className="animate__animated animate__fadeIn">
+  //                 <Link to={`/blog/${currentIndex + 1}`}>
+  //                   <div
+  //                     className={`hover:cursor-pointer border-2 border-[#ff8503] relative h-[240px] w-[150px] grid `}
+  //                   >
+  //                     <a
+  //                       // href user to game link
+  //                       href={listArticles[i].gameUrl}
+  //                       target="_blank"
+  //                       rel="noopener noreferrer"
+  //                     >
+  //                       <div className=" w-[147px] overflow-hidden">
+  //                         <img
+  //                           src={listArticles[i].imgArticle}
+  //                           alt={listArticles[i].title}
+  //                           className="h-[100px] w-full object-cover transition-transform duration-1000"
+  //                         />
+  //                       </div>
+  //                     </a>
+  //                     <div className="title-container h-[50px] flex items-center justify-start px-1">
+  //                       <p className="text-white text-[14px]">{listArticles[i].title}</p>
+  //                     </div>
+  //                   </div>
+  //                 </Link>
+  //               </div>
+  //             ))}
+  //           </div>
+  //         </div>
+  //         <Avatar
+  //           className="animate__animated animate__fadeIn"
+  //           sx={{
+  //             width: 36,
+  //             height: 36,
+  //             backgroundColor: '#ff8503',
+  //             fontWeight: '900',
+  //             mr: '-20px',
+  //             cursor: 'pointer',
+  //           }}
+  //         >
+  //           <ArrowForwardIosIcon
+  //             sx={{ color: 'white', fontSize: '20px' }}
+  //             onClick={handleGoToNextImage}
+  //           />
+  //         </Avatar>
+  //       </div>
+  //     </div>
+  //   );
+  // }
+
+  // export default HomeBlog2;
+
   return (
     <div className="bg-[#1f2029] w-[580px] h-[350px]">
-      {/* <div className="bg-[#1f2029] w-[750px] h-[350px] flex items-center flex-col font-display"> */}
       <div className="text-white text-[24px] font-bold font-pop text-center p-4 mt-[-16px]">
         <p>LAST ARTICLES</p>
       </div>
@@ -91,42 +164,40 @@ function HomeBlog2({ title }) {
             onClick={handleGoToPrevImage}
           />
         </Avatar>
-        <Box className="flex justify-between items-center mt-[-32px]">
-          <div className="grid grid-cols-3 justify-center gap-8 items-center mt-10 font-pop">
+        <div className="flex items-center mt-[-32px] min-h-[280px]">
+          <div className="flex justify-start gap-8 items-center font-pop">
             {currentImages.map((i, currentIndex) => (
-              <div className={` animate__animated animate__fadeIn `}>
+              <div key={currentIndex} className="animate__animated animate__fadeIn">
                 <Link to={`/blog/${currentIndex + 1}`}>
                   <div
-                    className={`hover:cursor-pointer border-2 border-[#ff8503] relative  w-[150px]`}
+                    className={`hover:cursor-pointer border-2 border-[#ff8503] relative h-[240px] w-[150px] grid`}
                   >
-                    <a
-                      key={currentIndex}
-                      // href user to game link
-                      href={listArticles[i].gameUrl}
-                      target="_blank"
-                    >
-                      <div className="h-[100px] w-[147px]">
+                    <a href={listArticles[i].gameUrl} target="_blank" rel="noopener noreferrer">
+                      <div className="w-[147px] overflow-hidden">
                         <img
                           src={listArticles[i].imgArticle}
                           alt={listArticles[i].title}
-                          className="h-full w-full object-fill transition-transform duration-1000"
+                          className="h-[100px] w-full object-cover transition-transform duration-1000"
                         />
                       </div>
                     </a>
-                    <div className="text-left mt-2 mb-2">
-                      <p className="text-[#bdbdbd] text-[12px] mt-1">{listArticles[i].title}</p>
+                    <div
+                      className={`title-container h-[50px] flex items-center justify-start px-1 `}
+                    >
+                      <p
+                        className={`text-white text-[14px] ${
+                          currentIndex === 2 ? 'mt-[-22px]' : ''
+                        }`}
+                      >
+                        {listArticles[i].title}
+                      </p>
                     </div>
-                    {/* <p className="text-white text-center mt-2 mb-2">{listArticles[i].title}</p> */}
                   </div>
                 </Link>
-
-                {/* <p className=" text-center mt-6 text-[#bdbdbd] text-[12px]">
-                  {listArticles[i].timeToRead}
-                </p> */}
               </div>
             ))}
           </div>
-        </Box>
+        </div>
         <Avatar
           className="animate__animated animate__fadeIn"
           sx={{
