@@ -34,17 +34,19 @@ const Header = () => {
   return (
     <div className="header-container relative font-display">
       <div
-        className={` w-full h-[80px] duration-2000 animate__animated flex justify-around bg-[#1f2029] ${
-          subNavBarToggle ? 'fixed animate__fadeInDown ' : ' header-before logo-after'
+        className={` w-full h-[80px] duration-2000 animate__animated flex justify-between bg-[#1f2029] px-4 ${
+          subNavBarToggle ? 'fixed animate__fadeInDown' : ' header-before logo-after'
         } items-center`}
         style={{ zIndex: 999 }}
       >
         {/* Logo */}
-        <a className="flex flex-col justify-between items-center mt-[-20px]" href="/">
+        <a className="flex flex-col justify-between items-center mt-[-15px]" href="/">
           <img
             src={LevelUpLogo}
             alt="Logo"
-            className={`w-[90px] h-[90px] cursor-pointer block m-auto rounded-[5px] object-cover`}
+            className={` ${
+              subNavBarToggle ? 'w-[90px] h-[85px]' : 'w-[110px] h-[110px]'
+            }  cursor-pointer block m-auto rounded-[5px] object-cover`}
           />
         </a>
 
