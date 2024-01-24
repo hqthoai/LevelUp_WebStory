@@ -34,17 +34,17 @@ const Header = () => {
   return (
     <div className="header-container relative font-display">
       <div
-        className={` w-full h-[110px] duration-2000 animate__animated flex justify-around bg-[#1f2029] ${
+        className={` w-full h-[80px] duration-2000 animate__animated flex justify-around bg-[#1f2029] ${
           subNavBarToggle ? 'fixed animate__fadeInDown ' : ' header-before logo-after'
         } items-center`}
         style={{ zIndex: 999 }}
       >
         {/* Logo */}
-        <a className="flex flex-col justify-between items-center " href="/">
+        <a className="flex flex-col justify-between items-center mt-[-20px]" href="/">
           <img
             src={LevelUpLogo}
             alt="Logo"
-            className={`w-[80px] h-[80px] cursor-pointer block m-auto rounded-[5px] object-cover`}
+            className={`w-[90px] h-[90px] cursor-pointer block m-auto rounded-[5px] object-cover`}
           />
         </a>
 
@@ -137,14 +137,14 @@ const Header = () => {
             />
             <FaMagnifyingGlass className={searchHover ? 'text-orange-800' : 'text-white'} />
           </div>
-          <div className="bg-[#1a1b21] p-3 flex items-center space-x-3 border-r-4 border-solid border-orange-700 text-white hover:text-orange-700">
+          {/* <div className="bg-[#1a1b21] p-3 flex items-center space-x-3 border-r-4 border-solid border-orange-700 text-white hover:text-orange-700">
             <div className="w-[30px] h-[30px] bg-[#15151a] flex items-center justify-center ">
               <FaRegPenToSquare />
             </div>
             <div className=" border-solid border-transparent text-normal leading-6 font-mono  font-semibold uppercase">
               Log-in
-            </div>
-          </div>
+            </div> 
+            </div>*/}
         </div>
       </div>
     </div>
