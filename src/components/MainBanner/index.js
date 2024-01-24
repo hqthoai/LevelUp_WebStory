@@ -50,12 +50,20 @@ const MainBanner = () => {
         <div className="text-white text-center font-display w-[90%]">
           <h2
             className="text-[120px] leading-tight font-bold font-refault "
-            style={{ ...hoverStyles }}
+            style={{ ...hoverStyles, textShadow: '2px 2px 2px #C1FF00' }}
           >
             LEVEL UP STUDIO
           </h2>
 
-          <h4 className="text-white uppercase text-2xl font-semibold tracking-wide ml-5 ">
+          <h4
+            className="text-white uppercase text-2xl font-semibold tracking-wide ml-5 "
+            style={{
+              border: '2px solid #58595B',
+              borderRadius: '10px',
+              padding: '10px',
+              display: 'inline-block',
+            }}
+          >
             We will win when we want.
           </h4>
           {/* <button className="clip-custom select-none bg-orange-500 border-0 mt-5 hover:bg-black text-white cursor-pointer inline-flex text-lg font-semibold tracking-wide leading-none mb-0 py-6 px-10 text-center uppercase relative font-oswald">
