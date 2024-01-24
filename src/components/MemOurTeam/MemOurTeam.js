@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import NguyenThanhDuy from '../../assets/images/NguyenThanhDuy.jpg';
 import DaoChiHao from '../../assets/images/DaoChiHao.jpg';
 import NguyenPhungYenNhi from '../../assets/images/NguyenPhungYenNhi.jpg';
+import SueHoang from '../../assets/images/SueHoang.jpg';
 import TruongThuyKhanhAn from '../../assets/images/TruongThuyKhanhAn.jpg';
 import VoThiMYLinh from '../../assets/images/VoThiMYLinh.jpg';
 import NguyenPhamTienHung from '../../assets/images/NguyenPhamTienHung.jpg';
@@ -34,9 +35,9 @@ const listDistribute = [
 
   {
     id: 4,
-    memImg: TruongThuyKhanhAn,
-    memName: 'Trương Thụy Khánh An',
-    memPosition: 'GAME DIRECTOR',
+    memImg: SueHoang,
+    memName: 'Sue Hoàng',
+    memPosition: 'CHIEF CREATIVE DIRECTOR',
   },
   {
     id: 5,
