@@ -15,6 +15,11 @@ import CasperDash from '../../assets/images/CasperDash.png';
 import Capcom from '../../assets/images/Capcom-logo.png';
 import './SlideImage.module.scss';
 
+import LightLeft from '../../assets/images/lightLeft.png';
+import LightRight from '../../assets/images/lightRight.png';
+import NextImage from '../../assets/images/next.png';
+import PreviousImage from '../../assets/images/previous.png';
+
 const slides = [
   {
     id: 1,
@@ -99,53 +104,87 @@ function SlideImage() {
   return (
     <div className="relative w-full min-h-screen overflow-hidden mt-20">
       <div className="w-full pt-[50px] flex overflow-hidden">
-        <div className="flex items-center">
+        <div className="flex items-center relative">
           {currentImages.map((i, currentIndex) => (
-            <a
-              key={slides[i].id}
-              // href user to game link
-              href={slides[i].gameUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className={`${
-                currentIndex === 1
-                  ? 'w-[590px] h-[430px] cursor-pointer -translate-y-8 transition-transform duration-1000'
-                  : 'w-[340px] h-[430px] translate-y-8 transition-transform duration-1000 '
-              } overflow-hidden flex justify-center items-center shadow-[0 15px 50px rgba(0, 0, 0, 0.2)] mr-10  transition-transform duration-1000`}
-            >
-              <img
-                src={slides[i].gameImageUrl}
-                alt={slides[i].gameName}
-                className="h-auto max-w-full opacity-100  transition-transform duration-1000"
-              />
-            </a>
+            <div key={slides[i].id} className="relative">
+              {currentIndex === 1 && (
+                <div>
+                  <img
+                    src={LightLeft}
+                    alt="Light Left"
+                    className="absolute -rotate-45 left-[-100px] top-1/2 transform -translate-y-1/2 opacity-100 transition-transform duration-1000"
+                  />
+                  <img
+                    src={LightRight}
+                    alt="Light Right"
+                    className="absolute rotate-45 right-[-80px] top-1/2 transform -translate-y-1/2 opacity-100 transition-transform duration-1000"
+                  />
+                </div>
+              )}
+
+              <a
+                href={slides[i].gameUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`${
+                  currentIndex === 1
+                    ? 'w-[490px] h-[380px] cursor-pointer -translate-y-8 transition-transform duration-1000 ml-[100px] mr-[100px]'
+                    : 'w-[300px] h-[300px] translate-y-8 transition-transform duration-1000 '
+                } overflow-hidden flex justify-around items-center shadow-[0 15px 50px rgba(0, 0, 0, 0.2)] mr-10  transition-transform duration-1000`}
+              >
+                <img
+                  src={slides[i].gameImageUrl}
+                  alt={slides[i].gameName}
+                  className={`h-auto max-w-full opacity-100 transition-transform duration-1000 ${
+                    currentIndex === 2 ? 'ml-3' : ''
+                  }`}
+                />
+              </a>
+            </div>
           ))}
         </div>
       </div>
-
       <Box className="flex justify-center mt-[-58px]">
-        <IconButton
+        <Box
           sx={{
             '&:hover': {
               color: 'transparent',
               backgroundColor: 'transparent',
             },
+            position: 'absolute',
+            top: '30%',
+            left: '22%',
+            transform: 'translateX(50%)',
           }}
         >
-          <KeyboardDoubleArrowLeftIcon
-            sx={{ color: 'white', mr: 70, fontSize: '48px' }}
+          <img
+            src={PreviousImage}
+            alt="Previous"
+            style={{ width: '100px', height: '100px', cursor: 'pointer' }}
             onClick={handleGoToPrevImage}
           />
-        </IconButton>
-        <IconButton>
-          <KeyboardDoubleArrowRightIcon
-            sx={{ color: 'white', fontSize: '48px' }}
+        </Box>
+        <Box
+          sx={{
+            '&:hover': {
+              color: 'transparent',
+              backgroundColor: 'transparent',
+            },
+            position: 'absolute',
+            top: '30%',
+            right: '25%',
+            transform: 'translateX(50%)',
+          }}
+        >
+          <img
+            src={NextImage}
+            alt="Next"
+            style={{ width: '100px', height: '100px', cursor: 'pointer' }}
             onClick={handleGoToNextImage}
           />
-        </IconButton>
+        </Box>
       </Box>
     </div>
   );
 }
-
 export default SlideImage;

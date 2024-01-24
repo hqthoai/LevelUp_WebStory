@@ -24,12 +24,12 @@ const listDistribute = [
   },
   {
     imgLink: SueHoang,
-    position: 'CHIEF CREATIVE DIRECTOR',
+    position: 'CHIEF CREATIVE OFFICER',
     name: 'Sue Hoàng',
   },
   {
     imgLink: TruongThuyKhanhAn,
-    position: 'HEAD OF MARKETING RESEARCH & DEVELOPMENT',
+    position: 'HEAD OF MARKETING',
     name: 'Trương Thụy Khánh An',
   },
 ];

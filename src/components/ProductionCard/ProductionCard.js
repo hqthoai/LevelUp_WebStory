@@ -61,7 +61,7 @@ export default function ProductionCard({ originalText, businessText }) {
                           <div>
                             Gaming should be more than just entertainment; it should be an enriching
                             experience and community-centric approach! Our team is passionate about
-                            incorporating elements of Vietnamese culture into your game, offering
+                            incorporating elements of cultures into your game, offering
                             global next-generation players a unique and immersive adventure in the
                             metaverse.{' '}
                           </div>
