@@ -20,8 +20,6 @@ const DefaultLayout = ({ children }) => {
         <div className=" w-full bg-[#151212] justify-self-center  h-fit ">{children}</div>
         <Footer />
       </div>
-      {/* <div className="flex flex-col pl-20 flex-wrap w-full h-screen "> */}
-      {/* </div> */}
     </div>
   );
 };

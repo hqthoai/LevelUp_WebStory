@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { FaMagnifyingGlass, FaRegPenToSquare } from 'react-icons/fa6';
-import './index.scss';
 import 'animate.css';
+import './index.css';
 
 import LevelUpLogo from '../../assets/images/LevelUpLogo.png';
 const Header = () => {
@@ -34,10 +34,10 @@ const Header = () => {
   return (
     <div className="header-container relative font-display">
       <div
-        className={` w-full h-[80px] duration-2000 animate__animated flex justify-between bg-[#1f2029] px-4 ${
-          subNavBarToggle ? 'fixed animate__fadeInDown' : ' header-before logo-after'
+        className={`w-full h-[80px] duration-2000 animate__animated flex justify-between bg-[#1f2029] px-4  ${
+          subNavBarToggle ? 'fixed animate__fadeInDown' : 'header'
         } items-center`}
-        style={{ zIndex: 999 }}
+        style={{ zIndex: 9999999999 }}
       >
         {/* Logo */}
         <a className="flex flex-col justify-between items-center mt-[-15px]" href="/">
