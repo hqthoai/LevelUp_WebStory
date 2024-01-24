@@ -112,7 +112,7 @@ function HomeOurServices({ title }) {
               key={currentIndex}
               onMouseEnter={() => handleMouseEnter(currentIndex)}
               onMouseLeave={handleMouseLeave}
-              className="hover:cursor-pointer border-2 border-[#ff8503] relative p-4 flex flex-col justify-between"
+              className="hover:cursor-pointer border-2 border-[#ff8503] relative p-4 grid"
               style={{ height: '350px' }} // Set a fixed height
             >
               <a
@@ -134,10 +134,15 @@ function HomeOurServices({ title }) {
                   </div>
                 )}
               </a>
-              <p className="text-white text-center mt-4">
+
+              <p
+                className={`text-white text-center mt-4 ${
+                  listServices[i].name[0] === 'BLOCKCHAIN' ? 'mt-[-10px]' : '' // Add custom margin-top for BLOCKCHAIN
+                }`}
+              >
                 <span className="text-[#FF8503] font-bold text-[20px]">
                   {listServices[i].name[0]}
-                </span>{' '}
+                </span>
                 <br />
                 {listServices[i].name[1]}
               </p>
