@@ -1,4 +1,5 @@
 import React, { useRef, useState } from 'react';
+import { Link } from 'react-router-dom';
 import './MainBanner.css';
 import { FaCirclePlay } from 'react-icons/fa6';
 import HomeBanner from '../../assets/images/logoWeb.jfif';
@@ -31,6 +32,11 @@ const MainBanner = () => {
     setHoverStyles({ transform: 'translate3d(0, 0, 0)' });
   };
 
+  const handleNavigate = () => {
+    // Implement the scroll logic using react-scroll
+    window.scrollTo({ top: 780, behavior: 'smooth' });
+  };
+
   return (
     <div className="w-full h-fit bg-[#151212]">
       <div
@@ -56,16 +62,15 @@ const MainBanner = () => {
           </h2>
 
           <h4
-            className="text-white uppercase text-2xl font-semibold tracking-wide ml-5 "
+            className="text-white uppercase text-2xl font-semibold tracking-wide ml-5 cursor-pointer"
             style={{
-              border: '2px solid #58595B',
-              borderRadius: '10px',
-              padding: '10px',
-              display: 'inline-block',
+              textShadow: '2px 4px 2px #58595B',
             }}
+            onClick={handleNavigate}
           >
             We will win when we want.
           </h4>
+
           {/* <button className="clip-custom select-none bg-orange-500 border-0 mt-5 hover:bg-black text-white cursor-pointer inline-flex text-lg font-semibold tracking-wide leading-none mb-0 py-6 px-10 text-center uppercase relative font-oswald">
             ABOUT US {'   '}
             <FaCirclePlay className="ml-3 text-[18px]" />
