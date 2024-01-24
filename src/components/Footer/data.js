@@ -76,14 +76,6 @@ export const FooterTexts = {
         color: '#3b5992',
       },
       {
-        icon: <FaInstagram />,
-        color: '#55acee',
-      },
-      {
-        icon: <FaPinterestP />,
-        color: '#d71e18',
-      },
-      {
         icon: <FaLinkedinIn />,
         color: '#1565c0',
       },
