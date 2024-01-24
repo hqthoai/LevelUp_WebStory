@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import Crown from '../../assets/images/crown.jpg';
 import { Box, IconButton } from '@mui/material';
 import KeyboardDoubleArrowRightIcon from '@mui/icons-material/KeyboardDoubleArrowRight';
 import KeyboardDoubleArrowLeftIcon from '@mui/icons-material/KeyboardDoubleArrowLeft';
@@ -13,29 +12,30 @@ import Blockchain from '../../assets/images/BLOCKCHAIN.jpg';
 const listServices = [
   {
     imgService: GameDevelopment,
-    name: 'GAME Development',
+
+    name: ['GAME', 'Development'],
   },
   {
     imgService: AppDevelopment,
-    name: 'APP Development',
+    name: ['APP', 'Development'],
   },
   {
     imgService: MARKETING,
 
-    name: 'MARKETING Research',
+    name: ['MARKETING', 'Research'],
   },
   {
     imgService: SystemSetting,
-    name: 'SYSTEM Testing',
+    name: ['SYSTEM', 'Testing'],
   },
   {
     imgService: ArtDesgin,
 
-    name: 'ART Design',
+    name: ['ART', 'Design'],
   },
   {
     imgService: Blockchain,
-    name: 'BLOCKCHAIN',
+    name: ['BLOCKCHAIN', ' '],
   },
 ];
 
@@ -106,24 +106,24 @@ function HomeOurServices({ title }) {
             onClick={handleGoToPrevImage}
           />
         </IconButton>
-        <div className="grid grid-cols-3 justify-center gap-8 items-center mt-10 ">
+        <div className="grid grid-cols-3 justify-center gap-8 items-stretch mt-10">
           {currentImages.map((i, currentIndex) => (
             <div
+              key={currentIndex}
               onMouseEnter={() => handleMouseEnter(currentIndex)}
               onMouseLeave={handleMouseLeave}
-              className="hover:cursor-pointer border-2 border-[#ff8503] relative p-4"
+              className="hover:cursor-pointer border-2 border-[#ff8503] relative p-4 flex flex-col justify-between"
+              style={{ height: '350px' }} // Set a fixed height
             >
               <a
-                key={currentIndex}
-                // href user to game link
                 href={listServices[i].gameUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-[350px] h-[450px]"
+                className="w-[350px] h-[100%]" // Use 100% height
               >
                 <img
                   src={listServices[i].imgService}
-                  alt={listServices[i].name}
+                  alt={listServices[i].name.join(' ')}
                   className="h-[auto] max-w-full opacity-100  transition-transform duration-1000 object-cover"
                   // className="contain h-auto max-w-full"
                 />
@@ -134,10 +134,17 @@ function HomeOurServices({ title }) {
                   </div>
                 )}
               </a>
-              <p className="text-white text-center mt-4">{listServices[i].name}</p>
+              <p className="text-white text-center mt-4">
+                <span className="text-[#FF8503] font-bold text-[20px]">
+                  {listServices[i].name[0]}
+                </span>{' '}
+                <br />
+                {listServices[i].name[1]}
+              </p>
             </div>
           ))}
         </div>
+
         <IconButton>
           <KeyboardDoubleArrowRightIcon
             sx={{ color: 'white', fontSize: '48px' }}
