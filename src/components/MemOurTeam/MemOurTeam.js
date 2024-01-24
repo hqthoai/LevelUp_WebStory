@@ -37,7 +37,7 @@ const listDistribute = [
     id: 4,
     memImg: SueHoang,
     memName: 'Sue Hoàng',
-    memPosition: 'CHIEF CREATIVE DIRECTOR',
+    memPosition: 'CHIEF CREATIVE OFFICER',
   },
   {
     id: 5,
@@ -86,7 +86,7 @@ const listDistribute = [
     id: 12,
     memImg: TruongThuyKhanhAn,
     memName: 'Trương Thụy Khánh An',
-    memPosition: 'HEAD OF MARKETING RESEARCH & DEVELOPMENT',
+    memPosition: 'HEAD OF MARKETING',
   },
 ];
 
