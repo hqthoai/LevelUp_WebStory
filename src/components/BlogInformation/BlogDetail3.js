@@ -2,7 +2,7 @@ import React from 'react';
 import AboutUs from '../../pages/AboutUs';
 import articleImage1 from '../../assets/images/article3-1.png';
 import articleImage2 from '../../assets/images/article3-2.png';
-import articleImage3 from '../../assets/images/article3-3.png';
+import articleImage3 from '../../assets/images/article3-3.jpg';
 import articleImage4 from '../../assets/images/article3-4.png';
 import articleImage5 from '../../assets/images/article3-5.png';
 import articleImage6 from '../../assets/images/article3-6.png';
