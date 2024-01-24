@@ -12,36 +12,18 @@ import imgArticle3 from '../../assets/images/article3-6.png';
 const listArticles = [
   {
     imgArticle: imgArticle1,
-    title: 'Article 1',
-    timeToRead:
-      'Roblox achieves remarkable growth in 2023: A game-changer in the digital landscape',
+
+    title: 'Roblox achieves remarkable growth in 2023: A game-changer in the digital landscape',
   },
   {
     imgArticle: imgArticle2,
-    title: 'Article 2',
-    timeToRead: "Roblox's phenomenal rise in vietnam: LEVEL UP STUDIO unveils key insights",
+
+    title: "Roblox's phenomenal rise in vietnam: LEVEL UP STUDIO unveils key insights",
   },
   {
     imgArticle: imgArticle3,
 
-    title: 'Article 3',
-    timeToRead: 'From Nikeland to Gucci Town: The top 5 branded Roblox activations',
-  },
-  {
-    imgArticle: 'https://i.pinimg.com/1200x/5e/6e/79/5e6e79603e87312e8ee6c500ce93a9cf.jpg',
-    title: 'Article 4',
-    timeToRead: '6 MIN READ',
-  },
-  {
-    imgArticle: 'https://i.pinimg.com/736x/3e/ae/7a/3eae7aea578fbc611ffbfa600fc3d2e5.jpg',
-
-    title: 'Article 5',
-    timeToRead: '6 MIN READ',
-  },
-  {
-    imgArticle: 'https://i.pinimg.com/736x/64/20/29/6420299e0c2879145fba999b892d2c6f.jpg',
-    title: 'Article 6',
-    timeToRead: '6 MIN READ',
+    title: 'From Nikeland to Gucci Town: The top 5 branded Roblox activations',
   },
 ];
 
@@ -85,7 +67,7 @@ function HomeBlog2({ title }) {
   return (
     <div className="bg-[#1f2029] w-[580px] h-[350px]">
       {/* <div className="bg-[#1f2029] w-[750px] h-[350px] flex items-center flex-col font-display"> */}
-      <div className="text-white text-[20px] font-bold font-pop text-center p-4">
+      <div className="text-white text-[24px] font-bold font-pop text-center p-4 mt-[-16px]">
         <p>LAST ARTICLES</p>
       </div>
       <div className="flex items-center justify-between font-pop mt-8">
@@ -131,11 +113,8 @@ function HomeBlog2({ title }) {
                         />
                       </div>
                     </a>
-                    <div className="text-center mt-2 mb-2">
-                      <p className="text-white">{listArticles[i].title}</p>
-                      <p className="text-[#bdbdbd] text-[12px] mt-1">
-                        {listArticles[i].timeToRead}
-                      </p>
+                    <div className="text-left mt-2 mb-2">
+                      <p className="text-[#bdbdbd] text-[12px] mt-1">{listArticles[i].title}</p>
                     </div>
                     {/* <p className="text-white text-center mt-2 mb-2">{listArticles[i].title}</p> */}
                   </div>
