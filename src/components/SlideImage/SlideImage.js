@@ -10,7 +10,7 @@ import GiantyVN from '../../assets/images/GiantyVN.png';
 import RollingAnt from '../../assets/images/RollingAnt.png';
 import S8XTPN from '../../assets/images/s8x-tpn-logo.png';
 
-import JungVonMattAg from '../../assets/images/JungVonMattAg.jpg';
+import JungVonMattAg from '../../assets/images/2560px-JvM_Logo.svg.png';
 import CasperDash from '../../assets/images/CasperDash.png';
 import Capcom from '../../assets/images/Capcom-logo.png';
 import './SlideImage.module.scss';
@@ -20,6 +20,11 @@ import LightRight from '../../assets/images/lightRight.png';
 import NextImage from '../../assets/images/next.png';
 import PreviousImage from '../../assets/images/previous.png';
 
+// version - 2
+import { Avatar } from '@mui/material';
+import { Link } from 'react-router-dom';
+import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
+import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 const slides = [
   {
     id: 1,
@@ -112,7 +117,7 @@ function SlideImage() {
                   <img
                     src={LightLeft}
                     alt="Light Left"
-                    className="absolute -rotate-45 left-[-100px] top-1/2 transform -translate-y-1/2 opacity-100 transition-transform duration-1000"
+                    className="absolute -rotate-45 left-[-100px] top-1/2 transform -translate-y-[135px] opacity-100 transition-transform duration-1000"
                   />
                   <img
                     src={LightRight}
@@ -128,14 +133,14 @@ function SlideImage() {
                 rel="noopener noreferrer"
                 className={`${
                   currentIndex === 1
-                    ? 'w-[490px] h-[380px] cursor-pointer -translate-y-8 transition-transform duration-1000 ml-[100px] mr-[100px]'
-                    : 'w-[300px] h-[300px] translate-y-8 transition-transform duration-1000 '
+                    ? 'w-[490px] h-[380px] cursor-pointer -translate-y-8 transition-transform duration-1000 ml-[150px] mr-[150px]'
+                    : 'w-[300px] h-[300px] translate-y-8 opacity-60 transition-transform duration-1000 '
                 } overflow-hidden flex justify-around items-center shadow-[0 15px 50px rgba(0, 0, 0, 0.2)] mr-10  transition-transform duration-1000`}
               >
                 <img
                   src={slides[i].gameImageUrl}
                   alt={slides[i].gameName}
-                  className={`h-auto max-w-full opacity-100 transition-transform duration-1000 ${
+                  className={`h-auto max-w-full transition-transform duration-1000 ${
                     currentIndex === 2 ? 'ml-3' : ''
                   }`}
                 />
@@ -153,16 +158,30 @@ function SlideImage() {
             },
             position: 'absolute',
             top: '30%',
-            left: '22%',
+            left: '25%',
             transform: 'translateX(50%)',
           }}
         >
-          <img
-            src={PreviousImage}
-            alt="Previous"
-            style={{ width: '100px', height: '100px', cursor: 'pointer' }}
-            onClick={handleGoToPrevImage}
-          />
+          <Avatar
+            className="animate__animated animate__fadeIn"
+            sx={{
+              width: 60,
+              height: 60,
+              backgroundColor: '#ff8503',
+              fontWeight: '900',
+              ml: '-20px',
+              cursor: 'pointer',
+            }}
+          >
+            <ArrowBackIosIcon
+              sx={{
+                color: 'white',
+                fontSize: '40px',
+                mr: '-12px',
+              }}
+              onClick={handleGoToPrevImage}
+            />
+          </Avatar>
         </Box>
         <Box
           sx={{
@@ -176,15 +195,26 @@ function SlideImage() {
             transform: 'translateX(50%)',
           }}
         >
-          <img
-            src={NextImage}
-            alt="Next"
-            style={{ width: '100px', height: '100px', cursor: 'pointer' }}
-            onClick={handleGoToNextImage}
-          />
+          <Avatar
+            className="animate__animated animate__fadeIn"
+            sx={{
+              width: 60,
+              height: 60,
+              backgroundColor: '#ff8503',
+              fontWeight: '900',
+              mr: '-20px',
+              cursor: 'pointer',
+            }}
+          >
+            <ArrowForwardIosIcon
+              sx={{ color: 'white', fontSize: '40px' }}
+              onClick={handleGoToNextImage}
+            />
+          </Avatar>
         </Box>
       </Box>
     </div>
   );
 }
+
 export default SlideImage;
