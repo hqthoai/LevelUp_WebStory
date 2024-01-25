@@ -1,4 +1,4 @@
-### Developing website for LevelUp Studio Company
+### Developing website for LevelUp Studio 
 
 - The contribution includes these members:
   - Phan Thanh Luan
