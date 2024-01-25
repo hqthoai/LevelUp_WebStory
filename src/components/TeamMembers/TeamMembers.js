@@ -83,8 +83,8 @@ function TeamMembers({ title }) {
               <p className="text-[16px] uppercase font-bold bg-clip-text text-transparent bg-gradient-to-r from-[#ec4899] from-10% via-purple-500 via-30% to-[#18ffff] to-90%">
                 {mem.position}
               </p>
-              <div className="flex items-center justify-center">
-                <p className="text-[12px] text-white mt-4 font-medium font-pop">{mem.name}</p>
+              <div className="flex items-center justify-center ">
+                <p className="text-[14px] text-white mt-4 font-quicksand font-bold">{mem.name}</p>
               </div>
             </div>
           </div>
