@@ -64,9 +64,7 @@ const MainBanner = () => {
           <h4
             className="text-white uppercase text-2xl font-semibold tracking-wide ml-5 cursor-pointer"
             style={{
-              textShadow: '8px 6px 0px #58595B, 5px 4px 0px rgba(0,0,0,0.15)',
-              color: '#FFFFFF',
-              // /textShadow: '2px 4px 2px #58595B',
+              textShadow: '2px 4px 2px #58595B',
             }}
             onClick={handleNavigate}
           >

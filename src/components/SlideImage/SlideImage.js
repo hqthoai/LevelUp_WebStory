@@ -169,7 +169,7 @@ function SlideImage() {
               height: 60,
               backgroundColor: '#ff8503',
               fontWeight: '900',
-              ml: '-20px',
+              ml: '-28px',
               cursor: 'pointer',
             }}
           >

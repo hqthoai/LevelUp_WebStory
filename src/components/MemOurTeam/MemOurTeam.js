@@ -127,7 +127,7 @@ function MemOurTeam({ title }) {
                   <p className="text-[16px] uppercase font-bold bg-clip-text text-transparent bg-gradient-to-r from-[#ec4899] from-10% via-purple-500 via-30% to-[#18ffff] to-90%">
                     {mem.memPosition}
                   </p>
-                  <p className="text-[12px] mt-2  font-medium font-pop">{mem.memName}</p>
+                  <p className="text-[14px] mt-2  font-bold font-quicksand">{mem.memName}</p>
                 </div>
               </div>
             </div>
