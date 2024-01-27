@@ -133,7 +133,7 @@ function SlideImage() {
                 rel="noopener noreferrer"
                 className={`${
                   currentIndex === 1
-                    ? 'w-[490px] h-[380px] cursor-pointer -translate-y-8 transition-transform duration-1000 ml-[145px] mr-[150px]'
+                    ? 'w-[490px] h-[380px] cursor-pointer -translate-y-8 transition-transform duration-1000 ml-[140px] mr-[150px]'
                     : 'w-[300px] h-[300px] translate-y-8 opacity-60 transition-transform duration-1000 '
                 } overflow-hidden flex justify-around items-center shadow-[0 15px 50px rgba(0, 0, 0, 0.2)] mr-10  transition-transform duration-1000`}
               >

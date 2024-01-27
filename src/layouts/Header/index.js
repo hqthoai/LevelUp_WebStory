@@ -60,11 +60,11 @@ const Header = () => {
                 setOpen(false);
               }}
             >
-              <li className=" relative h-[110px] px-6 hover:bg-[#1a1b21] border-b-4 border-solid border-transparent hover:border-orange-700 hover:text-orange-700 transform -skew-x-[20deg] flex items-center">
+              <li className=" relative h-[80px] px-6 hover:bg-[#1a1b21] border-b-4 border-solid border-transparent hover:border-orange-700 hover:text-orange-700 transform -skew-x-[20deg] flex items-center">
                 <div className="transform skew-x-[20deg] tracking-tighter">About Us</div>
               </li>
               <div
-                className={`absolute top-full uppercase left-[-21px] bg-[#1a1b29] w-[200px] transition-all transform origin-top duration-300 z-50  ${
+                className={`absolute top-full uppercase left-[-21px] bg-[#1a1b29]  w-[200px] transition-all transform origin-top duration-300 z-50  ${
                   open ? 'scale-y-100 ' : 'scale-y-0 '
                 }
                 }`}
