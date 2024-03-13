@@ -41,13 +41,13 @@ const MainBanner = () => {
     <div className="w-full h-fit bg-[#151212]">
       <div
         ref={bannerRef}
-        className="w-full h-screen flex justify-center items-center"
+        className="w-full lg:h-screen md:h-[700px] flex justify-center items-center"
         style={{
           // backgroundImage:
           //   'url("https://themebeyond.com/demo/haldalive/wp-content/uploads/2022/04/banner_bg.jpg")',
           backgroundImage: `url(${HomeBanner})`,
           backgroundRepeat: 'no-repeat',
-          backgroundSize: 'fill',
+          backgroundSize: 'cover',
           backgroundPosition: 'center',
         }}
         onMouseMove={handleMouseMove}

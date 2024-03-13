@@ -3,7 +3,7 @@ import { FaMagnifyingGlass, FaRegPenToSquare } from 'react-icons/fa6';
 import 'animate.css';
 import './index.css';
 
-import LevelUpLogo from '../../assets/images/LevelUpLogo.png';
+import LevelUpLogo from '../../assets/images/main_logo_v2.png';
 const Header = () => {
   const [searchHover, setSearchHover] = useState(false);
   const [searchKey, setSearchKey] = useState('');
@@ -45,14 +45,16 @@ const Header = () => {
             src={LevelUpLogo}
             alt="Logo"
             className={` ${
-              subNavBarToggle ? 'w-[90px] h-[85px]' : 'w-[110px] h-[110px]'
-            }  cursor-pointer block m-auto rounded-[5px] object-cover`}
+              subNavBarToggle
+                ? 'lg:w-[90px] lg:h-[85px] md:w-[6rem] md:h-[5rem] mt-4'
+                : 'lg:w-[110px] lg:h-[110px] md:w-[6rem] md:h-[6rem] mt-8'
+            }  cursor-pointer block mt-4 m-auto rounded-[5px] object-cover`}
           />
         </a>
 
         {/* Navigation */}
-        <div className="w-[55%] h-[100%] uppercase">
-          <ul className="flex w-full h-[100%] items-center text-[15px] text-white leading-10 font-semibold">
+        <div className="lg:w-[55%] md:w-[65%] h-[100%] uppercase">
+          <ul className="flex w-full h-[100%] items-center md:text-[12px] lg:text-[15px]  text-white leading-10 font-semibold">
             <div
               className="relative "
               onMouseEnter={() => setOpen(true)}
@@ -86,7 +88,7 @@ const Header = () => {
                 </ul>
               </div>
             </div>
-            <li className="h-[100%] px-6 hover:bg-[#1a1b21] border-b-4 border-solid border-transparent hover:border-orange-700 hover:text-orange-700 transform -skew-x-[30deg] flex items-center">
+            <li className="h-[100%] px-6  hover:bg-[#1a1b21] border-b-4 border-solid border-transparent hover:border-orange-700 hover:text-orange-700 transform -skew-x-[30deg] flex items-center">
               <a href="/our-team" className="transform skew-x-[30deg] tracking-tighter">
                 Our squad
               </a>

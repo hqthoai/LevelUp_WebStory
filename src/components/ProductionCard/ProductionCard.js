@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './ProductionCard.scss';
-import LogoWeb from '../../assets/images/LevelUpLogo.png';
+import LogoWeb from '../../assets/images/main_logo_v2.png';
 
 export default function ProductionCard({ originalText, businessText }) {
   const [activeTab, setActiveTab] = useState(1);
@@ -20,7 +20,7 @@ export default function ProductionCard({ originalText, businessText }) {
         <div className="flex md:flex-row items-center justify-between">
           {/* Tabs */}
           <div className="w-full md:w-1/2 px-[16px]">
-            <div className="bg-[#1f2029] px-4 md:px-[43px] py-4 md:py-[48px]">
+            <div className="bg-[#1f2029] px-4 md:px-[35px] py-4 md:py-[48px]">
               <div>
                 <div className="nav-link ">
                   <div className="flex mb-4 md:mb-[30px] pb-4 md:pb-[36px] relative">
@@ -34,7 +34,7 @@ export default function ProductionCard({ originalText, businessText }) {
                     </div>
                     <div
                       className={`ml-12 font-bold cursor-pointer uppercase business-tab
-                      ${activeTab === 2 ? 'text-[#ff8503]' : 'text-white'}`}
+                      ${activeTab === 2 ? 'text-[#ff8503] ' : 'text-white'}`}
                       onClick={() => handleTabChange(2)}
                     >
                       Business
@@ -47,7 +47,7 @@ export default function ProductionCard({ originalText, businessText }) {
                 <div className="mt-4 min-h-[300px]">
                   {activeTab === 1 && (
                     <div className="fade-in">
-                      <h2 className="text-white text-[50px] uppercase font-bold mb-2 font-san">
+                      <h2 className="text-white text-[50px] md:text-[40px] uppercase font-bold mb-2 font-san">
                         <a href="/production">
                           SEIZE THE LIFE ON <span className="text-[#ff8503]">METAVERSE</span>
                         </a>
@@ -61,8 +61,8 @@ export default function ProductionCard({ originalText, businessText }) {
                           <div>
                             Gaming should be more than just entertainment; it should be an enriching
                             experience and community-centric approach! Our team is passionate about
-                            incorporating elements of cultures into your game, offering
-                            global next-generation players a unique and immersive adventure in the
+                            incorporating elements of cultures into your game, offering global
+                            next-generation players a unique and immersive adventure in the
                             metaverse.{' '}
                           </div>
                         )}
@@ -71,7 +71,7 @@ export default function ProductionCard({ originalText, businessText }) {
                   )}
                   {activeTab === 2 && (
                     <div className="fade-in">
-                      <h2 className="text-white text-[50px] uppercase font-bold mb-2">
+                      <h2 className="text-white text-[50px] md:text-[40px]  uppercase font-bold mb-2">
                         <a href="/production">
                           EXPERIENCE JUST FOR{' '}
                           <span className="text-[#ff8503]">FEARLESS BUSINESS</span>
@@ -102,8 +102,12 @@ export default function ProductionCard({ originalText, businessText }) {
           </div>
 
           {/* Image */}
-          <div className="h-auto w-full md:w-1/2 px-[16px] justify-center items-center mb-24 md:mt-0">
-            <img src={LogoWeb} alt="Your Image" className="w-full h-[560px] object-cover" />
+          <div className="h-auto w-full md:w-1/2 px-[10px] justify-center items-center mb-24 md:mt-0">
+            <img
+              src={LogoWeb}
+              alt="Your Image"
+              className="w-full h-[560px] md:h-fit object-cover bg-center bg-cover"
+            />
           </div>
         </div>
       </div>

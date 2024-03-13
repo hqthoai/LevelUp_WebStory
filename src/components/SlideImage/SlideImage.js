@@ -107,7 +107,7 @@ function SlideImage() {
   }, [currentImages]);
 
   return (
-    <div className="relative w-[90%] min-h-screen overflow-hidden mt-20 ml-12">
+    <div className="relative lg:w-[90%]  md:w-[100%]  min-h-screen overflow-hidden mt-20 lg:ml-12 md:ml-0">
       <div className="w-full pt-[50px] flex overflow-hidden">
         <div className="flex items-center relative">
           {currentImages.map((i, currentIndex) => (
@@ -133,8 +133,8 @@ function SlideImage() {
                 rel="noopener noreferrer"
                 className={`${
                   currentIndex === 1
-                    ? 'w-[490px] h-[380px] cursor-pointer -translate-y-8 transition-transform duration-1000 ml-[140px] mr-[150px]'
-                    : 'w-[300px] h-[300px] translate-y-8 opacity-60 transition-transform duration-1000 '
+                    ? 'lg:w-[490px] lg:h-[380px] md:w-[326.67px] md:h-[253.33px] cursor-pointer -translate-y-8 transition-transform duration-1000 lg:ml-[140px] lg:mr-[150px] md:ml-[140px] md:mr-[150px]'
+                    : 'lg:w-[300px] lg:h-[300px] md:w-[200px] md:h-[200px] translate-y-8 opacity-60 transition-transform duration-1000 '
                 } overflow-hidden flex justify-around items-center shadow-[0 15px 50px rgba(0, 0, 0, 0.2)] mr-10  transition-transform duration-1000`}
               >
                 <img
@@ -149,7 +149,7 @@ function SlideImage() {
           ))}
         </div>
       </div>
-      <Box className="flex justify-center mt-[-58px]">
+      <Box className="flex justify-center mt-[-58px] md:mt-[-30px]">
         <Box
           sx={{
             '&:hover': {
