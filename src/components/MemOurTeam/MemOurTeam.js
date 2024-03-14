@@ -17,40 +17,37 @@ const listDistribute = [
     id: 1,
     memImg: NguyenThanhDuy,
     memName: 'Nguyễn Thanh Duy',
-    memPosition: 'FOUNDER & CEO',
+    memPosition: 'FOUNDER & CHIEF EXECTIVE OFFICER',
   },
   {
     id: 2,
-    memImg: DaoChiHao,
-    memName: 'Đào Chí Hào',
-    memPosition: 'TECHLEAD',
+    memImg: SueHoang,
+    memName: 'Sue Hoàng',
+    memPosition: 'CO-FOUNDER & CHIEF CREATIVE OFFICER',
   },
   {
     id: 3,
+    memImg: DaoChiHao,
+    memName: 'Đào Chí Hào',
+    memPosition: 'CHIEF TECHNICAL OFFICER',
+  },
+  {
+    id: 4,
     memImg: NguyenPhungYenNhi,
-
     memName: 'Nguyễn Phùng Yến Nhi',
     memPosition: 'ART DIRECTOR',
   },
-
-  {
-    id: 4,
-    memImg: SueHoang,
-    memName: 'Sue Hoàng',
-    memPosition: 'CHIEF CREATIVE OFFICER',
-  },
   {
     id: 5,
-
-    memImg: VoThiMYLinh,
-    memName: 'Võ Thị Mỹ Linh',
-    memPosition: 'GAME DESIGNER',
+    memImg: TruongThuyKhanhAn,
+    memName: 'Trương Thụy Khánh An',
+    memPosition: 'CHIEF MARKETING OFFICER',
   },
   {
     id: 6,
-    memImg: NguyenPhamTienHung,
-    memName: 'Nguyễn Phạm Tiến Hưng',
-    memPosition: '3D DESIGNER & PROGRAMMER',
+    memImg: VoThiMYLinh,
+    memName: 'Võ Thị Mỹ Linh',
+    memPosition: 'GAME DESIGNER',
   },
   {
     id: 7,
@@ -64,30 +61,30 @@ const listDistribute = [
     memName: 'Nguyễn Thị Minh Phúc',
     memPosition: '2D ARTIST',
   },
-  {
-    id: 9,
-    memImg: VoHoangVuong,
-    memName: 'Võ Hoàng Vương',
-    memPosition: 'DEVELOPER',
-  },
-  {
-    id: 10,
-    memImg: TongVuongPhat,
-    memName: 'Tống Phát Vương',
-    memPosition: 'DEVELOPER',
-  },
-  {
-    id: 11,
-    memImg: NguyenQuocTrung,
-    memName: 'Nguyễn Quốc Trung',
-    memPosition: 'DEVELOPER',
-  },
-  {
-    id: 12,
-    memImg: TruongThuyKhanhAn,
-    memName: 'Trương Thụy Khánh An',
-    memPosition: 'HEAD OF MARKETING',
-  },
+  // {
+  //   id: 9,
+  //   memImg: NguyenPhamTienHung,
+  //   memName: 'Nguyễn Phạm Tiến Hưng',
+  //   memPosition: '3D DESIGNER & PROGRAMMER',
+  // },
+  // {
+  //   id: 10,
+  //   memImg: VoHoangVuong,
+  //   memName: 'Võ Hoàng Vương',
+  //   memPosition: 'DEVELOPER',
+  // },
+  // {
+  //   id: 11,
+  //   memImg: TongVuongPhat,
+  //   memName: 'Tống Phát Vương',
+  //   memPosition: 'DEVELOPER',
+  // },
+  // {
+  //   id: 12,
+  //   memImg: NguyenQuocTrung,
+  //   memName: 'Nguyễn Quốc Trung',
+  //   memPosition: 'DEVELOPER',
+  // },
 ];
 
 function MemOurTeam({ title }) {
@@ -109,7 +106,7 @@ function MemOurTeam({ title }) {
 
       <div className="grid grid-cols-4 gap-8  mt-10">
         {listDistribute.map((mem, index) => (
-          <div className="bg-black w-[250px] h-[300px] p-3">
+          <div className="bg-black lg:w-[250px] lg:h-[300px] p-3 md:w-[190px] md:h-[260px]">
             <div key={index} className="relative w-[70%] h-[120px] mx-auto my-4 ">
               <div className="w-full h-full border-2 border-transparent group  relative ">
                 <div className="overflow-hidden w-full h-full rounded-[5px] ">
@@ -124,10 +121,10 @@ function MemOurTeam({ title }) {
                     {mem.memName}
                   </p>
                   <p className="text-[12px] mt-2  font-medium font-pop">{mem.memPosition}</p> */}
-                  <p className="text-[16px] uppercase font-bold bg-clip-text text-transparent bg-gradient-to-r from-[#ec4899] from-10% via-purple-500 via-30% to-[#18ffff] to-90%">
+                  <p className="lg:text-[16px] md:text-[13.5px] uppercase font-bold bg-clip-text text-transparent bg-gradient-to-r from-[#ec4899] from-10% via-purple-500 via-30% to-[#18ffff] to-90%">
                     {mem.memPosition}
                   </p>
-                  <p className="text-[14px] mt-2  font-bold font-quicksand">{mem.memName}</p>
+                  <p className="lg:text-[14px] md:text-[12px] mt-2  font-bold font-quicksand">{mem.memName}</p>
                 </div>
               </div>
             </div>

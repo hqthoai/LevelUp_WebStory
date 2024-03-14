@@ -13,9 +13,9 @@ const listDistribute = [
     name: 'Nguyễn Thanh Duy',
   },
   {
-    imgLink: DaoChiHao,
-    position: 'TECHLEAD',
-    name: 'Đào Chí Hào',
+    imgLink: SueHoang,
+    position: 'CO-FOUNDER CHIEF CREATIVE OFFICER',
+    name: 'Sue Hoàng',
   },
   {
     imgLink: NguyenPhungYenNhi,
@@ -23,9 +23,9 @@ const listDistribute = [
     name: 'Nguyễn Phùng Yến Nhi',
   },
   {
-    imgLink: SueHoang,
-    position: 'CHIEF CREATIVE OFFICER',
-    name: 'Sue Hoàng',
+    imgLink: DaoChiHao,
+    position: 'TECHLEAD',
+    name: 'Đào Chí Hào',
   },
   {
     imgLink: TruongThuyKhanhAn,
@@ -53,10 +53,10 @@ function TeamMembers({ title }) {
         </div>
       </div>
 
-      <div className="grid grid-cols-5 gap-8 justify-center items-center mt-10 ">
+      <div className="grid grid-cols-5 lg:gap-8 md:gap-4 justify-center items-center mt-10 ">
         {listDistribute.map((mem, index) => (
-          <div className="bg-black w-[230px] h-[300px] p-3 border-b-2 border-[#242424]" key={index}>
-            <div className="relative w-[120px] h-[120px] mx-auto my-4 ">
+          <div className="bg-black lg:w-[230px] lg:h-[300px] md:w-[130px] md:h-[220px] lg:p-3 border-b-2 border-[#242424]" key={index}>
+            <div className="relative lg:w-[120px] lg:h-[120px] mx-auto my-4 md:w-[80px] md:h-[80px] ">
               <div
                 className="w-full h-full rounded-full border-2 border-transparent group hover:border-[#ff8502] relative "
                 onMouseEnter={() => setIsHovered(index)}
@@ -80,11 +80,11 @@ function TeamMembers({ title }) {
             </div>
 
             <div className="text-center">
-              <p className="text-[16px] uppercase font-bold bg-clip-text text-transparent bg-gradient-to-r from-[#ec4899] from-10% via-purple-500 via-30% to-[#18ffff] to-90%">
+              <p className="lg:text-[16px] md:text-[13.5px] uppercase font-bold bg-clip-text text-transparent bg-gradient-to-r from-[#ec4899] from-10% via-purple-500 via-30% to-[#18ffff] to-90%">
                 {mem.position}
               </p>
               <div className="flex items-center justify-center ">
-                <p className="text-[14px] text-white mt-4 font-quicksand font-bold">{mem.name}</p>
+                <p className="lg:text-[14px] md:text-[13px] text-white mt-4 font-quicksand font-bold">{mem.name}</p>
               </div>
             </div>
           </div>

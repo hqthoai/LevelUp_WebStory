@@ -6,6 +6,7 @@ import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 import imgArticle1 from '../../assets/images/article-11.png';
 import imgArticle2 from '../../assets/images/article2-thumbnail.png';
 import imgArticle3 from '../../assets/images/article3-6.png';
+import { useMediaQuery } from '@mui/material';
 
 const listArticles = [
   {
@@ -25,7 +26,9 @@ const listArticles = [
 function HomeBlog2({ title }) {
   const [hoveredService, setHoveredService] = useState(null);
   const [currentImages, setCurrentImages] = useState([0, 1, 2]);
+    const [currentBlogIndex, setCurrentBlogIndex] = useState(0);
   const [translateX, setTranslateX] = useState(0);
+  const isTablet = useMediaQuery('(min-width: 768px) and (max-width: 1024px)');
 
   const handleGoToPrevImage = () => {
     const firstImageIndex = currentImages[0];
@@ -50,93 +53,7 @@ function HomeBlog2({ title }) {
     // };
   }, [currentImages]);
 
-  const handleMouseEnter = (index) => {
-    setHoveredService(index);
-  };
-
-  const handleMouseLeave = () => {
-    setHoveredService(null);
-  };
-
-  //   return (
-  //     <div className="bg-[#1f2029] w-[580px] h-[350px]">
-  //       <div className="text-white text-[24px] font-bold font-pop text-center p-4 mt-[-16px]">
-  //         <p>LAST ARTICLES</p>
-  //       </div>
-  //       <div className="flex items-center justify-between font-pop mt-8">
-  //         <Avatar
-  //           className="animate__animated animate__fadeIn"
-  //           sx={{
-  //             width: 36,
-  //             height: 36,
-  //             backgroundColor: '#ff8503',
-  //             fontWeight: '900',
-  //             ml: '-20px',
-  //             cursor: 'pointer',
-  //           }}
-  //         >
-  //           <ArrowBackIosIcon
-  //             sx={{
-  //               color: 'white',
-  //               fontSize: '20px',
-  //               mr: '-6px',
-  //             }}
-  //             onClick={handleGoToPrevImage}
-  //           />
-  //         </Avatar>
-  //         <div className="flex jus items-center mt-[-32px] min-h-[280px]">
-  //           <div className="flex justify-start gap-8 items-center  font-pop">
-  //             {currentImages.map((i, currentIndex) => (
-  //               <div key={currentIndex} className="animate__animated animate__fadeIn">
-  //                 <Link to={`/blog/${currentIndex + 1}`}>
-  //                   <div
-  //                     className={`hover:cursor-pointer border-2 border-[#ff8503] relative h-[240px] w-[150px] grid `}
-  //                   >
-  //                     <a
-  //                       // href user to game link
-  //                       href={listArticles[i].gameUrl}
-  //                       target="_blank"
-  //                       rel="noopener noreferrer"
-  //                     >
-  //                       <div className=" w-[147px] overflow-hidden">
-  //                         <img
-  //                           src={listArticles[i].imgArticle}
-  //                           alt={listArticles[i].title}
-  //                           className="h-[100px] w-full object-cover transition-transform duration-1000"
-  //                         />
-  //                       </div>
-  //                     </a>
-  //                     <div className="title-container h-[50px] flex items-center justify-start px-1">
-  //                       <p className="text-white text-[14px]">{listArticles[i].title}</p>
-  //                     </div>
-  //                   </div>
-  //                 </Link>
-  //               </div>
-  //             ))}
-  //           </div>
-  //         </div>
-  //         <Avatar
-  //           className="animate__animated animate__fadeIn"
-  //           sx={{
-  //             width: 36,
-  //             height: 36,
-  //             backgroundColor: '#ff8503',
-  //             fontWeight: '900',
-  //             mr: '-20px',
-  //             cursor: 'pointer',
-  //           }}
-  //         >
-  //           <ArrowForwardIosIcon
-  //             sx={{ color: 'white', fontSize: '20px' }}
-  //             onClick={handleGoToNextImage}
-  //           />
-  //         </Avatar>
-  //       </div>
-  //     </div>
-  //   );
-  // }
-
-  // export default HomeBlog2;
+  
 
   return (
     <div className="bg-[#1f2029] w-[580px] h-[350px]">
@@ -144,7 +61,7 @@ function HomeBlog2({ title }) {
         <p>LAST ARTICLES</p>
       </div>
       <div className="flex items-center justify-between font-pop mt-8">
-        <Avatar
+        {isTablet? <Avatar
           className="animate__animated animate__fadeIn"
           sx={{
             width: 36,
@@ -163,7 +80,7 @@ function HomeBlog2({ title }) {
             }}
             onClick={handleGoToPrevImage}
           />
-        </Avatar>
+        </Avatar> : null} 
         <div className="flex items-center mt-[-32px] min-h-[280px]">
           <div className="flex justify-start gap-8 items-center font-pop">
             {currentImages.map((i, currentIndex) => (
@@ -197,8 +114,12 @@ function HomeBlog2({ title }) {
               </div>
             ))}
           </div>
+
+          
+
+          
         </div>
-        <Avatar
+        {isTablet ?<Avatar
           className="animate__animated animate__fadeIn"
           sx={{
             width: 36,
@@ -213,7 +134,7 @@ function HomeBlog2({ title }) {
             sx={{ color: 'white', fontSize: '20px' }}
             onClick={handleGoToNextImage}
           />
-        </Avatar>
+        </Avatar> : null}
       </div>
     </div>
   );
