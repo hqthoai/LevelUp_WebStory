@@ -1,14 +1,13 @@
 import React, { useState, useEffect } from 'react';
-import { FaMagnifyingGlass, FaRegPenToSquare } from 'react-icons/fa6';
+import { FaMagnifyingGlass } from 'react-icons/fa6';
 import 'animate.css';
 import './index.css';
 
-import LevelUpLogo from '../../assets/images/main_logo_v2.png';
+import LevelUpLogo from '../../../assets/images/main_logo_v2.png';
 const Header = () => {
   const [searchHover, setSearchHover] = useState(false);
   const [searchKey, setSearchKey] = useState('');
   const [open, setOpen] = useState(false);
-  const [hoverFlag, setHoverFlag] = useState(true);
   const [subNavBarToggle, setSubNavBarToggle] = useState(false);
   // animation scrolling for sub-navbar
   useEffect(() => {
@@ -34,35 +33,35 @@ const Header = () => {
   return (
     <div className="header-container relative font-display">
       <div
-        className={`w-full h-[80px] duration-2000 animate__animated flex justify-between bg-[#1f2029] px-4  ${
+        className={`w-full lg:h-20 md:h-16 duration-2000 animate__animated flex justify-between bg-[#1f2029] px-4  ${
           subNavBarToggle ? 'fixed animate__fadeInDown' : 'header'
         } items-center`}
-        style={{ zIndex: 9999999999 }}
+        style={{ zIndex: 9999 }}
       >
         {/* Logo */}
-        <a className="flex flex-col justify-between items-center mt-[-15px]" href="/">
+        <a href="/">
           <img
             src={LevelUpLogo}
             alt="Logo"
             className={` ${
               subNavBarToggle
-                ? 'lg:w-[90px] lg:h-[85px] md:w-[6rem] md:h-[5rem] mt-4'
-                : 'lg:w-[110px] lg:h-[110px] md:w-[6rem] md:h-[6rem] mt-8'
-            }  cursor-pointer block mt-4 m-auto rounded-[5px] object-cover`}
+                ? 'lg:w-[110px] lg:h-20 md:w-[6rem] md:h-[5rem]'
+                : 'lg:w-[110px] lg:h-20 md:w-[6rem] md:h-[6rem] mt-4 '
+            }  cursor-pointer block m-auto rounded-[5px] object-cover`}
           />
         </a>
 
         {/* Navigation */}
-        <div className="lg:w-[55%] md:w-[65%] h-[100%] uppercase">
-          <ul className="flex w-full h-[100%] items-center md:text-[12px] lg:text-[15px]  text-white leading-10 font-semibold">
+        <div className="lg:w-[60%] md:w-[70%] h-full uppercase">
+          <ul className="flex w-full h-full items-center md:text-[12px] lg:text-[15px] text-white lg:leading-6 font-semibold md:font-medium">
             <div
-              className="relative "
+              className="relative"
               onMouseEnter={() => setOpen(true)}
               onMouseLeave={() => {
                 setOpen(false);
               }}
             >
-              <li className=" relative h-[80px] px-6 hover:bg-[#1a1b21] border-b-4 border-solid border-transparent hover:border-orange-700 hover:text-orange-700 transform -skew-x-[20deg] flex items-center">
+              <li className=" relative h-16 lg:px-6 md:px-4 hover:bg-[#1a1b21] border-b-4 border-solid border-transparent hover:border-orange-700 hover:text-orange-700 transform -skew-x-[20deg] flex items-center">
                 <div className="transform skew-x-[20deg] tracking-tighter">About Us</div>
               </li>
               <div
@@ -74,8 +73,8 @@ const Header = () => {
                   setOpen(false);
                 }}
               >
-                <ul className="flex flex-col py-4 text-[15px]">
-                  <li className="px-4 w-full hover:bg-[#1a1b21] hover:text-orange-700 ">
+                <ul className="flex flex-col py-4 lg:text-[15px] md:text-[12px]">
+                  <li className="px-4 w-full hover:bg-[#1a1b21] hover:text-orange-700 mb-3">
                     <a href="/about-us" className="transform skew-x-[30deg] tracking-tight">
                       About US
                     </a>
@@ -88,29 +87,29 @@ const Header = () => {
                 </ul>
               </div>
             </div>
-            <li className="h-[100%] px-6  hover:bg-[#1a1b21] border-b-4 border-solid border-transparent hover:border-orange-700 hover:text-orange-700 transform -skew-x-[30deg] flex items-center">
+            <li className="h-[100%]  lg:px-6 md:px-4 hover:bg-[#1a1b21] border-b-4 border-solid border-transparent hover:border-orange-700 hover:text-orange-700 transform -skew-x-[30deg] flex items-center">
               <a href="/our-team" className="transform skew-x-[30deg] tracking-tighter">
                 Our squad
               </a>
             </li>
-            <li className="h-[100%] px-6 hover:bg-[#1a1b21] border-b-4 border-solid border-transparent hover:border-orange-700 hover:text-orange-700 transform -skew-x-[30deg] flex items-center">
+            <li className="h-[100%]  lg:px-6 md:px-4  hover:bg-[#1a1b21] border-b-4 border-solid border-transparent hover:border-orange-700 hover:text-orange-700 transform -skew-x-[30deg] flex items-center">
               <a href="/production" className="transform skew-x-[30deg] tracking-tight">
                 Production
               </a>
             </li>
-            <li className="h-[100%] px-6 hover:bg-[#1a1b21] border-b-4 border-solid border-transparent hover:border-orange-700 hover:text-orange-700 transform -skew-x-[30deg] flex items-center">
+            <li className="h-[100%]  lg:px-6 md:px-4  hover:bg-[#1a1b21] border-b-4 border-solid border-transparent hover:border-orange-700 hover:text-orange-700 transform -skew-x-[30deg] flex items-center">
               <div className="transform skew-x-[30deg] tracking-tight">Games</div>
             </li>
-            <li className="h-[100%] px-6 hover:bg-[#1a1b21] border-b-4 border-solid border-transparent hover:border-orange-700 hover:text-orange-700 transform -skew-x-[30deg] flex items-center">
+            <li className="h-[100%]  lg:px-6 md:px-4  hover:bg-[#1a1b21] border-b-4 border-solid border-transparent hover:border-orange-700 hover:text-orange-700 transform -skew-x-[30deg] flex items-center">
               <div className="transform skew-x-[30deg] tracking-tight">Shop</div>
             </li>
-            <li className="h-[100%] px-6 hover:bg-[#1a1b21] border-b-4 border-solid border-transparent hover:border-orange-700 hover:text-orange-700 transform -skew-x-[30deg] flex items-center">
+            <li className="h-[100%]  lg:px-6 md:px-4  hover:bg-[#1a1b21] border-b-4 border-solid border-transparent hover:border-orange-700 hover:text-orange-700 transform -skew-x-[30deg] flex items-center">
               <a href="/blog" className="transform skew-x-[30deg] tracking-tight">
                 Blog
               </a>
             </li>
             <li
-              className="h-[100%] px-6 hover:bg-[#1a1b21] border-b-4
+              className="h-[100%]  lg:px-6 md:px-4  hover:bg-[#1a1b21] border-b-4
                         \border-solid border-transparent hover:border-orange-700
             hover:text-orange-700 transform -skew-x-[30deg] flex items-center"
             >

@@ -16,97 +16,94 @@ export default function ProductionCard({ originalText, businessText }) {
 
   return (
     <section className="pt-[120px] pb-[100px] font-display">
-      <div className="card-container p-[15px] mx-4 md:mx-16">
-        <div className="flex md:flex-row items-center justify-between">
+      <div className="card-container p-[15px] mx-4 lg:mx-16">
+        <div className="flex md:flex-row flex-wrap items-center justify-center">
           {/* Tabs */}
-          <div className="w-full md:w-1/2 px-[16px]">
+          <div className="w-full lg:flex-1 md:w-[80%] px-[16px] lg:order-1  md:order-2 ">
             <div className="bg-[#1f2029] px-4 md:px-[35px] py-4 md:py-[48px]">
-              <div>
-                <div className="nav-link ">
-                  <div className="flex mb-4 md:mb-[30px] pb-4 md:pb-[36px] relative">
-                    <div
-                      className={`font-bold mr-2 cursor-pointer uppercase ${
-                        activeTab === 1 ? 'text-[#ff8503]' : 'text-white'
-                      }`}
-                      onClick={() => handleTabChange(1)}
-                    >
-                      Originals
-                    </div>
-                    <div
-                      className={`ml-12 font-bold cursor-pointer uppercase business-tab
-                      ${activeTab === 2 ? 'text-[#ff8503] ' : 'text-white'}`}
-                      onClick={() => handleTabChange(2)}
-                    >
-                      Business
-                    </div>
-                    <div className="absolute bottom-[-4px] left-[460px] right-[40px] h-[8px] bg-[#ff8503] rounded"></div>
-                    <div className="absolute bottom-0 left-0 right-0 h-[5px] bg-[#ff8503]"></div>
+              <div className="nav-link ">
+                <div className="flex mb-4 md:mb-[30px] pb-4 relative">
+                  <div
+                    className={`font-bold mr-2 cursor-pointer uppercase ${
+                      activeTab === 1 ? 'text-[#ff8503]' : 'text-white'
+                    }`}
+                    onClick={() => handleTabChange(1)}
+                  >
+                    Originals
                   </div>
+                  <div
+                    className={`ml-12 font-bold cursor-pointer uppercase business-tab
+                      ${activeTab === 2 ? 'text-[#ff8503] ' : 'text-white'}`}
+                    onClick={() => handleTabChange(2)}
+                  >
+                    Business
+                  </div>
+                  <div className="absolute bottom-0 left-0 right-0 h-[5px] bg-[#ff8503]"></div>
+                  <div className="absolute lg:bottom-[-4px] md:bottom-[-2px] lg:right-[40px] md:right-[40px] lg:h-[8px] md:h-[7px] lg:w-20 md:w-14  bg-[#ff8503] rounded"></div>
                 </div>
+              </div>
 
-                <div className="mt-4 min-h-[300px]">
-                  {activeTab === 1 && (
-                    <div className="fade-in">
-                      <h2 className="text-white text-[50px] md:text-[40px] uppercase font-bold mb-2 font-san">
-                        <a href="/production">
-                          SEIZE THE LIFE ON <span className="text-[#ff8503]">METAVERSE</span>
-                        </a>
-                      </h2>
-                      <p className="text-white text-justify font-pop font-light text-[14px]  w-[90%]">
-                        {/* Gaming should be more than just entertainment; it should be an enriching
+              <div className="mt-4 md:min-h-[300px]">
+                {activeTab === 1 && (
+                  <div className="fade-in">
+                    <h2 className="text-white md:text-[50px]  uppercase font-bold mb-2 font-san">
+                      <a href="/production">
+                        SEIZE THE LIFE ON <span className="text-[#ff8503]">METAVERSE</span>
+                      </a>
+                    </h2>
+                    <p className="text-white text-justify font-pop font-light text-[14px]">
+                      {/* Gaming should be more than just entertainment; it should be an enriching
                         experience and community-centric approach! Our team is passionate about
                         incorporating elements of Vietnamese culture into your game, offering global
                         next-generation players a unique and immersive adventure in the metaverse. */}
-                        {originalText || (
-                          <div>
-                            Gaming should be more than just entertainment; it should be an enriching
-                            experience and community-centric approach! Our team is passionate about
-                            incorporating elements of cultures into your game, offering global
-                            next-generation players a unique and immersive adventure in the
-                            metaverse.{' '}
-                          </div>
-                        )}
-                      </p>
-                    </div>
-                  )}
-                  {activeTab === 2 && (
-                    <div className="fade-in">
-                      <h2 className="text-white text-[50px] md:text-[40px]  uppercase font-bold mb-2">
-                        <a href="/production">
-                          EXPERIENCE JUST FOR{' '}
-                          <span className="text-[#ff8503]">FEARLESS BUSINESS</span>
-                        </a>
-                      </h2>
-                      <p className="text-white text-justify font-pop font-light text-[14px] w-[90%]">
-                        {/* From storytelling to gameplay mechanics, we tailor every aspect of your game
+                      {originalText || (
+                        <div>
+                          Gaming should be more than just entertainment; it should be an enriching
+                          experience and community-centric approach! Our team is passionate about
+                          incorporating elements of cultures into your game, offering global
+                          next-generation players a unique and immersive adventure in the metaverse.{' '}
+                        </div>
+                      )}
+                    </p>
+                  </div>
+                )}
+                {activeTab === 2 && (
+                  <div className="fade-in">
+                    <h2 className="text-white md:text-[50px] uppercase font-bold mb-2">
+                      <a href="/production">
+                        EXPERIENCE JUST FOR{' '}
+                        <span className="text-[#ff8503]">FEARLESS BUSINESS</span>
+                      </a>
+                    </h2>
+                    <p className="text-white text-justify font-pop font-light text-[14px] ">
+                      {/* From storytelling to gameplay mechanics, we tailor every aspect of your game
                         to resonate with the target audience, ensuring an unforgettable experience.
                         We work closely with you to bring your game concept to life. Whether it's a
                         historical epic, a fantastical journey, or a modern adventure, LEVEL UP
                         STUDIO are here to turn your vision into a captivating reality. */}
-                        {businessText || (
-                          <div>
-                            From storytelling to gameplay mechanics, we tailor every aspect of your
-                            game to resonate with the target audience, ensuring an unforgettable
-                            experience. We work closely with you to bring your game concept to life.
-                            Whether it's a historical epic, a fantastical journey, or a modern
-                            adventure, LEVEL UP STUDIO are here to turn your vision into a
-                            captivating reality.
-                          </div>
-                        )}
-                      </p>
-                    </div>
-                  )}
-                </div>
+                      {businessText || (
+                        <div>
+                          From storytelling to gameplay mechanics, we tailor every aspect of your
+                          game to resonate with the target audience, ensuring an unforgettable
+                          experience. We work closely with you to bring your game concept to life.
+                          Whether it's a historical epic, a fantastical journey, or a modern
+                          adventure, LEVEL UP STUDIO are here to turn your vision into a captivating
+                          reality.
+                        </div>
+                      )}
+                    </p>
+                  </div>
+                )}
               </div>
             </div>
           </div>
 
           {/* Image */}
-          <div className="h-auto w-full md:w-1/2 px-[10px] justify-center items-center mb-24 md:mt-0">
+          <div className="h-full w-full lg:flex-1 md:w-[80%] px-[10px] justify-center items-center lg:order-2 md:order-1">
             <img
               src={LogoWeb}
               alt="Your Image"
-              className="w-full h-[560px] md:h-fit object-cover bg-center bg-cover"
+              className="w-full h-fit md:h-90% object-cover bg-center bg-cover"
             />
           </div>
         </div>

@@ -9,11 +9,11 @@ module.exports = {
       refault: ['Refault'],
     },
     screens: {
-      md: '46.25em',
+      md: '48em',
       // => @media (min-width: 768px) { ... }
 
       lg: '73.9375em',
-      // => @media (min-width: 1024px) { ... }
+      // => @media (min-width: 1183px) { ... }
     },
   },
 
