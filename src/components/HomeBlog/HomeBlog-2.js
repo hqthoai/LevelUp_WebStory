@@ -6,8 +6,6 @@ import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 import imgArticle1 from '../../assets/images/article-11.png';
 import imgArticle2 from '../../assets/images/article2-thumbnail.png';
 import imgArticle3 from '../../assets/images/article3-6.png';
-import { useMediaQuery } from '@mui/material';
-
 const listArticles = [
   {
     imgArticle: imgArticle1,
@@ -22,13 +20,11 @@ const listArticles = [
     title: 'From Nikeland to Gucci Town: The top 5 branded Roblox activations',
   },
 ];
-
 function HomeBlog2({ title }) {
   const [hoveredService, setHoveredService] = useState(null);
   const [currentImages, setCurrentImages] = useState([0, 1, 2]);
     const [currentBlogIndex, setCurrentBlogIndex] = useState(0);
   const [translateX, setTranslateX] = useState(0);
-  const isTablet = useMediaQuery('(min-width: 768px) and (max-width: 1024px)');
 
   const handleGoToPrevImage = () => {
     const firstImageIndex = currentImages[0];
@@ -43,6 +39,22 @@ function HomeBlog2({ title }) {
     setCurrentImages((prevImages) => [...prevImages.slice(1), nextImageIndex]);
     setTranslateX(translateX - 100); // Adjust the value based on your desired translation amount
   };
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth > 768 && window.innerWidth < 1024) {
+        setCurrentImages([0]);
+      } else {
+        setCurrentImages([0, 1, 2]);
+      }
+    };
+
+    window.addEventListener('resize', handleResize);
+
+    // Cleanup function to remove event listener when component unmounts
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
 
   useEffect(() => {
     // const slideInterval = setInterval(() => {
@@ -56,7 +68,7 @@ function HomeBlog2({ title }) {
   
 
   return (
-    <div className="bg-[#1f2029] w-[580px] h-[350px]">
+    <div className="bg-[#1f2029] lg:w-[580px] md:w-[200px] h-[350px]">
       <div className="text-white text-[24px] font-bold font-pop text-center p-4 mt-[-16px]">
         <p>LAST ARTICLES</p>
       </div>
@@ -80,7 +92,7 @@ function HomeBlog2({ title }) {
             }}
             onClick={handleGoToPrevImage}
           />
-        </Avatar> : null} 
+        </Avatar>
         <div className="flex items-center mt-[-32px] min-h-[280px]">
           <div className="flex justify-start gap-8 items-center font-pop">
             {currentImages.map((i, currentIndex) => (

@@ -5,6 +5,7 @@ import { FooterTexts } from './data';
 import { List } from './data';
 import { useCallback } from 'react';
 import { FaRegClock, FaRocket } from 'react-icons/fa6';
+import LevelUpLogo from '../../../assets/images/main_logo_v2.png';
 
 const Footer = () => {
   const renderIcon = useCallback((element) => {
@@ -30,9 +31,9 @@ const Footer = () => {
             'url("https://themebeyond.com/demo/haldalive/wp-content/uploads/2022/03/footer_bg.jpg")',
         }}
       >
-        <div className="mx-[64px] px-[15px]">
-          <main className="w-full lg:pt-28 lg:pb-12 pt-20 pb-12 grid md:grid-cols-4 lg:gap-8 md:gap-5 gap-8 ">
-            <div className="flex flex-col gap-6 col-span-2">
+        <div className="lg:mx-[64px] px-[15px]">
+          <main className="w-full lg:pt-28 lg:pb-12 pt-20 pb-12 grid md:grid-cols-3 lg:gap-8 md:gap-5 gap-8 ">
+            <div className="flex flex-1 flex-col gap-6 ">
               <Link
                 to={`/`}
                 className="font-extrabold flex items-center relative md:text-3xl text-2xl font-display"
@@ -40,12 +41,16 @@ const Footer = () => {
                 {/* <Text as="span" className="text-orange-700 absolute -top-5 md:left-5 left-3">
                 <Barbell size={35} color="currentColor" weight="fill" />
               </Text> */}
-                <Text as="span" className="text-white">
+                {/* <Text as="span" className="text-white">
                   LEVELUP
                 </Text>
                 <Text as="span" className="text-transparent bg-clip-text bg-[#ff8503]">
                   STUDIO
-                </Text>
+                </Text> */}
+                <img
+                  src={LevelUpLogo}
+                  className="lg:w-[110px] lg:h-20 md:w-[6rem] md:h-[6rem]  cursor-pointer block rounded-[5px] object-cover`"
+                />
               </Link>
               <Text as="p" className="text-zinc-400 text-justify">
                 {FooterTexts.underLogoText}
@@ -68,7 +73,7 @@ const Footer = () => {
             </div>
 
             {/* CATEGORIES  */}
-            <div className="flex flex-col  gap-6 ml-[-100px] ">
+            <div className="flex flex-col felx-1 ml-20 gap-6 ">
               <Text
                 as="h1"
                 className="text-zinc-300 text-2xl font-display font-bold border-solid border-[#ff8503] border-r-8"
@@ -115,7 +120,7 @@ const Footer = () => {
               </ul>
             </div> */}
             {/* FOLLOW US  */}
-            <div className="flex flex-col  gap-6 ">
+            <div className="flex flex-col flex-1  gap-6 ">
               <Text
                 as="h1"
                 className="text-zinc-300 text-2xl font-display font-bold  border-solid border-[#ff8503] border-r-8"

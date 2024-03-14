@@ -106,14 +106,14 @@ function HomeOurServices({ title }) {
             onClick={handleGoToPrevImage}
           />
         </IconButton>
-        <div className="grid grid-cols-3 justify-center gap-8 items-stretch mt-10">
+        <div className="grid grid-cols-3 lg:justify-center md:text-center md:justify-between lg:gap-8 md:gap-4 items-stretch mt-10">
           {currentImages.map((i, currentIndex) => (
             <div
               key={currentIndex}
               onMouseEnter={() => handleMouseEnter(currentIndex)}
               onMouseLeave={handleMouseLeave}
-              className="hover:cursor-pointer border-2 border-[#ff8503] relative p-4 grid"
-              style={{ height: '350px' }} // Set a fixed height
+              className="hover:cursor-pointer border-2 border-[#ff8503] lg:h-[350px] md:h-[250px] md:w-[100%] relative lg:p-4 md:p-2 lg:grid md:flex-col md:justify-center"
+              // style={{ height: '350px' }} // Set a fixed height
             >
               <a
                 href={listServices[i].gameUrl}
@@ -124,7 +124,7 @@ function HomeOurServices({ title }) {
                 <img
                   src={listServices[i].imgService}
                   alt={listServices[i].name.join(' ')}
-                  className="h-[auto] max-w-full opacity-100  transition-transform duration-1000 object-cover"
+                  className="lg:h-[auto] lg:max-w-full md:h-[auto] md:w-[100%] opacity-100  transition-transform duration-1000 object-cover"
                   // className="contain h-auto max-w-full"
                 />
                 {hoveredService === currentIndex && (
@@ -136,8 +136,8 @@ function HomeOurServices({ title }) {
               </a>
 
               <p
-                className={`text-white text-center mt-4 ${
-                  listServices[i].name[0] === 'BLOCKCHAIN' ? 'mt-[-10px]' : '' // Add custom margin-top for BLOCKCHAIN
+                className={`text-white lg:w-full text-center md:w-[100%] lg:mt-4 md:mt-4${
+                  listServices[i].name[0] === 'BLOCKCHAIN' ? 'lg:mt-[-10px] md:mt-4' : '' // Add custom margin-top for BLOCKCHAIN
                 }`}
               >
                 <span className="text-[#FF8503] font-bold text-[20px]">
