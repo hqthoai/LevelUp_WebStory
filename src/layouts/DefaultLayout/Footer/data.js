@@ -1,7 +1,7 @@
 import { FaFacebookF, FaInstagram, FaPinterestP, FaLinkedinIn } from 'react-icons/fa6';
 
 export const FooterTexts = {
-  underLogoText: 'We will win when we want',
+  underLogoText: 'Gaming redefined.',
   quickLinks: {
     caption: 'CATEGORIES',
     links: [
