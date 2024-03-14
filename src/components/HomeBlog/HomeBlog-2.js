@@ -23,8 +23,10 @@ const listArticles = [
 function HomeBlog2({ title }) {
   const [hoveredService, setHoveredService] = useState(null);
   const [currentImages, setCurrentImages] = useState([0, 1, 2]);
-    const [currentBlogIndex, setCurrentBlogIndex] = useState(0);
   const [translateX, setTranslateX] = useState(0);
+  const [isWideScreen, setIsWideScreen] = useState(
+    window.innerWidth > 768 && window.innerWidth < 1024,
+  );
 
   const handleGoToPrevImage = () => {
     const firstImageIndex = currentImages[0];
@@ -65,15 +67,22 @@ function HomeBlog2({ title }) {
     // };
   }, [currentImages]);
 
-  
+  const handleMouseEnter = (index) => {
+    setHoveredService(index);
+  };
+
+  const handleMouseLeave = () => {
+    setHoveredService(null);
+  };
+
 
   return (
     <div className="bg-[#1f2029] lg:w-[580px] md:w-[200px] h-[350px]">
       <div className="text-white text-[24px] font-bold font-pop text-center p-4 mt-[-16px]">
         <p>LAST ARTICLES</p>
       </div>
-      <div className="flex items-center justify-between font-pop mt-8">
-        {isTablet? <Avatar
+<div className="flex items-center justify-between font-pop mt-8">
+        <Avatar
           className="animate__animated animate__fadeIn"
           sx={{
             width: 36,
@@ -93,8 +102,9 @@ function HomeBlog2({ title }) {
             onClick={handleGoToPrevImage}
           />
         </Avatar>
-        <div className="flex items-center mt-[-32px] min-h-[280px]">
-          <div className="flex justify-start gap-8 items-center font-pop">
+        <div className="flex items-center lg:mt-[-32px] md:mt-[-55px] min-h-[280px]">
+          <div className="flex justify-start gap-8  items-center font-pop">
+            {/* {!isWideScreen ? ( */}
             {currentImages.map((i, currentIndex) => (
               <div key={currentIndex} className="animate__animated animate__fadeIn">
                 <Link to={`/blog/${currentIndex + 1}`}>
@@ -126,12 +136,8 @@ function HomeBlog2({ title }) {
               </div>
             ))}
           </div>
-
-          
-
-          
         </div>
-        {isTablet ?<Avatar
+        <Avatar
           className="animate__animated animate__fadeIn"
           sx={{
             width: 36,
@@ -146,7 +152,7 @@ function HomeBlog2({ title }) {
             sx={{ color: 'white', fontSize: '20px' }}
             onClick={handleGoToNextImage}
           />
-        </Avatar> : null}
+        </Avatar>
       </div>
     </div>
   );
