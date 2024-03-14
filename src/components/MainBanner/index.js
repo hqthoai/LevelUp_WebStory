@@ -1,7 +1,6 @@
 import React, { useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import './MainBanner.css';
-import { FaCirclePlay } from 'react-icons/fa6';
 import HomeBanner from '../../assets/images/logoWeb.jfif';
 const MainBanner = () => {
   const bannerRef = useRef(null);
@@ -41,28 +40,28 @@ const MainBanner = () => {
     <div className="w-full h-fit bg-[#151212]">
       <div
         ref={bannerRef}
-        className="w-full lg:h-screen md:h-[700px] flex justify-center items-center"
+        className="w-full lg:h-screen md:h-[700px] flex justify-center items-center md:bg-cover"
         style={{
           // backgroundImage:
           //   'url("https://themebeyond.com/demo/haldalive/wp-content/uploads/2022/04/banner_bg.jpg")',
           backgroundImage: `url(${HomeBanner})`,
           backgroundRepeat: 'no-repeat',
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
+          // backgroundSize: 'cover',
+          backgroundPosition: 'center center',
         }}
         onMouseMove={handleMouseMove}
         onMouseLeave={handleMouseLeave}
       >
         <div className="text-white text-center font-display w-[90%]">
           <h2
-            className="text-[120px] leading-tight font-bold font-refault "
+            className="lg:text-[120px] md:text-[80px] leading-tight font-bold font-refault "
             style={{ ...hoverStyles, textShadow: '2px 2px 2px #C1FF00' }}
           >
             LEVEL UP STUDIO
           </h2>
 
           <h4
-            className="text-white uppercase text-2xl font-semibold tracking-wide ml-5 cursor-pointer"
+            className="text-white uppercase lg:text-2xl md:text-xl font-semibold tracking-wide ml-5 cursor-pointer"
             style={{
               textShadow: '2px 4px 2px #58595B',
             }}
