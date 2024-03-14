@@ -124,11 +124,12 @@ const SlideImage = () => {
               <div className="relative">
                 {currentIndex === 1 && (
                   <div className="absolute inset-0 flex justify-center items-center  md:mr-36 lg:mr-[-56px] lg:ml-[-56px] z-0">
-                    <div className="md:ml-[-36px] lg:ml-0 md:h-[200px] md:w-[400px] lg:h-full lg:w-full absolute -rotate-45 left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-[90px] lg:-translate-y-[210px] opacity-100 transition-transform duration-1000 z-10">
+                    <div className="md:ml-[-100px] lg:ml-0 md:h-[200px] md:w-[400px] lg:h-full lg:w-full absolute -rotate-45 left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-[90px] lg:-translate-y-[210px] opacity-100 transition-transform duration-1000 z-10">
                       <img src={LightLeft} alt="Light Left" />
                     </div>
-                    {/* <div className="md:mr-[-36px] lg:mr-0 md:h-[200px] md:w-[400px] lg:h-full lg:w-full absolute rotate-45 right-1/2 top-1/2 transform translate-x-1/2 -translate-y-1/2 opacity-100 transition-transform duration-1000 z-10"> */}
-                    <div className="md:mr-[-36px] lg:mr-0 md:h-[200px] md:w-[400px] lg:h-full lg:w-full absolute rotate-45 right-1/2 top-1/2 transform translate-x-1/2 -translate-y-1/2 lg:-translate-y-[175px] opacity-100 transition-transform duration-1000 z-10">
+                    
+                    {/* <div className="md:mr-[-36px] lg:mr-0 md:h-[200px] md:w-[400px] lg:h-full lg:w-full absolute rotate-45 right-1/2 top-1/2 transform translate-x-1/2 -translate-y-1/2 lg:-translate-y-[175px] opacity-100 transition-transform duration-1000 z-10"> */}
+                    <div className="md:mr-[-36px] lg:mr-0 md:h-[200px] md:w-[400px] lg:h-full lg:w-full absolute rotate-45 right-1/2 top-1/2 transform translate-x-1/2 md:-translate-y-[97px] lg:-translate-y-[175px] opacity-100 transition-transform duration-1000 z-10"> 
                       <img src={LightRight} alt="Light Right" />
                     </div>
                   </div>
@@ -149,7 +150,7 @@ const SlideImage = () => {
                       src={slides[i].gameImageUrl}
                       alt={slides[i].gameName}
                       className={`h-auto max-w-full transition-transform duration-1000 ${
-                        currentIndex === 2 ? 'ml-3' : ''
+                        currentIndex === 2 ? 'ml-3 md:mr-12' : ''
                       }`}
                     />
                   </a>
@@ -168,7 +169,7 @@ const SlideImage = () => {
             },
             position: 'absolute',
             top: isTablet ? '20%':'30%',
-            left: isTablet ? '27%':'31%',
+            left: isTablet ? '25%':'31%',
             transform: 'translateX(50%)',
           }}
         >
