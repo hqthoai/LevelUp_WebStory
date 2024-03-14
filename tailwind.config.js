@@ -9,11 +9,17 @@ module.exports = {
       refault: ['Refault'],
     },
     screens: {
+      /* Tablet ----------- */
       md: '48em',
       // => @media (min-width: 768px) { ... }
 
-      lg: '73.9375em',
-      // => @media (min-width: 1183px) { ... }
+      /* Ipad Pro and small laptops ----------- */
+      lg: '64.0625em',
+      // => @media (min-width: 1025px) { ... }
+
+      /* Desktops and laptops ----------- */
+      xl: '76.5em',
+      // => @media (min-width: 1224px) { ... }
     },
   },
 
