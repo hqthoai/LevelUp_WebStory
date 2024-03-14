@@ -25,7 +25,7 @@ function HomeBlog2({ title }) {
   const [currentImages, setCurrentImages] = useState([0, 1, 2]);
   const [translateX, setTranslateX] = useState(0);
   const [isWideScreen, setIsWideScreen] = useState(
-    window.innerWidth > 768 && window.innerWidth < 1024,
+    window.innerWidth > 768 && window.innerWidth <= 1024,
   );
 
   const handleGoToPrevImage = () => {
@@ -43,7 +43,7 @@ function HomeBlog2({ title }) {
   };
   useEffect(() => {
     const handleResize = () => {
-      if (window.innerWidth > 768 && window.innerWidth < 1024) {
+      if (window.innerWidth > 768 && window.innerWidth <= 1024) {
         setCurrentImages([0]);
       } else {
         setCurrentImages([0, 1, 2]);

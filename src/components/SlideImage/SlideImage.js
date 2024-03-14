@@ -169,7 +169,7 @@ const SlideImage = () => {
             },
             position: 'absolute',
             top: isTablet ? '20%':'30%',
-            left: isTablet ? '25%':'31%',
+            left: isTablet ? '20%':'31%',
             transform: 'translateX(50%)',
           }}
         >
@@ -202,7 +202,8 @@ const SlideImage = () => {
             },
             position: 'absolute',
             top: isTablet ? '20%':'30%',
-            right: '24%',
+            // right: '24%',
+            right: isTablet ? '25%':'28%',
             transform: 'translateX(50%)',
           }}
         >
