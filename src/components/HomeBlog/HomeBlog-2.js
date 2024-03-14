@@ -22,11 +22,13 @@ const listArticles = [
 ];
 function HomeBlog2({ title }) {
   const [hoveredService, setHoveredService] = useState(null);
+  const [isWideScreen, setIsWideScreen] = useState(
+    window.innerWidth > 768 && window.innerWidth <= 1024
+  );
+
   const [currentImages, setCurrentImages] = useState([0, 1, 2]);
   const [translateX, setTranslateX] = useState(0);
-  const [isWideScreen, setIsWideScreen] = useState(
-    window.innerWidth > 768 && window.innerWidth <= 1024,
-  );
+  
 
   const handleGoToPrevImage = () => {
     const firstImageIndex = currentImages[0];
@@ -41,22 +43,32 @@ function HomeBlog2({ title }) {
     setCurrentImages((prevImages) => [...prevImages.slice(1), nextImageIndex]);
     setTranslateX(translateX - 100); // Adjust the value based on your desired translation amount
   };
+  
   useEffect(() => {
     const handleResize = () => {
-      if (window.innerWidth > 768 && window.innerWidth <= 1024) {
+      const wideScreen = window.innerWidth > 768 && window.innerWidth <= 1024;
+      setIsWideScreen(wideScreen);
+      if (wideScreen) {
         setCurrentImages([0]);
       } else {
         setCurrentImages([0, 1, 2]);
       }
     };
-
+  
     window.addEventListener('resize', handleResize);
+  
+    // handleResize re-check when we reload the page
+    handleResize();
+  
 
-    // Cleanup function to remove event listener when component unmounts
     return () => {
       window.removeEventListener('resize', handleResize);
     };
   }, []);
+  
+
+  
+  
 
   useEffect(() => {
     // const slideInterval = setInterval(() => {
@@ -67,13 +79,7 @@ function HomeBlog2({ title }) {
     // };
   }, [currentImages]);
 
-  const handleMouseEnter = (index) => {
-    setHoveredService(index);
-  };
-
-  const handleMouseLeave = () => {
-    setHoveredService(null);
-  };
+  
 
 
   return (
