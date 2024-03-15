@@ -15,7 +15,6 @@ import CasperDash from '../../assets/images/CasperDash.png';
 import Capcom from '../../assets/images/Capcom-logo.png';
 import LightLeft from '../../assets/images/lightLeft.png';
 import LightRight from '../../assets/images/lightRight.png';
-import Test from '../../assets/images/test2-re.png';
 
 import './SlideImage.module.scss';
 
@@ -67,12 +66,6 @@ const slides = [
     gameImageUrl: Capcom,
     gameUrl: 'https://www.capcom.com/',
     gameName: 'Capcom',
-  },
-  {
-    id: 9,
-    gameImageUrl: Test,
-    gameUrl: 'https://studio8fx.com/',
-    gameName: '8fx studio',
   },
 ];
 
