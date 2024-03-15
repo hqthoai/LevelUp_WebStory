@@ -104,9 +104,9 @@ function MemOurTeam({ title }) {
         </div>
       </div>
 
-      <div className="grid grid-cols-4 gap-8  mt-10">
+      <div className="grid grid-cols-4 lg:gap-8 md:gap-4 mt-10">
         {listDistribute.map((mem, index) => (
-          <div className="bg-black lg:w-[250px] lg:h-[300px] p-3 md:w-[190px] md:h-[280px]">
+          <div className="bg-black lg:w-[250px] lg:h-[300px] p-3 md:w-[11em] md:h-[280px]">
             <div key={index} className="relative w-[70%] h-[120px] mx-auto my-4 ">
               <div className="w-full h-full border-2 border-transparent group  relative ">
                 <div className="overflow-hidden w-full h-full rounded-[5px] ">
@@ -121,7 +121,7 @@ function MemOurTeam({ title }) {
                     {mem.memName}
                   </p>
                   <p className="text-[12px] mt-2  font-medium font-pop">{mem.memPosition}</p> */}
-                  <p className="lg:text-[16px] md:text-[13.5px] md:h-[5em]  lg:h-[4em] uppercase font-bold bg-clip-text text-transparent bg-gradient-to-r from-[#ec4899] from-10% via-purple-500 via-30% to-[#18ffff] to-90%">
+                  <p className="lg:text-[16px] md:text-[13.5px] md:h-[4em]  lg:h-[4em] uppercase font-bold bg-clip-text text-transparent bg-gradient-to-r from-[#ec4899] from-10% via-purple-500 via-30% to-[#18ffff] to-90%">
                     {mem.memPosition}
                   </p>
                   <p className="lg:text-[14px] md:text-[12px] mt-2  font-bold font-quicksand">
