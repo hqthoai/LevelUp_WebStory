@@ -113,7 +113,7 @@ const SlideImage = () => {
                       className={`absolute -rotate-45  ${
                         isIpadPro
                           ? // ? `ml-[50px] h-[200px] w-[400px] left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-[90px]`
-                            `ml-[60px] h-[200px] w-[500px] left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-[90px]`
+                            `ml-[60px] h-[200px] w-[500px] left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-[100px]`
                           : `md:ml-[100px] lg:ml-0 md:h-[400px] md:w-[400px] lg:h-full lg:w-full absolute -rotate-45 left-1/2 top-1/2 transform -translate-x-1/2 md:-translate-y-[150px] lg:-translate-y-[210px] opacity-100 transition-transform duration-1000 z-10`
                       }`}
                     >
@@ -122,7 +122,7 @@ const SlideImage = () => {
                     <div
                       className={`absolute rotate-45 ${
                         isIpadPro
-                          ? `ml-[180px] h-[200px] w-[500px] left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-[96px]`
+                          ? `ml-[180px] h-[200px] w-[500px] left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-[100px]`
                           : `md:mr-[-50px] lg:mr-0 md:h-[400px] md:w-[400px] lg:h-full lg:w-full right-1/2 top-1/2 transform translate-x-1/2 md:-translate-y-[150px] lg:-translate-y-[175px] opacity-100 transition-transform duration-1000 z-10`
                       }`}
                     >
@@ -139,11 +139,11 @@ const SlideImage = () => {
                       currentIndex === 1
                         ? isIpadPro
                           ? // ? 'ml-[30px] mr-[-35px] w-[400px] h-[300px] cursor-pointer -translate-y-16 transition-transform duration-1000 overflow-hidden'
-                            'ml-[55px] mr-[-60px] w-[400px] h-[300px] cursor-pointer -translate-y-16 transition-transform duration-1000 overflow-hidden'
-                          : 'lg:ml-[35px] lg:mr-[80px] lg:w-[490px] lg:h-[380px] md:w-[300px] md:h-[250px] cursor-pointer lg:-translate-y-24 md:-translate-y-16 transition-transform duration-1000 md:ml-[0px] md:mr-[0px] md:z-12 '
+                            'ml-[55px] mr-[-40px] w-[400px] h-[300px] cursor-pointer -translate-y-16 transition-transform duration-1000 overflow-hidden'
+                          : 'lg:ml-[35px] lg:mr-[80px] lg:w-[490px] lg:h-[380px] md:w-[320px] md:h-[250px] cursor-pointer lg:-translate-y-24 md:-translate-y-16 transition-transform duration-1000 md:ml-[0px] md:mr-[0px] md:z-12 '
                         : isIpadPro
                         ? 'w-[150px] h-[150px] translate-y-8 opacity-60 transition-transform duration-1000 overflow-hidden ml-[40px] mr-[40px] z-12'
-                        : 'lg:w-[100px] lg:h-[300px] md:w-[150px] md:h-[150px] translate-y-8 opacity-60 transition-transform duration-1000 overflow-hidden md:ml-[10px] md:mr-[10px] md:z-12'
+                        : 'lg:w-[300px] lg:h-[300px] md:w-[150px] md:h-[150px] translate-y-8 opacity-60 transition-transform duration-1000 overflow-hidden md:ml-[10px] md:mr-[10px] md:z-12'
                     } overflow-hidden flex justify-around items-center shadow-[0 15px 50px rgba(0, 0, 0, 0.2)] mr-10  transition-transform duration-1000 z-11 lg:ml-[-8px]`}
                   >
                     <img
@@ -170,7 +170,7 @@ const SlideImage = () => {
             position: 'absolute',
             // top: isTablet || isIpadPro ? '20%' : '30%',
             // left: isTablet || isIpadPro ? '20%' : '31%',
-            top: isTablet ? '36%' : isIpadPro ? '45%' : '60%',
+            top: isTablet ? '36%' : isIpadPro ? '45%' : '33%',
             left: isTablet ? '29%' : isIpadPro ? '36%' : '28%',
             transform: 'translateX(50%)',
           }}
@@ -205,7 +205,7 @@ const SlideImage = () => {
             position: 'absolute',
             // top: isTablet || isIpadPro ? '20%':'30%',
             // right: isTablet || isIpadPro ? '25%':'28%',
-            top: isTablet ? '36%' : isIpadPro ? '45%' : '60%',
+            top: isTablet ? '36%' : isIpadPro ? '45%' : '33%',
             right: isTablet ? '26%' : isIpadPro ? '25%' : '38%',
             transform: 'translateX(50%)',
           }}
