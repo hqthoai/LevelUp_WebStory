@@ -100,7 +100,7 @@ const SlideImage = () => {
   }, [currentImages]);
 
   return (
-    <div className="relative lg:w-[90%] lg:h-[800px] md:max-h-[100vh] md:w-[100%] overflow-hidden mt-20 lg:ml-12 md:ml-0 pb-48">
+    <div className="relative lg:w-[90%] lg:h-[800px] md:max-h-[100vh] md:w-[100%] overflow-hidden mt-20 lg:m-auto md:ml-0 pb-48">
       {/* // <div className={`${isIpadPro ? `relative w-[100%] h-[100%] min-h-screen overflow-hidden mt-20`: `relative lg:w-[90%] lg:h-[800px] md:w-[100%] min-h-screen overflow-hidden mt-20 lg:ml-12 md:ml-0`}`}> */}
       <div className="w-[100%] pt-[50px] flex justify-center ">
         <div className="flex items-center relative">
