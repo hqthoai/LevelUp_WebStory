@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { useTheme } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
@@ -108,21 +107,21 @@ const SlideImage = () => {
   }, [currentImages]);
 
   return (
-    <div className="relative lg:w-[90%] lg:h-[800px] md:w-[100%] min-h-screen overflow-hidden mt-20 lg:ml-12 md:ml-0">
+    <div className="relative lg:w-[90%] lg:h-[800px] md:max-h-[100vh] md:w-[100%] overflow-hidden mt-20 lg:m-auto md:ml-0 pb-48">
       {/* // <div className={`${isIpadPro ? `relative w-[100%] h-[100%] min-h-screen overflow-hidden mt-20`: `relative lg:w-[90%] lg:h-[800px] md:w-[100%] min-h-screen overflow-hidden mt-20 lg:ml-12 md:ml-0`}`}> */}
-      <div className="w-[100%] pt-[50px] flex ">
+      <div className="w-[100%] pt-[50px] flex justify-center ">
         <div className="flex items-center relative">
           {currentImages.map((i, currentIndex) => (
-            <div key={slides[i].id} className="relative md:mx-[45px] lg:ml-0">
+            <div key={slides[i].id} className="relative md:mx-[45px] lg:ml-0 lg:mr-0">
               <div className="relative">
                 {currentIndex === 1 && (
                   <div className="absolute inset-0 flex justify-between items-center md:mr-36 lg:mr-[-56px] lg:ml-[-56px] z-0">
                     <div
                       className={`absolute -rotate-45  ${
                         isIpadPro
-                        // ? `ml-[50px] h-[200px] w-[400px] left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-[90px]`
-                        ? `ml-[60px] h-[200px] w-[400px] left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-[90px]`
-                          : `md:ml-[-100px] lg:ml-0 md:h-[200px] md:w-[400px] lg:h-full lg:w-full absolute -rotate-45 left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-[90px] lg:-translate-y-[210px] opacity-100 transition-transform duration-1000 z-10`
+                          ? // ? `ml-[50px] h-[200px] w-[400px] left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-[90px]`
+                            `ml-[60px] h-[200px] w-[500px] left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-[100px]`
+                          : `md:ml-[100px] lg:ml-5 lg:mr-5 md:h-[400px] md:w-[400px] lg:h-full lg:w-full absolute -rotate-45 left-1/2 top-1/2 transform -translate-x-1/2 md:-translate-y-[150px] lg:-translate-y-[210px] opacity-100 transition-transform duration-1000 z-10`
                       }`}
                     >
                       <img src={LightLeft} alt="Light Left" />
@@ -130,15 +129,15 @@ const SlideImage = () => {
                     <div
                       className={`absolute rotate-45 ${
                         isIpadPro
-                          ? `ml-[180px] h-[200px] w-[400px] left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-[96px]`
-                          : `md:mr-[-36px] lg:mr-0 md:h-[200px] md:w-[400px] lg:h-full lg:w-full right-1/2 top-1/2 transform translate-x-1/2 md:-translate-y-[97px] lg:-translate-y-[175px] opacity-100 transition-transform duration-1000 z-10`
+                          ? `ml-[180px] h-[200px] w-[500px] left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-[100px]`
+                          : `md:mr-[-50px] lg:mr-0 md:h-[400px] md:w-[400px] lg:h-full lg:w-full right-1/2 top-1/2 transform translate-x-1/2  lg:translate-x-[60%] md:-translate-y-[150px] lg:-translate-y-[110px] opacity-100 transition-transform duration-1000 z-10`
                       }`}
                     >
                       <img src={LightRight} alt="Light Right" />
                     </div>
                   </div>
                 )}
-                <div className={`${isIpadPro? 'ml-30':'lg:ml-26'}`}>
+                <div className={`${isIpadPro ? 'ml-30' : 'lg:ml-26'}`}>
                   <a
                     href={slides[i].gameUrl}
                     target="_blank"
@@ -146,12 +145,12 @@ const SlideImage = () => {
                     className={`${
                       currentIndex === 1
                         ? isIpadPro
-                          // ? 'ml-[30px] mr-[-35px] w-[400px] h-[300px] cursor-pointer -translate-y-16 transition-transform duration-1000 overflow-hidden'
-                          ? 'ml-[55px] mr-[-60px] w-[400px] h-[300px] cursor-pointer -translate-y-16 transition-transform duration-1000 overflow-hidden'
-                          : 'lg:ml-[35px] lg:mr-[80px] lg:w-[490px] lg:h-[380px] md:w-[400px] md:h-[300px] cursor-pointer lg:-translate-y-24 md:-translate-y-16 transition-transform duration-1000 md:ml-[-60px] md:mr-[150px] md:z-12 '
+                          ? // ? 'ml-[30px] mr-[-35px] w-[400px] h-[300px] cursor-pointer -translate-y-16 transition-transform duration-1000 overflow-hidden'
+                            'ml-[55px] mr-[-40px] w-[400px] h-[300px] cursor-pointer -translate-y-16 transition-transform duration-1000 overflow-hidden'
+                          : 'lg:ml-[100px] lg:mr-[100px] lg:w-[490px] lg:h-[380px] md:w-[320px] md:h-[250px] cursor-pointer lg:-translate-y-24 md:-translate-y-16 transition-transform duration-1000 md:ml-[0px] md:mr-[0px] md:z-12 '
                         : isIpadPro
-                        ? 'w-[150px] h-[150px] translate-y-8 opacity-60 transition-transform duration-1000 overflow-hidden ml-[-40px] mr-[40px] z-12'
-                        : 'lg:w-[300px] lg:h-[300px] md:w-[100px] md:h-[100px] translate-y-8 opacity-60 transition-transform duration-1000 overflow-hidden md:ml-[-70px] md:mr-[70px] md:z-12'
+                        ? 'w-[150px] h-[150px] translate-y-8 opacity-60 transition-transform duration-1000 overflow-hidden ml-[40px] mr-[40px] z-12'
+                        : 'lg:w-[250px] lg:h-[250px] md:w-[150px] md:h-[150px] translate-y-8 opacity-60 transition-transform duration-1000 overflow-hidden md:ml-[10px] md:mr-[10px] md:z-12'
                     } overflow-hidden flex justify-around items-center shadow-[0 15px 50px rgba(0, 0, 0, 0.2)] mr-10  transition-transform duration-1000 z-11 lg:ml-[-8px]`}
                   >
                     <img
@@ -178,8 +177,8 @@ const SlideImage = () => {
             position: 'absolute',
             // top: isTablet || isIpadPro ? '20%' : '30%',
             // left: isTablet || isIpadPro ? '20%' : '31%',
-            top: isTablet ? '20%' : isIpadPro ? '16%' : '28%',
-            left: isTablet ? '19%' : isIpadPro ? '31%' : '35%',
+            top: isTablet ? '36%' : isIpadPro ? '45%' : '33%',
+            left: isTablet ? '29%' : isIpadPro ? '36%' : '33%',
             transform: 'translateX(50%)',
           }}
         >
@@ -213,8 +212,8 @@ const SlideImage = () => {
             position: 'absolute',
             // top: isTablet || isIpadPro ? '20%':'30%',
             // right: isTablet || isIpadPro ? '25%':'28%',
-            top: isTablet ? '20%' : isIpadPro ? '16%' : '28%',
-            right: isTablet ? '24%' : isIpadPro ? '25%' : '28%',
+            top: isTablet ? '36%' : isIpadPro ? '45%' : '33%',
+            right: isTablet ? '26%' : isIpadPro ? '25%' : '36%',
             transform: 'translateX(50%)',
           }}
         >
