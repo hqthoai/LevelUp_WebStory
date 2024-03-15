@@ -112,7 +112,7 @@ function HomeOurServices({ title }) {
               key={currentIndex}
               onMouseEnter={() => handleMouseEnter(currentIndex)}
               onMouseLeave={handleMouseLeave}
-              className="hover:cursor-pointer border-2 border-[#ff8503] lg:h-[350px] md:h-[250px] md:w-[100%] relative lg:p-4 md:p-2 lg:grid md:flex-col md:justify-center"
+              className="hover:cursor-pointer border-2 border-[#ff8503] lg:min-h-[350px] md:min-h-[250px] md:w-[100%] relative lg:p-4 md:p-2 lg:grid md:flex-col md:justify-center"
               // style={{ height: '350px' }} // Set a fixed height
             >
               <a

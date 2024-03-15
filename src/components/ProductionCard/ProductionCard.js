@@ -113,7 +113,6 @@
 //   );
 // }
 
-
 import React, { useState } from 'react';
 import './ProductionCard.scss';
 import LogoWeb from '../../assets/images/main_logo_v2.png';

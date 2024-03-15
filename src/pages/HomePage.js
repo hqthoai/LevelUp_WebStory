@@ -9,6 +9,7 @@ import HomeOurServices from '../components/HomeOurServices/HomeOurServices';
 import HomeBlog from '../components/HomeBlog/HomeBlog';
 import BlogTest from '../components/BlogTest/BlogDetail';
 import MyComponent from '../components/BlogTest/Editor22';
+import Projects from '../components/SlideImage/Projects';
 
 function HomePage() {
   return (
@@ -25,6 +26,8 @@ function HomePage() {
       <MainBanner />
       <ProductionCard />
       {/* <GameComing /> */}
+
+      {/* <Projects /> */}
       <SlideImage />
       <HomeOurServices />
       <TeamMembers />
