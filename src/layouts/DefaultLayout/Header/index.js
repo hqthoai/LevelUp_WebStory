@@ -61,7 +61,7 @@ const Header = () => {
                 setOpen(false);
               }}
             >
-              <li className=" relative h-16 lg:px-6 md:px-4 hover:bg-[#1a1b21] border-b-4 border-solid border-transparent hover:border-orange-700 hover:text-orange-700 transform -skew-x-[20deg] flex items-center">
+              <li className=" relative lg:h-20 semilg:h-16 md:h-16  lg:px-6 md:px-4 hover:bg-[#1a1b21] border-b-4 border-solid border-transparent hover:border-orange-700 hover:text-orange-700 transform -skew-x-[20deg] flex items-center">
                 <div className="transform skew-x-[20deg] tracking-tighter">About Us</div>
               </li>
               <div
