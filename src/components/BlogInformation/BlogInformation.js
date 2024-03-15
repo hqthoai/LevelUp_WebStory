@@ -16,11 +16,21 @@ const blogData = [
 ];
 
 function BlogInformation() {
+
+  // back to top when the button is clicked
+  const scrollToTop = () => {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth',
+    });
+};
+
   const navigate = useNavigate();
   const isTablet = useMediaQuery('(min-width: 768px) and (max-width: 1024px)');
 
   const goToBlogDetail = (blogId) => {
     navigate(`/blog/${blogId}`);
+    scrollToTop();
   };
     return (
       <div>
@@ -29,8 +39,8 @@ function BlogInformation() {
             {blogData.map((blog, index) => (
               <div className="mb-16" onClick={() => goToBlogDetail(index + 1)}>
                 <div key={index} className=" cursor-pointer">
-                  <img src={blog.blogImage} className="text-white w-[800px] h-[450px] " />
-                  <p className="font-pop font-bold  text-white text-[24px] mt-4 hover:pointer">
+                  <img src={blog.blogImage} className="text-white lg:w-[800px] lg:h-[450px]  " />
+                  <p className="font-pop font-bold  text-white lg:text-[24px]  mt-4 hover:pointer">
                     {/* {blog.blogImage} */}
                     {blog.blogName}
                   </p>
@@ -42,6 +52,7 @@ function BlogInformation() {
                     style={{
                       clipPath: 'polygon(90% 0, 100% 34%, 100% 100%, 10% 100%, 0 66%, 0 0)',
                     }}
+                    onClick={scrollToTop}
                   >
                     read more
                   </div>

@@ -1,25 +1,28 @@
 import React from 'react';
 import AboutUs from '../../pages/AboutUs';
+import { useMediaQuery } from '@mui/material';
 import articleImage1 from '../../assets/images/article-11.png';
 import articleImage2 from '../../assets/images/article-12.png';
 import articleImage3 from '../../assets/images/article-13.png';
 import articleImage4 from '../../assets/images/article-14.png';
 import articleImage5 from '../../assets/images/article-15.png';
+
 const BlogDetail1 = () => {
+  const isTablet = useMediaQuery('(min-width: 768px) and (max-width: 1024px)');
   return (
     <div>
-      <AboutUs title={'ROBLOX ACHIEVES REMARKABLE GROWTH IN 2023'} textSize="text-[30px]" />
-      <div className="text-white flex flex-col text-justify mt-16 ml-36 mr-36">
-        <h1 className="text-[35px] font-bold mb-4">
+      <AboutUs title={'ROBLOX ACHIEVES REMARKABLE GROWTH IN 2023'} textSize={`${isTablet? 'text-[18px]': `text-[30px]`}`} />
+      <div className="text-white flex flex-col text-justify mt-16 lg:ml-36 lg:mr-36 md:ml-12 md:mr-12">
+        <h1 className="lg:text-[35px] md:text-[25px] font-bold mb-4">
           ROBLOX ACHIEVES REMARKABLE GROWTH IN 2023: A GAME-CHANGER IN THE DIGITAL LANDSCAPE
         </h1>
 
-        <p className="text-[24px] font-bold italic mb-4">
+        <p className="lg:text-[24px] md:text-[20px] font-bold italic mb-4">
           In the dynamic landscape of online gaming, Roblox has emerged as a powerhouse, marking
           unprecedented growth in 2023.
         </p>
 
-        <p className="text-[18px] mt-3 mb-4">
+        <p className="lg:text-[18px] md:text-[16px]  mt-3 mb-4">
           With a staggering daily active user count of 70.2 million, an engagement hour reaching a
           monumental 16 billion, and revenue hitting an impressive $2.343 billion, Roblox is
           reshaping the gaming industry.
@@ -27,7 +30,7 @@ const BlogDetail1 = () => {
 
         <img src={articleImage1} alt="Image 1" />
 
-        <p className="text-[18px] mt-3 mb-4">
+        <p className="lg:text-[18px] md:text-[16px] mt-3 mb-4">
           Despite not being as crowded as leading social media platforms like Facebook, Instagram,
           or TikTok, Roblox continues to draw in 70.2 million users every day. This presents a
           golden opportunity for marketers to diversify their digital efforts beyond the
@@ -36,7 +39,7 @@ const BlogDetail1 = () => {
 
         <img src={articleImage2} alt="Image 2" />
 
-        <p className="text-[18px] mt-3 mb-4">
+        <p className="lg:text-[18px] md:text-[16px] mt-3 mb-4">
           Roblox stands out as a solution to the challenges faced by modern marketing, where
           traditional social media channels are saturated, and breaking through the noise is an
           uphill battle. Leveraging Roblox allows marketers to unleash creativity, not only in
@@ -45,7 +48,7 @@ const BlogDetail1 = () => {
 
         <img src={articleImage3} alt="Image 3" />
 
-        <p className="text-[18px] mt-3 mb-4">
+        <p className="lg:text-[18px] md:text-[16px] mt-3 mb-4">
           The demographic profile of Roblox users is evolving, with over 55% now aged 13 and above.
           The platform's fastest-growing segment comprises 17-24-year-olds, experiencing a
           remarkable 35% growth in Daily Active Users during Q1 2023. This age group now constitutes
@@ -54,7 +57,7 @@ const BlogDetail1 = () => {
 
         <img src={articleImage4} alt="Image 4" />
 
-        <p className="text-[18px] mt-3 mb-4">
+        <p className="lg:text-[18px] md:text-[16px] mt-3 mb-4">
           The widespread user base of Roblox across the globe provides an opportunity to expand
           market reach geographically. Marketing campaigns can be tailored to incorporate local
           cultural elements, ensuring a more personalized and engaging experience for users
@@ -63,7 +66,7 @@ const BlogDetail1 = () => {
 
         <img src={articleImage5} alt="Image 5" />
 
-        <p className="text-[18px] mt-3 mb-4">
+        <p className="lg:text-[18px] md:text-[16px] mt-3 mb-4">
           Considering Roblox's diverse user demographics, spanning Generation Z and Alpha, and
           maintaining a balanced distribution between male and female users, marketers can broaden
           their target audience. The potential for implementing effective and inclusive marketing
@@ -71,7 +74,7 @@ const BlogDetail1 = () => {
           landscape.
         </p>
 
-        <p className="text-[18px] mt-3 mb-4">
+        <p className="lg:text-[18px] md:text-[16px] mt-3 mb-4">
           Roblox's impressive financial figures, including bookings of $2.9 billion and an operating
           cash flow of $369.3 million, further solidify its position as a game-changer in the
           digital arena. As the platform continues to redefine the gaming industry, marketers have a

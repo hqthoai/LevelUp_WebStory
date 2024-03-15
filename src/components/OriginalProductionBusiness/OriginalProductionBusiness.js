@@ -7,7 +7,7 @@ function OriginalProductionBusiness() {
         <div className="original-container lg:mx-[64px] px-[15px]">
           <div className="leading-[1.1] pl-[30px] relative">
             <p
-              className="text-white text-[50px] text-start font-bold 
+              className="text-white lg:text-[50px] md:text-[40px] text-start font-bold 
            before:content-['|'] before:ml-[-30px] before:mt-[11px] before:h-[83%] before:w-[11px] before:text-[#ff8503] before:absolute before:bg-[#ff8503]"
             >
               EXPERIENCE JUST FOR <br />
@@ -30,14 +30,14 @@ function OriginalProductionBusiness() {
                   Hot deal
                 </div>
                 {/* content */}
-                <div className="text-white text-[16px]  font-light font-pop lg:w-[80%] md:w-[90%] text-justify">
+                <div className="text-white lg:text-[16px] md:text-[14px]  font-light font-pop lg:w-[80%]  md:w-[90%] text-justify">
                   Our commitment to innovation and efficiency allows us to break barriers by
                   lowering the cost of making games without compromising on quality. We believe that
                   great games should be accessible to all, and we're making that vision a reality.
                 </div>
                 {/* offer overlay */}
                 <div
-                  className="absolute right-[-30px] top-[120px] -rotate-90 text-[#d98d7b] text-[40px] font-bold md:hidden"
+                  className="absolute right-[-30px] top-[120px] -rotate-90 text-[#d98d7b] text-[40px] font-bold lg:block md:hidden"
                   style={{
                     WebkitTextFillColor: 'transparent',
                     WebkitTextStrokeWidth: '1px',
@@ -63,7 +63,7 @@ function OriginalProductionBusiness() {
                   Discover
                 </div>
                 {/* content */}
-                <div className="text-white text-[16px]  font-light font-pop lg:w-[80%] md:w-[90%] text-justify">
+                <div className="text-white lg:text-[16px] md:text-[14px]  font-light font-pop lg:w-[80%]  md:w-[90%] text-justify">
                   We can seamlessly integrate your game into websites and mobile apps, expanding
                   your reach and player base. We work closely with you every step of the way,
                   ensuring your vision is realized and your game succeeds in the competitive gaming
@@ -71,7 +71,7 @@ function OriginalProductionBusiness() {
                 </div>
                 {/* offer overlay */}
                 <div
-                  className="absolute right-[-30px] top-[120px] -rotate-90 text-[#d98d7b] text-[40px] font-bold md:hidden"
+                  className="absolute right-[-30px] top-[120px] -rotate-90 text-[#d98d7b] text-[40px] font-bold lg:block md:hidden"
                   style={{
                     WebkitTextFillColor: 'transparent',
                     WebkitTextStrokeWidth: '1px',
@@ -97,13 +97,13 @@ function OriginalProductionBusiness() {
                   Unique experiences
                 </div>
                 {/* content */}
-                <div className="text-white text-[16px]  font-light font-pop  lg:w-[80%] md:w-[90%]  text-justify">
+                <div className="text-white lg:text-[16px] md:text-[14px] font-light font-pop  lg:w-[80%]  md:w-[90%]  text-justify">
                   We thrive on innovation, constantly pushing the boundaries of what's possible in
                   game development and create gameplay mechanics that challenge the status quo.
                 </div>
                 {/* offer overlay */}
                 <div
-                  className="absolute right-[-30px] top-[120px] -rotate-90 text-[#d98d7b] text-[40px] font-bold md:hidden"
+                  className="absolute right-[-30px] top-[120px] -rotate-90 text-[#d98d7b] text-[40px] font-bold lg:block md:hidden"
                   style={{
                     WebkitTextFillColor: 'transparent',
                     WebkitTextStrokeWidth: '1px',

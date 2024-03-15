@@ -6,7 +6,7 @@ const AboutUs = ({ title = 'About Us', textSize }) => {
   return (
     <div>
       <div
-        className="min-h-fit w-full"
+        className="lg:min-h-fit lg:w-full"
         style={{
           backgroundImage:
             'url("https://themebeyond.com/demo/haldalive/wp-content/uploads/2022/04/area_bg-scaled.jpg")',

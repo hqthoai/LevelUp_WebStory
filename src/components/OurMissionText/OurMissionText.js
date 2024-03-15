@@ -6,7 +6,7 @@ function OurMissionText() {
           <div className="flex flex-col justify-center items-center px-[15px]">
             <div className="about-title flex justify-center text-center mx-[-15px] mb-10">
               {/* <h2 className="title bg-clip-text text-transparent text-[40px] font-extrabold uppercase  w-[83.33333333%] bg-gradient-to-r from-[#ec4899] from-10% via-purple-500 via-30% to-[#18ffff] to-90%"> */}
-              <h2 className="title text-[60px] font-extrabold uppercase  text-[#ff8503]">
+              <h2 className="title lg:text-[60px] md:text-[35px] font-extrabold uppercase  text-[#ff8503]">
                 GAMING REDEFINED!
               </h2>
             </div>

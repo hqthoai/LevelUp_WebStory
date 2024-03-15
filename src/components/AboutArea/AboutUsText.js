@@ -5,7 +5,7 @@ function AboutUsText() {
         <div className="flex">
           <div className="flex flex-col justify-center items-center px-[15px]">
             <div className="about-title flex justify-center  mx-[-15px] mb-10">
-              <h2 className="title text-[40px] font-extrabold text-center uppercase  w-[83.33333333%] text-[#ff8503]">
+              <h2 className="title lg:text-[40px] md:text-[30px] font-extrabold text-center uppercase  w-[83.33333333%] text-[#ff8503]">
                 Level Up Studio is the the leading game development studios in Vietnam and has been
                 active since 2019.
               </h2>

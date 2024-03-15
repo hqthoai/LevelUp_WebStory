@@ -21,7 +21,7 @@ const AboutUsMainBanner = ({ title, textSize }) => {
           }}
         >
           <div className="flex justify-around items-center w-full">
-            <div className="text-white mb-[100px] ">
+            <div className="text-white mb-[100px] md:ml-[-70px]">
               <h2
                 className={`${
                   textSize || `text-[60px]`
@@ -30,17 +30,18 @@ const AboutUsMainBanner = ({ title, textSize }) => {
                 {/* ABOUT US */}
                 {title}
               </h2>
-              <button className=" text-[16px]  select-none bg-[#ff8503] border-0 mt-1 hover:bg-black text-white leading-tighter  cursor-pointer inline-flex  font-bold tracking-wide leading-none mb-0 py-5 px-3 text-center uppercase  relative">
+              <button className=" lg:text-[16px] md:text-[12px]  select-none bg-[#ff8503] border-0 mt-1 hover:bg-black text-white leading-tighter  cursor-pointer inline-flex  font-bold tracking-wide leading-none mb-0 py-5 px-3 text-center uppercase  relative">
                 HOME {'   '}
                 <FaAnglesRight className="ml-3 text-lg mr-3 mt-[-3px]" />
                 {'   '} {title}
               </button>
             </div>
-            <div className="text-center mt-[-100px] relative">
+            <div className="text-center mt-[-100px] relative ml-[-100px] ">
               <div className="breadcrumb-img-two">
                 <img
                   src="https://themebeyond.com/demo/haldalive/wp-content/themes/halda/assets/img/images/breadcrumb_img04.png"
                   alt="img"
+                  
                 />
               </div>
             </div>
