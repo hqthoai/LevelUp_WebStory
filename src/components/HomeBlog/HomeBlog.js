@@ -10,22 +10,22 @@ function HomeBlog() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
   return (
-    <div className="lg:ml-8 lg:mr-8 md:p-4 lg:p-0 mb-16">
-      <div className="flex items-start lg:justify-between md:justify-around mt-8">
-        <div className="text-white lg:w-[300px] lg:h-[230px] md:w-[250px] md:h-[230px]  ">
+    <div className="md:mx-10 mb-16">
+      <div className="grid grid-cols-4 gap-10 mt-8">
+        <div className="text-white md:min-h-[230px]  ">
           <div className="text-[#ff8503] font-bold font-pop lg:text-[24px] md:text-[18px] ">
             CHECK OUT OUR NEXT
           </div>
-          <div className="text-white lg:text-[24px] md:text-[18px] font-bold font-pop mt-2 w-[300px]">
+          <div className="text-white lg:text-[18px] md:text-[16px] font-bold font-pop mt-2">
             ARTICLES on GAMING and DEVELOPING!
           </div>
-          <div className="mt-2 text-[#cfcfcf] font-pop text-justify">
+          <div className="mt-2 text-[#cfcfcf] font-pop text-justify lg:text-[16px] md:text-[14px] ">
             We're on a mission to fuel your excitement with the latest news from the metaverse, and
             the thrilling stories crafted by the talented individuals at LEVEL UP STUDIO!
           </div>
-          <div className="mt-10">
+          <div className="lg:mt-10 md:mt-4">
             <a
-              className="btn bg-[#ff8503] px-[33px] py-[18px] text-white font-bold font-pop uppercase inline-block lg:text-[16px] md:text-[12px] transition-all duration-300"
+              className="btn bg-[#ff8503] lg:px-[20px] lg:py-[16px] md:p-3 text-white font-bold font-pop uppercase inline-block lg:text-[16px] md:text-[12px] transition-all duration-300"
               href="/blog"
               style={{
                 clipPath: 'polygon(90% 0, 100% 34%, 100% 100%, 10% 100%, 0 66%, 0 0)',
@@ -36,7 +36,7 @@ function HomeBlog() {
           </div>
         </div>
 
-        <div className="lg:grid lg:grid-cols-1 text-center md:flex-col md:justify-center">
+        <div className="justify-center items-center text-center">
           <div className="text-[#FF8503] font-bold font-pop lg:text-[24px] md:text-[18px] ">
             LATEST NEWS
           </div>
@@ -52,11 +52,11 @@ function HomeBlog() {
             />
           </div>
 
-          <p className="text-white lg:text-[24px] md:text-[18px]  font-bold font-pop mt-[20px] w-[300px]">
+          <p className="text-white lg:text-[24px] md:text-[18px] font-bold font-pop mt-[20px]">
             Metaverse and Money
           </p>
         </div>
-        <div>
+        <div className="col-span-2 mt-[-20px]">
           <HomeBlog2 />
         </div>
       </div>
