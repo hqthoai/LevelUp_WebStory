@@ -4,6 +4,7 @@ import 'animate.css';
 import './index.css';
 
 import LevelUpLogo from '../../../assets/images/main_logo_v2.png';
+import { Link } from 'react-router-dom';
 const Header = () => {
   const [searchHover, setSearchHover] = useState(false);
   const [searchKey, setSearchKey] = useState('');
@@ -39,7 +40,7 @@ const Header = () => {
         style={{ zIndex: 9999 }}
       >
         {/* Logo */}
-        <a href="/">
+        <Link to="/">
           <img
             src={LevelUpLogo}
             alt="Logo"
@@ -49,7 +50,7 @@ const Header = () => {
                 : 'lg:w-[110px] lg:h-20 md:w-[6rem] md:h-[6rem] mt-4 '
             }  cursor-pointer block m-auto rounded-[5px] object-cover`}
           />
-        </a>
+        </Link>
 
         {/* Navigation */}
         <div className="lg:w-[60%] md:w-[70%] h-full uppercase">
@@ -75,27 +76,27 @@ const Header = () => {
               >
                 <ul className="flex flex-col py-4 lg:text-[15px] md:text-[12px]">
                   <li className="px-4 w-full hover:bg-[#1a1b21] hover:text-orange-700 mb-3">
-                    <a href="/about-us" className="transform skew-x-[30deg] tracking-tight">
+                    <Link to="/about-us" className="transform skew-x-[30deg] tracking-tight">
                       About US
-                    </a>
+                    </Link>
                   </li>
                   <li className="px-4 w-full hover:bg-[#1a1b21] hover:text-orange-700 ">
-                    <a href="/our-mission" className="transform skew-x-[30deg] tracking-tight">
+                    <Link to="/our-mission" className="transform skew-x-[30deg] tracking-tight">
                       Our mission
-                    </a>
+                    </Link>
                   </li>
                 </ul>
               </div>
             </div>
             <li className="h-[100%]  lg:px-6 md:px-4 hover:bg-[#1a1b21] border-b-4 border-solid border-transparent hover:border-orange-700 hover:text-orange-700 transform -skew-x-[30deg] flex items-center">
-              <a href="/our-team" className="transform skew-x-[30deg] tracking-tighter">
+              <Link to="/our-team" className="transform skew-x-[30deg] tracking-tighter">
                 Our squad
-              </a>
+              </Link>
             </li>
             <li className="h-[100%]  lg:px-6 md:px-4  hover:bg-[#1a1b21] border-b-4 border-solid border-transparent hover:border-orange-700 hover:text-orange-700 transform -skew-x-[30deg] flex items-center">
-              <a href="/production" className="transform skew-x-[30deg] tracking-tight">
+              <Link to="/production" className="transform skew-x-[30deg] tracking-tight">
                 Production
-              </a>
+              </Link>
             </li>
             <li className="h-[100%]  lg:px-6 md:px-4  hover:bg-[#1a1b21] border-b-4 border-solid border-transparent hover:border-orange-700 hover:text-orange-700 transform -skew-x-[30deg] flex items-center">
               <div className="transform skew-x-[30deg] tracking-tight">Games</div>
@@ -104,9 +105,9 @@ const Header = () => {
               <div className="transform skew-x-[30deg] tracking-tight">Shop</div>
             </li>
             <li className="h-[100%]  lg:px-6 md:px-4  hover:bg-[#1a1b21] border-b-4 border-solid border-transparent hover:border-orange-700 hover:text-orange-700 transform -skew-x-[30deg] flex items-center">
-              <a href="/blog" className="transform skew-x-[30deg] tracking-tight">
+              <Link to="/blog" className="transform skew-x-[30deg] tracking-tight">
                 Blog
-              </a>
+              </Link>
             </li>
             <li
               className="h-[100%]  lg:px-6 md:px-4  hover:bg-[#1a1b21] border-b-4
@@ -114,9 +115,9 @@ const Header = () => {
             hover:text-orange-700 transform -skew-x-[30deg] flex items-center"
             >
               <div className={`transform skew-x-[30deg] tracking-tight`}>
-                <a href="/contact" className="transform skew-x-[30deg] tracking-tight">
+                <Link to="/contact" className="transform skew-x-[30deg] tracking-tight">
                   Contacts
-                </a>
+                </Link>
               </div>
             </li>
           </ul>

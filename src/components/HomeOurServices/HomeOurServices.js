@@ -100,11 +100,9 @@ function HomeOurServices({ title }) {
               backgroundColor: 'transparent',
             },
           }}
+          onClick={handleGoToPrevImage}
         >
-          <KeyboardDoubleArrowLeftIcon
-            sx={{ color: 'white', fontSize: '48px' }}
-            onClick={handleGoToPrevImage}
-          />
+          <KeyboardDoubleArrowLeftIcon sx={{ color: 'white', fontSize: '48px' }} />
         </IconButton>
         <div className="grid grid-cols-3 lg:justify-center md:text-center md:justify-between lg:gap-8 md:gap-4 items-stretch mt-10">
           {currentImages.map((i, currentIndex) => (
@@ -150,11 +148,8 @@ function HomeOurServices({ title }) {
           ))}
         </div>
 
-        <IconButton>
-          <KeyboardDoubleArrowRightIcon
-            sx={{ color: 'white', fontSize: '48px' }}
-            onClick={handleGoToNextImage}
-          />
+        <IconButton onClick={handleGoToNextImage}>
+          <KeyboardDoubleArrowRightIcon sx={{ color: 'white', fontSize: '48px' }} />
         </IconButton>
       </Box>
     </div>

@@ -171,14 +171,13 @@ export default function ProductionCard({ originalText, businessText }) {
                         experience and community-centric approach! Our team is passionate about
                         incorporating elements of Vietnamese culture into your game, offering global
                         next-generation players a unique and immersive adventure in the metaverse. */}
-                      {originalText || (
-                        <div>
+                      {originalText ||
+                        `
                           Gaming should be more than just entertainment; it should be an enriching
                           experience and community-centric approach! Our team is passionate about
                           incorporating elements of cultures into your game, offering global
-                          next-generation players a unique and immersive adventure in the metaverse.{' '}
-                        </div>
-                      )}
+                          next-generation players a unique and immersive adventure in the metaverse.
+                        `}
                     </p>
                   </div>
                 )}
@@ -196,16 +195,15 @@ export default function ProductionCard({ originalText, businessText }) {
                         We work closely with you to bring your game concept to life. Whether it's a
                         historical epic, a fantastical journey, or a modern adventure, LEVEL UP
                         STUDIO are here to turn your vision into a captivating reality. */}
-                      {businessText || (
-                        <div>
+                      {businessText ||
+                        `
                           From storytelling to gameplay mechanics, we tailor every aspect of your
                           game to resonate with the target audience, ensuring an unforgettable
                           experience. We work closely with you to bring your game concept to life.
                           Whether it's a historical epic, a fantastical journey, or a modern
                           adventure, LEVEL UP STUDIO are here to turn your vision into a captivating
                           reality.
-                        </div>
-                      )}
+                        `}
                     </p>
                   </div>
                 )}

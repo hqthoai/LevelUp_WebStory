@@ -141,7 +141,7 @@ const Footer = () => {
               <div className="relative mt-5">
                 <input
                   type="text"
-                  class="w-full bg-[#111316] border-0 py-4 px-5 text-white pr-12 text-base rounded-md"
+                  className="w-full bg-[#111316] border-0 py-4 px-5 text-white pr-12 text-base rounded-md"
                   placeholder="Enter your email..."
                 ></input>
                 <div className="bg-[#ff8503] absolute flex justify-center items-center right-0 top-0 h-full w-[60px]  rounded-md">
