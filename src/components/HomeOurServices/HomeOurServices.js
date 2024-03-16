@@ -100,26 +100,24 @@ function HomeOurServices({ title }) {
               backgroundColor: 'transparent',
             },
           }}
+          onClick={handleGoToPrevImage}
         >
-          <KeyboardDoubleArrowLeftIcon
-            sx={{ color: 'white', fontSize: '48px' }}
-            onClick={handleGoToPrevImage}
-          />
+          <KeyboardDoubleArrowLeftIcon sx={{ color: 'white', fontSize: '48px' }} />
         </IconButton>
         <div className="grid grid-cols-3 lg:justify-center md:text-center md:justify-between lg:gap-8 md:gap-4 items-stretch mt-10">
           {currentImages.map((i, currentIndex) => (
             <div
               key={currentIndex}
+              className="hover:cursor-pointer border-2 border-[#ff8503]  md:min-h-[200px] md:w-[100%] relative lg:p-4 md:p-2 lg:grid md:flex-col md:justify-center"
               onMouseEnter={() => handleMouseEnter(currentIndex)}
               onMouseLeave={handleMouseLeave}
-              className="hover:cursor-pointer border-2 border-[#ff8503] lg:h-[350px] semilg:h-[280px] md:h-[250px] md:w-[100%] relative lg:p-4 md:p-2 lg:grid md:flex-col md:justify-center"
               // style={{ height: '350px' }} // Set a fixed height
             >
               <a
                 href={listServices[i].gameUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-[350px] h-[100%]" // Use 100% height
+                className="w-full" // Use 100% height
               >
                 <img
                   src={listServices[i].imgService}
@@ -136,8 +134,8 @@ function HomeOurServices({ title }) {
               </a>
 
               <p
-                className={`text-white lg:w-full text-center md:w-[100%] lg:mt-4 md:mt-4${
-                  listServices[i].name[0] === 'BLOCKCHAIN' ? 'lg:mt-[-10px] md:mt-4' : '' // Add custom margin-top for BLOCKCHAIN
+                className={`text-white lg:w-full text-center md:w-[100%] md:mt-4 mb-4 ${
+                  listServices[i].name[0] === 'BLOCKCHAIN' ? 'pt-4' : '' // Add custom margin-top for BLOCKCHAIN
                 }`}
               >
                 <span className="text-[#FF8503] font-bold text-[20px]">
@@ -150,11 +148,8 @@ function HomeOurServices({ title }) {
           ))}
         </div>
 
-        <IconButton>
-          <KeyboardDoubleArrowRightIcon
-            sx={{ color: 'white', fontSize: '48px' }}
-            onClick={handleGoToNextImage}
-          />
+        <IconButton onClick={handleGoToNextImage}>
+          <KeyboardDoubleArrowRightIcon sx={{ color: 'white', fontSize: '48px' }} />
         </IconButton>
       </Box>
     </div>

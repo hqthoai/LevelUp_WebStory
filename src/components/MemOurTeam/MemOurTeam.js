@@ -106,8 +106,11 @@ function MemOurTeam({ title }) {
 
       <div className="grid grid-cols-4 lg:gap-8 md:gap-4 mt-10">
         {listDistribute.map((mem, index) => (
-          <div className="bg-black lg:w-[250px] lg:h-[300px] p-3 md:w-[11em] md:h-[280px]">
-            <div key={index} className="relative w-[70%] h-[120px] mx-auto my-4 ">
+          <div
+            key={index}
+            className="bg-black lg:w-[250px] lg:h-[300px] p-3 md:w-[11em] md:h-[280px]"
+          >
+            <div className="relative w-[70%] h-[120px] mx-auto my-4 ">
               <div className="w-full h-full border-2 border-transparent group  relative ">
                 <div className="overflow-hidden w-full h-full rounded-[5px] ">
                   <img
