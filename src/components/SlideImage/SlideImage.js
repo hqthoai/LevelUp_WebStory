@@ -100,7 +100,7 @@ const SlideImage = () => {
 
   return (
     <div
-      className="relative lg:h-[800px] md:max-h-[100vh] md:w-[100%] overflow-hidden mt-20 lg:m-auto md:ml-0 pb-48"
+      className="relative lg:min-h-[900px] md:h-[800px] md:w-[100%] overflow-hidden mt-20 lg:m-auto md:ml-0 pb-48"
       style={{
         backgroundImage: `url(${Spotlight})`,
         backgroundRepeat: 'no-repeat',
@@ -113,7 +113,7 @@ const SlideImage = () => {
     >
       {/* // <div className={`${isIpadPro ? `relative w-[100%] h-[100%] min-h-screen overflow-hidden mt-20`: `relative lg:w-[90%] lg:h-[800px] md:w-[100%] min-h-screen overflow-hidden mt-20 lg:ml-12 md:ml-0`}`}> */}
       <div className="w-[100%] lg:pt-[20%] md:pt-[30%] flex justify-center ">
-        <div className="grid grid-cols-3 gap-0 items-center justify-center w-full relative">
+        <div className="grid grid-cols-3 gap-0 items-center justify-center w-full relative xxl:-top-[150px] ">
           {currentImages.map((i, currentIndex) => (
             <div key={slides[i].id} className="flex relative ">
               <div className="relative">
