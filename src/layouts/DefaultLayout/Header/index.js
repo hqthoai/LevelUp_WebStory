@@ -101,9 +101,9 @@ const Header = () => {
             <li className="h-[100%]  lg:px-6 md:px-4  hover:bg-[#1a1b21] border-b-4 border-solid border-transparent hover:border-orange-700 hover:text-orange-700 transform -skew-x-[30deg] flex items-center">
               <div className="transform skew-x-[30deg] tracking-tight">Games</div>
             </li>
-            <li className="h-[100%]  lg:px-6 md:px-4  hover:bg-[#1a1b21] border-b-4 border-solid border-transparent hover:border-orange-700 hover:text-orange-700 transform -skew-x-[30deg] flex items-center">
+            {/* <li className="h-[100%]  lg:px-6 md:px-4  hover:bg-[#1a1b21] border-b-4 border-solid border-transparent hover:border-orange-700 hover:text-orange-700 transform -skew-x-[30deg] flex items-center">
               <div className="transform skew-x-[30deg] tracking-tight">Shop</div>
-            </li>
+            </li> */}
             <li className="h-[100%]  lg:px-6 md:px-4  hover:bg-[#1a1b21] border-b-4 border-solid border-transparent hover:border-orange-700 hover:text-orange-700 transform -skew-x-[30deg] flex items-center">
               <Link to="/blog" className="transform skew-x-[30deg] tracking-tight">
                 Blog
