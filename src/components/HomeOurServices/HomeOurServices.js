@@ -76,7 +76,7 @@ function HomeOurServices({ title }) {
   };
 
   return (
-    <div className="bg-[#1c121f] h-[600px] flex items-center flex-col font-display">
+    <div className="bg-[#1c121f] h-[600px] flex items-center flex-col font-display mt-40">
       <div className="flex justify-center items-center">
         <div className="content-around text-center">
           <h3 className="uppercase text-white font-bold text-[30px] pb-4">
