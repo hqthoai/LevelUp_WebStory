@@ -108,6 +108,7 @@ const SlideImage = () => {
         // height: '100%',
         backgroundSize: 'contain',
         backgroundPosition: 'center',
+        // opacity: 0.85,
       }}
     >
       {/* // <div className={`${isIpadPro ? `relative w-[100%] h-[100%] min-h-screen overflow-hidden mt-20`: `relative lg:w-[90%] lg:h-[800px] md:w-[100%] min-h-screen overflow-hidden mt-20 lg:ml-12 md:ml-0`}`}> */}
@@ -157,7 +158,7 @@ const SlideImage = () => {
                       src={slides[i].gameImageUrl}
                       alt={slides[i].gameName}
                       // className={`w-[60%] transition-transform duration-1000`}
-                      className={`w-full transition-transform duration-1000 ${
+                      className={`transition-transform duration-1000 ${
                         currentIndex === 2 ? `w-[40%]` : currentIndex === 0 ? 'w-[40%]' : ''
                       }`}
                     />
