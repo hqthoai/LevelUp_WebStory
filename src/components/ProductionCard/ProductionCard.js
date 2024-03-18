@@ -132,7 +132,7 @@ export default function ProductionCard({ originalText, businessText }) {
   return (
     <section className="pt-[120px] pb-[100px] font-display">
       <div className="card-container p-[15px] mx-4 lg:mx-16">
-        <div className="grid grid-cols-2 items-center justify-center">
+        <div className="grid grid-cols-2 gap-4 items-center justify-center">
           {/* Tabs */}
           <div className="px-[4px] lg:order-1  md:order-1 ">
             <div className="bg-[#1f2029] px-4 py-4 md:px-[35px] md:py-[48px]">
