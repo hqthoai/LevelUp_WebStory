@@ -23,6 +23,7 @@ module.exports = {
       /* Desktops and laptops ----------- */
       xl: '76.5em',
       // => @media (min-width: 1224px) { ... }
+      xxl: '114em',
     },
   },
 
