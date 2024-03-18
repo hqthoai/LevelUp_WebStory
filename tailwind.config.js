@@ -16,7 +16,7 @@ module.exports = {
       semilg: '63.9375em',
       // => just for ipad pro
 
-      /* Ipad Pro and small laptops ----------- */
+      /* pc and small laptops ----------- */
       lg: '64.0625em',
       // => @media (min-width: 1025px) { ... }
 
@@ -24,6 +24,7 @@ module.exports = {
       xl: '76.5em',
       // => @media (min-width: 1224px) { ... }
       xxl: '114em',
+      // => @media (min-width: 1824px)
     },
   },
 

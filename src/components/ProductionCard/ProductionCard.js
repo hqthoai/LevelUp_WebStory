@@ -132,10 +132,10 @@ export default function ProductionCard({ originalText, businessText }) {
   return (
     <section className="pt-[120px] pb-[100px] font-display">
       <div className="card-container p-[15px] mx-4 lg:mx-16">
-        <div className="flex items-center justify-between">
+        <div className="grid grid-cols-2 gap-4 items-center justify-center">
           {/* Tabs */}
-          <div className=" flex-1 w-full  md:w-[50%] px-[4px] lg:order-1  md:order-1 ">
-            <div className="bg-[#1f2029] px-4 md:px-[35px] py-4 md:py-[48px]">
+          <div className="px-[4px] lg:order-1  md:order-1 ">
+            <div className="bg-[#1f2029] px-4 py-4 md:px-[35px] md:py-[48px]">
               <div className="nav-link ">
                 <div className="flex mb-4 md:mb-[30px] pb-4 relative">
                   <div
@@ -212,11 +212,11 @@ export default function ProductionCard({ originalText, businessText }) {
           </div>
 
           {/* Image */}
-          <div className="flex-1 h-full w-full  md:w-[50%] px-[10px] justify-center items-center lg:order-2 md:order-2">
+          <div className="h-full flex justify-center items-center lg:order-2 md:order-2">
             <img
               src={LogoWeb}
               alt="Your Image"
-              className="w-full h-fit md:h-90% object-cover bg-center bg-cover"
+              className="w-full object-cover bg-center bg-cover"
             />
           </div>
         </div>
