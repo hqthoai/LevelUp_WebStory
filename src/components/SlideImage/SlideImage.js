@@ -6,12 +6,12 @@ import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 
 import ActivisionBlizzard from '../../assets/images/Activision-logo.png';
-import RobloxGlobal from '../../assets/images/Roblox.png';
+import RobloxGlobal from '../../assets/images/Robloxresize.png';
 import GiantyVN from '../../assets/images/GiantyVN.png';
 import RollingAnt from '../../assets/images/RollingAnt.png';
 import S8XTPN from '../../assets/images/s8x-tpn-logo.png';
 import JungVonMattAg from '../../assets/images/2560px-JvM_Logo.svg.png';
-import CasperDash from '../../assets/images/CasperDash.png';
+import CasperDash from '../../assets/images/CasperDash2Resize.png';
 import Capcom from '../../assets/images/Capcom-logo.png';
 import Spotlight from '../../assets/images/lighting-spotlight.png';
 
